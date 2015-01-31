@@ -1,23 +1,21 @@
 'use strict';
 
 module.exports = {
-  db: 'mongodb://' + (process.env.DB_PORT_27017_TCP_ADDR || 'localhost') + '/mean-dev',
-  debug: true,
-//  aggregate: 'whatever that is not false, because boolean false value turns aggregation off', //false
-  aggregate: false,
+  db:  process.env.TRACDR_MONGODB_URL || 'mongodb://localhost/tracdr-dev',
+  debug: 'true',
   mongoose: {
     debug: false
   },
   app: {
-    name: 'MEAN - FullStack JS - Development'
+    name: 'TracDR Mobile App'
   },
   facebook: {
-    clientID: 'DEFAULT_APP_ID',
-    clientSecret: 'APP_SECRET',
+    clientID: '1495105934103825',
+    clientSecret:  '05e5fa118a171a3c3025ec70de7807f1',
     callbackURL: 'http://localhost:3000/auth/facebook/callback'
   },
   twitter: {
-    clientID: 'DEFAULT_CONSUMER_KEY',
+    clientID: 'TWITTER_CONSUMER_KEY',
     clientSecret: 'CONSUMER_SECRET',
     callbackURL: 'http://localhost:3000/auth/twitter/callback'
   },

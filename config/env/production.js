@@ -1,10 +1,14 @@
 'use strict';
 
 module.exports = {
-  db: 'mongodb://' + (process.env.DB_PORT_27017_TCP_ADDR || 'localhost') + '/mean-prod',
+  db:  process.env.TRACDR_MONGODB_URL || 'mongodb://localhost/tracdr-prod',
+  debug: 'false',
+  mongoose: {
+    debug: false
+  },
   /**
    * Database options that will be passed directly to mongoose.connect
-   * Below are some examples.
+   * Below are some examples.    mongodb://agni_user:agni_password@localhost/agni_db
    * See http://mongodb.github.io/node-mongodb-native/driver-articles/mongoclient.html#mongoclient-connect-options
    * and http://mongoosejs.com/docs/connections.html for more information
    */
@@ -27,30 +31,30 @@ module.exports = {
     */
   },
   app: {
-    name: 'MEAN - A Modern Stack - Production'
+    name: 'TracDr App - Production'
   },
   facebook: {
-    clientID: 'APP_ID',
-    clientSecret: 'APP_SECRET',
-    callbackURL: 'http://localhost:3000/auth/facebook/callback'
+    clientID: process.env.FACEBOOK_ID || '1495105934103825',
+    clientSecret:  process.env.FACEBOOK_SECRET || '05e5fa118a171a3c3025ec70de7807f1',
+    callbackURL: process.env.FACEBOOK_CALLBACK_URL || 'http://localhost:3000/auth/facebook/callback'
   },
   twitter: {
-    clientID: 'CONSUMER_KEY',
-    clientSecret: 'CONSUMER_SECRET',
+    clientID: process.env.TWITTER_CONSUMER_KEY || 'TWITTER_CONSUMER_KEY',
+    clientSecret: process.env.TWITTER_CONSUMER_SECRET || 'CONSUMER_SECRET',
     callbackURL: 'http://localhost:3000/auth/twitter/callback'
   },
   github: {
-    clientID: 'APP_ID',
+    clientID: 'DEFAULT_APP_ID',
     clientSecret: 'APP_SECRET',
     callbackURL: 'http://localhost:3000/auth/github/callback'
   },
   google: {
-    clientID: 'APP_ID',
-    clientSecret: 'APP_SECRET',
+    clientID: process.env.GOOGLE_CONSUMER_KEY || 'GOOGLE_CONSUMER_KEY',
+    clientSecret: process.env.GOOGLE_CONSUMER_SECRET || 'CONSUMER_SECRET',
     callbackURL: 'http://localhost:3000/auth/google/callback'
   },
   linkedin: {
-    clientID: 'API_KEY',
+    clientID: 'DEFAULT_API_KEY',
     clientSecret: 'SECRET_KEY',
     callbackURL: 'http://localhost:3000/auth/linkedin/callback'
   },

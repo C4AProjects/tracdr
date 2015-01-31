@@ -12,6 +12,20 @@ var mongoose = require('mongoose'),
   templates = require('../template');
 
 /**
+* Set local user profile
+*/
+exports.update = function(req, res) {
+  var user = req.user;
+  user = _.extend(user, req.body);
+  user.save(function(err) {
+    if (err) {
+      return res.status(400).json(err);
+    }
+    res.status(200).json({success: true, msg: 'Update succeed!'});
+  });
+};
+
+/**
  * Auth callback
  */
 exports.authCallback = function(req, res) {
@@ -50,12 +64,14 @@ exports.create = function(req, res, next) {
   var user = new User(req.body);
 
   user.provider = 'local';
+  
+  user.username = user.username || user.email; // set username with email if empty
 
   // because we set our user.provider to local our models/user.js validation will always be true
   req.assert('name', 'You must enter a name').notEmpty();
   req.assert('email', 'You must enter a valid email address').isEmail();
   req.assert('password', 'Password must be between 8-20 characters long').len(8, 20);
-  req.assert('username', 'Username cannot be more than 20 characters').len(1, 20);
+  req.assert('username', 'Username cannot be more than 40 characters').len(1, 40);
   req.assert('confirmPassword', 'Passwords do not match').equals(req.body.password);
 
   var errors = req.validationErrors();

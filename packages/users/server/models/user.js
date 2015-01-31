@@ -81,7 +81,22 @@ var UserSchema = new Schema({
   twitter: {},
   github: {},
   google: {},
-  linkedin: {}
+  linkedin: {},
+  profile: { // local user profile
+    firstname: String,    
+    lastname: String,
+    dob: Date,
+    phone: String,
+    address: {
+      street: String,
+      city: String,
+      state: String
+    }
+  },
+  doctors: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Doctor'
+  }]
 });
 
 /**
