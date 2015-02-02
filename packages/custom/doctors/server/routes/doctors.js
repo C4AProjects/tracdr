@@ -15,5 +15,5 @@ module.exports = function(Doctors, app, auth, database) {
     
   // Setting up the doctorId param
   
-  app.param('doctorId', doctors.diet);
+  app.param('doctorId', doctors.doctor);
 };

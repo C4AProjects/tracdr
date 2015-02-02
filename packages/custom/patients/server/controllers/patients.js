@@ -4,8 +4,7 @@
  * Module dependencies.
  */
 var mongoose = require('mongoose'),
-  User = mongoose.model('User'),
-  _ = require('lodash');
+  User = mongoose.model('User');
 
 
 /**
@@ -17,7 +16,7 @@ exports.specifyDoctors = function(req, res){
     list.forEach(function(doc){
         user.doctors.push(doc);
     });
-}
+};
 
 
 /**
