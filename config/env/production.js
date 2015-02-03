@@ -36,27 +36,27 @@ module.exports = {
   facebook: {
     clientID: process.env.FACEBOOK_ID || '1495105934103825',
     clientSecret:  process.env.FACEBOOK_SECRET || '05e5fa118a171a3c3025ec70de7807f1',
-    callbackURL: process.env.FACEBOOK_CALLBACK_URL || 'http://localhost:3000/auth/facebook/callback'
+    callbackURL: 'http://' + process.env.HOST + '/auth/facebook/callback' || 'http://localhost:3000/auth/facebook/callback'
   },
   twitter: {
     clientID: process.env.TWITTER_CONSUMER_KEY || 'TWITTER_CONSUMER_KEY',
     clientSecret: process.env.TWITTER_CONSUMER_SECRET || 'CONSUMER_SECRET',
-    callbackURL: 'http://localhost:3000/auth/twitter/callback'
+    callbackURL: 'http://' + process.env.HOST + '/auth/twitter/callback'
   },
   github: {
     clientID: 'DEFAULT_APP_ID',
     clientSecret: 'APP_SECRET',
-    callbackURL: 'http://localhost:3000/auth/github/callback'
+    callbackURL: 'http://' + process.env.HOST + '/auth/github/callback'
   },
   google: {
     clientID: process.env.GOOGLE_CONSUMER_KEY || 'GOOGLE_CONSUMER_KEY',
     clientSecret: process.env.GOOGLE_CONSUMER_SECRET || 'CONSUMER_SECRET',
-    callbackURL: 'http://localhost:3000/auth/google/callback'
+    callbackURL: 'http://' + process.env.HOST + '/auth/google/callback'
   },
   linkedin: {
     clientID: 'DEFAULT_API_KEY',
     clientSecret: 'SECRET_KEY',
-    callbackURL: 'http://localhost:3000/auth/linkedin/callback'
+    callbackURL: 'http://' + process.env.HOST + '/auth/linkedin/callback'
   },
   emailFrom: 'SENDER EMAIL ADDRESS', // sender address like ABC <abc@example.com>
   mailer: {
