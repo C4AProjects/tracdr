@@ -23,7 +23,7 @@
     margin-left: 0
 }
 .content {
-    margin-top: 70px;
+    margin-top: 105px;
     width: 100%
 }
 footer {
@@ -50,3 +50,62 @@ footer p {
 /*.ng-valid.ng-dirty{*/
     /*border-color:#78FA89;*/
 /*}*/
+
+.jumbotron.tracdr-container {
+    background-color: #FFFFFF;
+    padding: 0;
+    padding-top: 150px;
+    border-radius: 0;
+}
+
+.navbar-default.tracdr-header{
+    background-color: #FFFFFF;
+    height: 105px;
+    border-color: #005991;
+}
+
+.footer.tracdr-footer{
+    background-color: #005991;
+    padding-left: 150px;
+    color: #FFFFFF;
+
+}
+
+.navbar-fixed-top {
+    border-width: 0 0 15px;
+}
+
+.navbar-right {
+    padding-top: 45px;
+}
+
+.pic.password.tracdr-pwd {
+    position: absolute;
+    background: url("/theme/assets/img/eye_password.png") no-repeat 50% 50%;
+    width: 33px;
+    height: 20px;
+    top: 6px;
+    right: 22px;
+    cursor: pointer;
+}
+
+.pic.email.tracdr-email {
+    position: absolute;
+    background: url("/theme/assets/img/mail_login.png")  no-repeat 50% 50%;
+    width: 33px;
+    height: 21px;
+    top: 6px;
+    right: 22px;
+    cursor: pointer;
+}
+
+.main-form.main-form-tracdr .input-wrapper input {
+    width: 401px;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    padding: 5px 0 5px 5px;
+    outline: none;
+    font-size: 15px;
+    font-family: 'proxima_nova_rgregular';
+    line-height: 22px;
+}

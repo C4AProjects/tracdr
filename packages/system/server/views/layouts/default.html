@@ -9,11 +9,13 @@
         <div data-ng-include="'/mean-admin/views/index.html'"></div>
     </section>
     {% endif %}
-    <section class="content">
+    <section class="content" style="background-color: #005991;padding: 20px 0 30px 0">
         <section class="container">
             {% block content %}{% endblock %}
         </section>
+
     </section>
+    <div class="tracdr-footer" data-ng-include="'/system/views/footer.html'" ></div>
     {% include '../includes/foot.html' %}
 </body>
 
