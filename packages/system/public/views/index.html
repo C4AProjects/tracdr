@@ -1,77 +1,117 @@
-<div>
-    <div class="row" style="background-color: #005991">
-        <div class="col-md-3" style="vertical-align: middle">
-            <img src="/theme/assets/img/doctor.png" height="250px" >
-        </div>
-        <div class="col-md-9">
-            <div class="form main-form main-form-tracdr" ng-controller="AuthCtrl" ng-class="{'register-form' : global.registerForm}">
-                <div class="login-form__left" ui-view>
-                    <div data-ng-controller="LoginCtrl">
-
-                        <div class="alert alert-danger animated fadeIn" ng-show="loginerror">{{loginerror}}</div>
-                        <form id="login_form" ng-submit="login()">
-                            <div class="input-wrapper">
-                                <input required id="email_block" type="email" name="email" placeholder="Email Address" ng-model="user.email">
-                                <div class="error_message">Please enter a correct info #</div>
-                                <span class="pic email tracdr-email"></span>
-                            </div>
-                            <div class="input-wrapper">
-                                <input required id="password_block" name="password" type="{{input.type}}" placeholder="{{input.placeholder}}" ng-model="user.password">
-                                <div class="error_message">Please enter a correct info #</div>
-                <span class="pic password {{input.iconClass}} tracdr-pwd" ng-click = "togglePasswordVisible()">
-                      <div class="hide_text_password">
-                          {{input.tooltipText}}
-                      </div>
-                </span>
-                            </div>
-                            <div class="forgot_password">
-                                <a ui-sref='forgot-password'>Forgot your password?</a>
-                            </div>
-                            <div class="button_login">
-                                <button type="submit" class="submit_button">Login</button>
-                                <p>Don't have an account?</p>
-                                <a ui-sref='auth.register' >Sign up</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="login-form__center">
-                    <p>or</p>
-                </div>
-                <div class="row login-form__right " data-ng-controller="AuthCtrl">
-                    <div class="social_wrap" ng-class="{bigger:socialButtonsCounter > 4 && !global.registerForm}">
-                        <ul class="social">
-                            <li ng-if="socialButtons.hasOwnProperty('linkedin')" class="social_icon social_icon_in">
-                                <a href="/auth/linkedin" class="button">
-                                    <span>Log In With LinkedIn</span>
-                                </a>
-                            </li>
-                            <li ng-if="socialButtons.hasOwnProperty('facebook')" class="social_icon social_icon_fb">
-                                <a href="/auth/facebook" class="button">
-                                    <span>Log In With Facebook</span>
-                                </a>
-                            </li>
-                            <li ng-if="socialButtons.hasOwnProperty('github')" class="social_icon social_icon_gh">
-                                <a href="/auth/github" class="button">
-                                    <span>Log In With GitHub</span>
-                                </a>
-                            </li>
-                            <li ng-if="socialButtons.hasOwnProperty('twitter')" class="social_icon social_icon_tw">
-                                <a href="/auth/twitter" class="button">
-                                    <span>Log In With Twitter</span>
-                                </a>
-                            </li>
-                            <li ng-if="socialButtons.hasOwnProperty('google')" class="social_icon social_icon_google">
-                                <a href="/auth/google" class="button">
-                                    <span>Log In With Google</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
+<div class="col-sm-1 home-login"> </div>
+<div class="col-sm-10">
+<div class="row home-login">
+    <div class="col-md-3" style="vertical-align: middle">
+        <img src="/theme/assets/img/doctor.png" height="350px" >
     </div>
+    <div class="col-md-9">
+        <span style="color: white">
+            <h2>TracDr</h2> <h4>is rt,d,,dfdmmmmmdf,,f ,,fs;mfdfn,d ffms;msfd ls,smlmsfmms</h4>
+            <h6>kjqjd sjnfsdf sdfn,ndf sdfnsd,f dsnds,d ll</h6>
+        </span>
+        <div class="form main-form main-form-tracdr" ng-controller="AuthCtrl" ng-class="{'register-form' : global.registerForm}">
+            <div class="login-form__left">
+                <div data-ng-controller="LoginCtrl">
+
+                    <div class="alert alert-danger animated fadeIn" ng-show="loginerror">{{loginerror}}</div>
+                    <form id="login_form" ng-submit="login()">
+                        <div class="input-wrapper">
+                            <input required id="email_block" type="email" name="email" placeholder="Email Address" ng-model="user.email">
+                            <div class="error_message">Please enter a correct info #</div>
+                            <span class="pic email tracdr-email"></span>
+                        </div>
+                        <div class="input-wrapper">
+                            <input required id="password_block" name="password" type="{{input.type}}" placeholder="{{input.placeholder}}" ng-model="user.password">
+                            <div class="error_message">Please enter a correct info #</div>
+                            <span class="pic password {{input.iconClass}} tracdr-pwd" ng-click = "togglePasswordVisible()">
+                                  <div class="hide_text_password">
+                                      {{input.tooltipText}}
+                                  </div>
+                            </span>
+                        </div>
+                        <div class="forgot_password">
+                            <a ui-sref='forgot-password'>Forgot your password?</a>
+                        </div>
+
+                        <div>
+                            <button type="submit" class="btn btn-primary">Login</button>   <i> Or Log In With </i>
+                            <span ng-if="socialButtons.hasOwnProperty('twitter')">
+                                <a href="/auth/twitter" >
+                                    <img class="social_icon_tw">
+                                </a>
+                            </span>
+                            <span ng-if="socialButtons.hasOwnProperty('facebook')">
+                                <a href="/auth/facebook">
+                                    <img class="social_icon_fb">
+                                </a>
+                            </span>
+                            <span ng-if="socialButtons.hasOwnProperty('github')">
+                                <a href="/auth/github" >
+                                    <img class="social_icon_gh">
+                                </a>
+                            </span>
+                            <span ng-if="socialButtons.hasOwnProperty('linkedin')" >
+                                <a href="/auth/linkedin" class="button">
+                                    <img class="social_icon_in">
+                                </a>
+                            </span>
+                            <span ng-if="socialButtons.hasOwnProperty('google')">
+                                <a href="/auth/google" class="button">
+                                    <img class="social_icon_google">
+                                </a>
+                            </span>
+                        </div>
+
+                        <p>Don't have an account?  <a ui-sref='auth.register' class="forgot_password">Sign up</a></p>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="col-sm-12 txt-center">
+        <h1>WHAT IS TracDr. ?</h1>
+        <p><h6>kkkddk sndcnldm ld,sdl kqdqlmqs mlkqsdqk qkqdqk </h6></p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 txt-center">
+        <h1>WHAT WE OFFER ?</h1>
+        <h3>Some great features</h3>
+    </div>
+
+</div>
+<div class="row txt-center">
+    <div class="col-md-4">
+        CALENDAR
+    </div>
+    <div class="col-md-4">
+        GEOLOCATION
+    </div>
+    <div class="col-md-4">
+        PERIODIC REMINDERS
+    </div>
+</div>
+<div class="row txt-center">
+    <div class="col-md-4">
+        USER PROFILE
+    </div>
+    <div class="col-md-4">
+        TIMER
+    </div>
+    <div class="col-md-4">
+        GREAT SUPPORT
+    </div>
+</div>
+<div class="row txt-center">READ MORE</div>
+
+</div>
+<div class="col-sm-1 home-login"> </div>
 </div>

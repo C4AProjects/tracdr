@@ -99,6 +99,12 @@ footer p {
     cursor: pointer;
 }
 
+.main-form.main-form-tracdr{
+    height: 230px;
+    width: 463px;
+    left:45%
+}
+
 .main-form.main-form-tracdr .input-wrapper input {
     width: 401px;
     border: 1px solid #d3d3d3;
@@ -108,4 +114,54 @@ footer p {
     font-size: 15px;
     font-family: 'proxima_nova_rgregular';
     line-height: 22px;
+}
+
+.social_icon_in {
+    content: '';
+    position: absolute;
+    background: url("/theme/assets/img/social_in.png") no-repeat 50% 50%;
+    width: 50px;
+    height: 47px;
+}
+
+.social_icon_fb {
+
+    background: url("/theme/assets/img/social_fb.png") no-repeat 50% 50%;
+    width: 41px;
+    height: 40px;
+}
+
+.social_icon_gh {
+    content: '';
+    position: absolute;
+    background: url("/theme/assets/img/social_github.png") no-repeat 50% 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.social_icon_tw {
+    background: url("/theme/assets/img/social_tw.png") no-repeat 50% 50%;
+    width: 40px;
+    height: 41px;
+}
+
+.social_icon_google {
+    content: '';
+    position: absolute;
+    background: url("/theme/assets/img/social_g+.png") no-repeat 50% 50%;
+    width: 40px;
+    height: 41px;;
+}
+
+.tracdr-theme{
+    background-color: #005991;
+}
+
+.home-login{
+    background-color: #005991;
+    height: 380px;
+}
+
+.txt-center{
+    text-align: center;
 }
