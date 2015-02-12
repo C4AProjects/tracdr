@@ -129,6 +129,9 @@ module.exports = function(grunt) {
   //Default task.
   grunt.registerTask('default', ['hook']);
 
+  //Build task for production.
+  grunt.registerTask('build:production', ['clean', 'cssmin', 'uglify']);
+
   //Test task.
   grunt.registerTask('test', ['env:test', 'mochaTest', 'karma:unit']);
 
