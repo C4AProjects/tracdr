@@ -206,7 +206,7 @@ background: url("/theme/assets/img/bg.png");
 
 .login-form__left .forgot_password a {
     font-size: 15px;
-    color: #68a80c;
+    color: #e8960c;
     text-decoration: none;
     font-family: "open_sans_hebrewregular";
 }
@@ -259,7 +259,7 @@ background: url("/theme/assets/img/bg.png");
 .button_register a {
     display: inline-block;
     font-size: 15px;
-    color: #68a80c;
+    color: #E8960C;
     text-decoration: none;
     margin-left: 1px;
     padding-top: 11px;
