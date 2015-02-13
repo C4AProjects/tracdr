@@ -26,6 +26,10 @@ angular.module('mean.users').config(['$meanStateProvider',
 
     // states for my app
     $meanStateProvider
+      .state('welcome', {
+            url: '/welcome',
+            templateUrl: 'users/views/index-join.html'
+      })
       .state('auth', {
         url: '/auth',
         templateUrl: 'users/views/index.html'
@@ -36,6 +40,27 @@ angular.module('mean.users').config(['$meanStateProvider',
         resolve: {
           loggedin: checkLoggedOut
         }
+      })
+      .state('welcome.join', {
+            url: '/join',
+            templateUrl: 'users/views/join.html',
+            resolve: {
+                loggedin: checkLoggedOut
+            }
+      })
+      .state('auth.join-doctor', {
+            url: '/join-doctor',
+            templateUrl: 'users/views/join-doctor.html',
+            resolve: {
+                loggedin: checkLoggedOut
+            }
+      })
+      .state('auth.join-patient', {
+            url: '/join-patient',
+            templateUrl: 'users/views/join-patient.html',
+            resolve: {
+                loggedin: checkLoggedOut
+            }
       })
       .state('auth.register', {
         url: '/register',

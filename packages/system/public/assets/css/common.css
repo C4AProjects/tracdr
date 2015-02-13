@@ -102,7 +102,8 @@ footer p {
 .main-form.main-form-tracdr{
     height: 230px;
     width: 463px;
-    left:45%
+    left:45%;
+    margin-top: 5px;
 }
 
 .main-form.main-form-tracdr .input-wrapper input {
@@ -116,43 +117,6 @@ footer p {
     line-height: 22px;
 }
 
-.social_icon_in {
-    content: '';
-    position: absolute;
-    background: url("/theme/assets/img/social_in.png") no-repeat 50% 50%;
-    width: 50px;
-    height: 47px;
-}
-
-.social_icon_fb {
-
-    background: url("/theme/assets/img/social_fb.png") no-repeat 50% 50%;
-    width: 41px;
-    height: 40px;
-}
-
-.social_icon_gh {
-    content: '';
-    position: absolute;
-    background: url("/theme/assets/img/social_github.png") no-repeat 50% 50%;
-    width: 40px;
-    height: 40px;
-}
-
-.social_icon_tw {
-    background: url("/theme/assets/img/social_tw.png") no-repeat 50% 50%;
-    width: 40px;
-    height: 41px;
-}
-
-.social_icon_google {
-    content: '';
-    position: absolute;
-    background: url("/theme/assets/img/social_g+.png") no-repeat 50% 50%;
-    width: 40px;
-    height: 41px;;
-}
-
 .tracdr-theme{
     background-color: #005991;
 }
@@ -164,4 +128,45 @@ footer p {
 
 .txt-center{
     text-align: center;
+}
+
+.txt-color{
+    color: #005991;
+}
+
+.revert-color{
+    color: #ff8c27;
+}
+
+.btn-orange{
+    background-color: #ff8c27;
+    border-color: #ff8c27;
+    width:100px;
+}
+
+.btn-blue{
+    background-color: #005991;
+    width:100px;
+}
+
+.btn-grey{
+    background-color: #cfced3;
+    color: #ffffff;
+}
+
+.opacity-img{
+    opacity: .4;
+}
+
+.vertical_bar {
+    height: 100%;
+    float: left;
+    background: url("/theme/assets/img/vertical-bar.png") no-repeat 50% 30%;
+    padding: 0 10px;
+}
+
+.vertical_bar p {
+    margin-top: 281px;
+    font-family: 'proxima_novalight';
+    font-size: 16px;
 }

@@ -1,15 +1,19 @@
 <div class="col-sm-1 home-login"> </div>
 <div class="col-sm-10">
 <div class="row home-login">
-    <div class="col-md-3" style="vertical-align: middle">
-        <img src="/theme/assets/img/doctor.png" height="350px" >
+    <div class="col-md-3 col-sm-6" style="vertical-align: middle">
+        <img src="/theme/assets/img/doctor.png" class="img-responsive" >
     </div>
-    <div class="col-md-9">
+    <div class="col-md-9 col-sm-6">
         <span style="color: white">
-            <h2>TracDr</h2> <h4>is rt,d,,dfdmmmmmdf,,f ,,fs;mfdfn,d ffms;msfd ls,smlmsfmms</h4>
-            <h6>kjqjd sjnfsdf sdfn,ndf sdfnsd,f dsnds,d ll</h6>
+            <h2><b>TracDr.</b> is a mobile web app that tracks a doctor’s progress with patients and sends automated notifications and text messages to patients.</h2>
+            <h6>
+                It incorporates the use of a patient-driven scheduling system, which allows patients to register and update any personal information,
+                insurance information, current medications and allergies information into the system.
+            </h6>
         </span>
         <div class="form main-form main-form-tracdr" ng-controller="AuthCtrl" ng-class="{'register-form' : global.registerForm}">
+
             <div class="login-form__left">
                 <div data-ng-controller="LoginCtrl">
 
@@ -37,32 +41,32 @@
                             <button type="submit" class="btn btn-primary">Login</button>   <i> Or Log In With </i>
                             <span ng-if="socialButtons.hasOwnProperty('twitter')">
                                 <a href="/auth/twitter" >
-                                    <img class="social_icon_tw">
+                                    <img src="/theme/assets/img/social_tw.png">
                                 </a>
                             </span>
                             <span ng-if="socialButtons.hasOwnProperty('facebook')">
                                 <a href="/auth/facebook">
-                                    <img class="social_icon_fb">
+                                    <img src="/theme/assets/img/social_fb.png">
                                 </a>
                             </span>
                             <span ng-if="socialButtons.hasOwnProperty('github')">
                                 <a href="/auth/github" >
-                                    <img class="social_icon_gh">
+                                    <img src="/theme/assets/img/social_in.png">
                                 </a>
                             </span>
                             <span ng-if="socialButtons.hasOwnProperty('linkedin')" >
                                 <a href="/auth/linkedin" class="button">
-                                    <img class="social_icon_in">
+                                    <img src="/theme/assets/img/social_in.png">
                                 </a>
                             </span>
                             <span ng-if="socialButtons.hasOwnProperty('google')">
                                 <a href="/auth/google" class="button">
-                                    <img class="social_icon_google">
+                                    <img src="/theme/assets/img/social_g+.png">
                                 </a>
                             </span>
                         </div>
 
-                        <p>Don't have an account?  <a ui-sref='auth.register' class="forgot_password">Sign up</a></p>
+                        <p>Don't have an account?  <a ui-sref='welcome.join' class="forgot_password">Sign up</a></p>
 
 
                     </form>
