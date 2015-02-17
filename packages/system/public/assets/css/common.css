@@ -58,15 +58,21 @@ footer p {
     border-radius: 0;
 }
 
-.navbar-default.tracdr-header{
+.tracdr-header{
     background-color: #FFFFFF;
-    height: 105px;
-    border-color: #005991;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 5px;
+}
+
+.horizontal-bar{
+    width: 100%;
+    height: 8px;
+    background-color: #0078ba;
 }
 
 .footer.tracdr-footer{
     background-color: #005991;
-    padding-left: 150px;
     color: #FFFFFF;
 
 }
@@ -119,7 +125,7 @@ footer p {
 }
 
 .tracdr-theme{
-    background-color: #005991;
+    background-color: #0078ba;
 }
 
 .home-login{
@@ -174,10 +180,8 @@ footer p {
 .footer-social {
     background-color: #0078ba;
     text-align: center;
-    position: fixed;
-    bottom: 31px;
-    width: 100%;
-    height: 130px;
-    margin: 0;
-    z-index: -1;
+    padding-top: 3px;
+    width: 101%;
+    height: 145px;
+    margin-bottom: 32px;
 }

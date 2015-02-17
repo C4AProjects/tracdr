@@ -3,16 +3,27 @@
 {% include '../includes/head.html' %}
 
 <body data-ng-controller="ThemeController" ng-cloak class="ng-cloak" ng-class="state">
-    <div class="navbar navbar-inverse navbar-fixed-top" data-ng-include="'/system/views/header.html'" data-role="navigation"></div>
+    <div data-ng-include="'/system/views/header.html'" data-role="navigation"></div>
     {% if adminEnabled %}
     <section class="admin-menu">
         <div data-ng-include="'/mean-admin/views/index.html'"></div>
     </section>
     {% endif %}
-    <section class="content">
+    <!--section class="content">
         {% block content %}{% endblock %}
-    </section>
-    <div class="footer-social" data-ng-include="'/system/views/footer.html'" ></div>
+    </section-->
+
+    <div class="row">
+        <div  class="horizontal-bar"></div>
+        {% block content %}{% endblock %}
+    </div>
+    <div class="content">
+        <div class="footer-social" >
+            <h3 style="color: #e9e9e9;">Social With Us</h3>
+            <img src="/theme/assets/img/social_all.png" >
+        </div>
+    </div>
+    <div data-ng-include="'/system/views/footer.html'" ></div>
     {% include '../includes/foot.html' %}
 </body>
 
