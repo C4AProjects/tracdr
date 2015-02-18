@@ -1,0 +1,51 @@
+<div class="hr">
+<div class="container" data-ng-controller="DashboardController">
+      <div class="row">
+          <div class="col-md-2 text-right">
+            <img src="/dashboard/assets/img/profile.png" class="img-profile">
+          </div>
+          <div class="col-md-7">
+           <h5 class="profile-name">Firstname Lastname</h5>
+            <p>
+                <a>Account Settings</a>
+                <br>
+                <a>Sign out</a>
+            </p>
+          </div>
+          <div class="3">
+            <input type="search" placeholder="Search">
+          </div>
+      </div>
+      <div class="row">
+            <div class="col-md-2 text-right">
+                <div class="btn bg-primary btn-dash btn-orange">
+                    <a ui-sref="profile">
+                        <img src="/dashboard/assets/img/my-profile.png">
+                    </a>
+                    <h6>My profile</h6>
+                </div>
+                <div class="btn bg-primary btn-dash">
+                    <a ui-sref="appointments">
+                        <img src="/dashboard/assets/img/appointments.png">
+                    </a>
+                    <h6>Appointments</h6>
+                </div>
+                <div class="btn bg-primary btn-dash">
+                    <a ui-sref="notifications">
+                        <img src="/dashboard/assets/img/notifications.png">
+                    </a>
+                    <h6>Notifications</h6>
+                </div>
+                <div class="btn bg-primary btn-dash">
+                    <a ui-sref="calendar">
+                        <img src="/dashboard/assets/img/calendar.png">
+                    </a>
+                    <h6>Calendar</h6>
+                </div>
+            </div>
+            <div class="col-md-10" ui-view="">
+                PROFILE GOES HERE........
+            </div>
+      </div>
+</div>
+

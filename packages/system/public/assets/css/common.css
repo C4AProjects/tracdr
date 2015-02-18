@@ -136,6 +136,9 @@ footer p {
 .txt-center{
     text-align: center;
 }
+.text-right{
+    text-align: right;
+}
 
 .txt-color{
     color: #0078ba;
