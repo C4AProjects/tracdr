@@ -3,11 +3,10 @@
 }
 
 .img-profile{
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    margin: 3px 16px 6px;
-    border: 1px solid grey;
+    border: 2px solid grey;
 }
 
 .profile-name{
@@ -16,12 +15,12 @@
 }
 
 .btn-dash{
-    width: 95px;
-    height: 95px;
-    padding-top: 24px;
+    width: 85px;
+    height: 85px;
     margin-top: 1px;
     border-radius: 0;
     color:white;
+    padding: 10px 0;
 }
 
 .hr {
@@ -30,7 +29,7 @@
     border: 0;
 }
 
-.btn-orange{
+.btn-dash-orange{
     background-color: #ff8c27;
     border-color: #ff8c27;
 }
