@@ -13,7 +13,7 @@ angular.module('mean.users').config(['$meanStateProvider',
         // Authenticated
         if (user !== '0') {
           $timeout(deferred.reject);
-          $location.url('/login');
+          $location.url('/');
         }
 
         // Not Authenticated
@@ -53,7 +53,7 @@ angular.module('mean.users').config(['$meanStateProvider',
       })
       .state('auth', {
             url: '/auth',
-            templateUrl: 'users/views/index.html'
+            templateUrl: 'system/views/index.html'
       })
       .state('auth.login', {
             url: '/login',

@@ -65,6 +65,8 @@ angular.module('mean.users')
   .controller('RegisterCtrl', ['$scope', '$rootScope', '$http', '$location', 'Global',
     function($scope, $rootScope, $http, $location, Global) {
       $scope.user = {};
+      $scope.user.profile = {};
+      $scope.user.profile.address = {};
       $scope.global = Global;
       $scope.global.registerForm = true;
       $scope.input = {
