@@ -1,10 +1,10 @@
 <div class="hr">
 <div class="container" data-ng-controller="DashboardController">
       <div class="row">
-          <div class="col-md-2 text-right">
+          <div class="col-xs-2 text-right">
             <img src="/dashboard/assets/img/profile.png" class="img-profile">
           </div>
-          <div class="col-md-7">
+          <div class="col-xs-7">
            <h5 class="profile-name">Firstname Lastname</h5>
             <p>
                 <a>Account Settings</a>
@@ -17,34 +17,43 @@
           </div>
       </div>
       <div class="row">
-            <div class="col-md-2 text-right">
-                <div class="btn bg-primary btn-dash btn-orange">
-                    <a ui-sref="profile">
+            <div class="col-xs-2 text-right">
+                <div class="btn bg-primary btn-dash btn-dash-orange">
+                    <a ui-sref="dashboard">
                         <img src="/dashboard/assets/img/my-profile.png">
                     </a>
                     <h6>My profile</h6>
                 </div>
                 <div class="btn bg-primary btn-dash">
-                    <a ui-sref="appointments">
+                    <a ui-sref="dashboard.appointments">
                         <img src="/dashboard/assets/img/appointments.png">
                     </a>
                     <h6>Appointments</h6>
                 </div>
                 <div class="btn bg-primary btn-dash">
-                    <a ui-sref="notifications">
+                    <a ui-sref="dashboard.notifications">
                         <img src="/dashboard/assets/img/notifications.png">
                     </a>
                     <h6>Notifications</h6>
                 </div>
                 <div class="btn bg-primary btn-dash">
-                    <a ui-sref="calendar">
+                    <a ui-sref="dashboard.calendar">
                         <img src="/dashboard/assets/img/calendar.png">
                     </a>
                     <h6>Calendar</h6>
                 </div>
             </div>
-            <div class="col-md-10" ui-view="">
-                PROFILE GOES HERE........
+            <div class="col-xs-10" ui-view>
+                <div class="container">
+                   <div class="row" style="min-height:200px">
+                       <div class="col-xs-4">
+
+                       </div>
+                       <div class="col-xs-8">
+
+                       </div>
+                   </div>
+                </div>
             </div>
       </div>
 </div>

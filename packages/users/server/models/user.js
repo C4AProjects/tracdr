@@ -87,6 +87,9 @@ var UserSchema = new Schema({
     lastname: String,
     dob: Date,
     phone: String,
+    gender: String,
+    postcode: String,
+    kinphone: String,
     address: {
       street: String,
       city: String,

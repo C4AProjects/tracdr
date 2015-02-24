@@ -1,4 +1,4 @@
-<div data-ng-controller="LoginCtrl">
+<!--div data-ng-controller="LoginCtrl">
 
     <div class="alert alert-danger animated fadeIn" ng-show="loginerror">{{loginerror}}</div>
 
@@ -30,5 +30,62 @@
         <div class="woman_ninja_bottom">
             <img src="/theme/assets/img/woman_ninja.png" alt="#">
         </div>
+    </form>
+</div-->
+
+<div data-ng-controller="LoginCtrl">
+
+
+    <form id="login_form" ng-submit="login()">
+        <div class="input-wrapper">
+            <input required id="email_block" type="email" name="email" placeholder="Email Address" ng-model="user.email">
+            <div class="error_message">Please enter a correct info #</div>
+            <span class="pic email tracdr-email"></span>
+        </div>
+        <div class="input-wrapper">
+            <input required id="password_block" name="password" type="{{input.type}}" placeholder="{{input.placeholder}}" ng-model="user.password">
+            <div class="error_message">Please enter a correct info #</div>
+                            <span class="pic password {{input.iconClass}} tracdr-pwd" ng-click = "togglePasswordVisible()">
+                                  <div class="hide_text_password">
+                                      {{input.tooltipText}}
+                                  </div>
+                            </span>
+        </div>
+        <div class="forgot_password">
+            <a ui-sref='forgot-password'>Forgot your password?</a>
+        </div>
+
+        <div>
+            <button type="submit" class="btn btn-primary">Login</button>   <i> Or Log In With </i>
+                            <span ng-if="socialButtons.hasOwnProperty('twitter')">
+                                <a href="/auth/twitter" >
+                                    <img src="/theme/assets/img/social_tw.png">
+                                </a>
+                            </span>
+                            <span ng-if="socialButtons.hasOwnProperty('facebook')">
+                                <a href="/auth/facebook">
+                                    <img src="/theme/assets/img/social_fb.png">
+                                </a>
+                            </span>
+                            <span ng-if="socialButtons.hasOwnProperty('github')">
+                                <a href="/auth/github" >
+                                    <img src="/theme/assets/img/social_in.png">
+                                </a>
+                            </span>
+                            <span ng-if="socialButtons.hasOwnProperty('linkedin')" >
+                                <a href="/auth/linkedin" class="button">
+                                    <img src="/theme/assets/img/social_in.png">
+                                </a>
+                            </span>
+                            <span ng-if="socialButtons.hasOwnProperty('google')">
+                                <a href="/auth/google" class="button">
+                                    <img src="/theme/assets/img/social_g+.png">
+                                </a>
+                            </span>
+        </div>
+
+        <p>Don't have an account?  <a ui-sref='join' class="forgot_password">Sign up</a></p>
+        <div class="alert alert-danger animated fadeIn" ng-show="loginerror">{{loginerror}}</div>
+
     </form>
 </div>

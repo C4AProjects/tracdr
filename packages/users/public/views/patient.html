@@ -1,9 +1,9 @@
 <div data-ng-controller="RegisterCtrl">
-    <div ng-repeat="error in registerError">
+    <!--div ng-repeat="error in registerError">
         <div class="alert alert-danger animated fadeIn">{{error.msg}}</div>
     </div>
     <div class="alert alert-danger animated fadeIn" ng-show="usernameError">{{usernameError}}</div>
-    <div class="alert alert-danger animated fadeIn" ng-show="emailError">{{emailError}}</div>
+    <div class="alert alert-danger animated fadeIn" ng-show="emailError">{{emailError}}</div-->
 
     <div class="txt-center" style="margin-left: 15%;margin-right: 15%">
         <img style="border-radius: 50%;width: 50px;height: 50px" src="/theme/assets/img/upload.png">
@@ -16,25 +16,25 @@
             </div>
         </div>
 
-        <div class="row opacity-img" style="margin-left: 16%;">
-            <h3>Enter Your Personal Details</h3>
+        <div class="row" style="margin-left: 16%;text-align: left">
+            <h5>Enter Your Personal Details</h5>
         </div>
         <div class="row" style="margin-left: 15%;margin-right: 15%">
             <div class="col-lg-6">
                 <div class="form-group">
-                    <input type="text" class="form-control input-sm" placeholder="First Name">
+                    <input type="text" class="form-control input-sm" placeholder="First Name" ng-model="user.profile.firstname">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control input-sm" placeholder="Second Name">
+                    <input type="text" class="form-control input-sm" placeholder="Second Name" ng-model="user.profile.lastname">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control input-sm" placeholder="Email">
+                    <input type="text" class="form-control input-sm" placeholder="Email" ng-model="user.email">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control input-sm" placeholder="Date of Birth">
+                    <input type="text" class="form-control input-sm" placeholder="Date of Birth" ng-model="user.profile.dob">
                 </div>
                 <div class="form-group">
-                    <select class="form-control input-sm" placeholder="Gender">
+                    <select class="form-control input-sm" placeholder="Gender" ng-model="user.profile.gender">
                         <option>Gender</option>
                         <option>Male</option>
                         <option>Female</option>
@@ -44,23 +44,23 @@
 
             <div class="col-lg-6">
                 <div class="form-group">
-                    <select class="form-control input-sm" >
+                    <select class="form-control input-sm" ng-model="user.profile.address.country">
                         <option>Select country</option>
                         <option>USA</option>
                         <option>Canada</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control input-sm" placeholder="State">
+                    <input type="text" class="form-control input-sm" placeholder="State" ng-model="user.profile.address.state">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control input-sm" placeholder="Post Code">
+                    <input type="text" class="form-control input-sm" placeholder="Post Code" ng-model="user.profile.address.postcode">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control input-sm" placeholder="Phone Number">
+                    <input type="text" class="form-control input-sm" placeholder="Phone Number" ng-model="user.profile.phone">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control input-sm" placeholder="Next of Kin Phone Number">
+                    <input type="text" class="form-control input-sm" placeholder="Next of Kin Phone Number" ng-model="user.profile.kinphone">
                 </div>
             </div>
         </div>

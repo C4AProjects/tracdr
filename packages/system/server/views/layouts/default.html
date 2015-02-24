@@ -3,7 +3,7 @@
 {% include '../includes/head.html' %}
 
 <body data-ng-controller="ThemeController" ng-cloak class="ng-cloak" ng-class="state">
-    <div data-ng-include="'/system/views/header.html'" data-role="navigation"></div>
+    <div class="container" data-ng-include="'/system/views/header.html'" data-role="navigation"></div>
     {% if adminEnabled %}
     <section class="admin-menu">
         <div data-ng-include="'/mean-admin/views/index.html'"></div>
@@ -13,7 +13,7 @@
         {% block content %}{% endblock %}
     </section-->
 
-    <div class="row">
+    <div>
         <div  class="horizontal-bar"></div>
         {% block content %}{% endblock %}
     </div>
@@ -22,8 +22,13 @@
             <h3 style="color: #e9e9e9;">Social With Us</h3>
             <img src="/theme/assets/img/social_all.png" >
         </div>
+        <div class="footer tracdr-footer">
+            <div class="container">
+                <p>Copyright 2015 TracDr.</p>
+            </div>
+        </div>
     </div>
-    <div data-ng-include="'/system/views/footer.html'" ></div>
+    <!--div data-ng-include="'/system/views/footer.html'" ></div-->
     {% include '../includes/foot.html' %}
 </body>
 
