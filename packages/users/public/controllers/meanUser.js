@@ -53,7 +53,7 @@ angular.module('mean.users')
                 window.location = response.redirect;
               }
             } else {
-              $location.url('/');
+              $location.url('/dashboard');
             }
           })
           .error(function() {
@@ -92,6 +92,7 @@ angular.module('mean.users')
       };
 
       $scope.register = function() {
+        $scope.user.name = $scope.user.profile.lastname + ' ' + $scope.user.profile.firstname;
         $scope.usernameError = null;
         $scope.registerError = null;
         $http.post('/register', {
@@ -108,7 +109,7 @@ angular.module('mean.users')
             Global.user = $rootScope.user;
             Global.authenticated = !! $rootScope.user;
             $rootScope.$emit('loggedin');
-            $location.url('/');
+            $location.url('/dashboard');
           })
           .error(function(error) {
             // Error: authentication failed

@@ -159,6 +159,10 @@ footer p {
     width:100px;
 }
 
+.main-color {
+    background-color: #0078ba;
+    color: #ffffff;
+}
 .btn-grey{
     background-color: #cfced3;
     color: #ffffff;
@@ -186,4 +190,12 @@ footer p {
     padding-top: 3px;
     height: 145px;
     margin-bottom: 2px;
+}
+
+.list-group .list-group-item{
+    border-radius: 0;
+}
+
+.bg-primary{
+    background-color: #0078ba;
 }

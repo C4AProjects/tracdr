@@ -63,6 +63,7 @@ exports.session = function(req, res) {
  */
 exports.create = function(req, res, next) {
   var user = new User(req.body);
+    console.log(user);
 
   user.provider = 'local';
   
@@ -77,6 +78,7 @@ exports.create = function(req, res, next) {
 
   var errors = req.validationErrors();
   if (errors) {
+     // console.log(errors)
     return res.status(400).send(errors);
   }
 

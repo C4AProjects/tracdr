@@ -1,0 +1,62 @@
+<div class="progress row" style="margin-left: 16%;margin-right: 16%">
+    <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="4" style="width: 100%;">
+        4/4
+    </div>
+</div>
+
+<div class="row" style="margin-left: 16%;text-align: left">
+    <h5>Your Personal Details</h5>
+</div>
+<div class="row">
+    <div class="col-lg-6">
+        <b>First Name : </b>{{user.profile.firstname}}
+    </div>
+
+    <div class="col-lg-6">
+        <b>Last Name : </b>{{user.profile.lastname}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6">
+
+    </div>
+
+    <div class="col-lg-6">
+
+    </div>
+</div>
+
+<div class="row" style="margin-left: 16%;text-align: left">
+    <h5>Log In Information</h5>
+</div>
+<div class="row" style="margin-left: 15%;margin-right: 15%">
+    <div class="col-lg-6">
+        <div class="form-group">
+            <input type="text" class="form-control input-sm" placeholder="Username" ng-model="user.username">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control input-sm" placeholder="Password" ng-model="user.password">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control input-sm" placeholder="Confirm Password" ng-model="user.confirmPassword">
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div ng-repeat="error in registerError">
+            <div class="alert alert-danger animated fadeIn">{{error.msg}}</div>
+        </div>
+        <div class="alert alert-danger animated fadeIn" ng-show="usernameError">{{usernameError}}</div>
+        <div class="alert alert-danger animated fadeIn" ng-show="emailError">{{emailError}}</div>
+
+    </div>
+</div>
+
+<div class="row" style="margin-left: 15%;margin-right: 15%">
+    <div class="col-lg-12 text-center">
+        <br>
+        <button class="btn btn-default btn-grey" ui-sref='join.patient.step3'>BACK</button>
+        <button class="btn btn-primary btn-orange" ng-click="register()">REGISTER</button>
+    </div>
+</div>
+</div>

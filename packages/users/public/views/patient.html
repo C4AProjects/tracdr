@@ -1,9 +1,9 @@
 <div data-ng-controller="RegisterCtrl">
-    <!--div ng-repeat="error in registerError">
+    <div ng-repeat="error in registerError">
         <div class="alert alert-danger animated fadeIn">{{error.msg}}</div>
     </div>
     <div class="alert alert-danger animated fadeIn" ng-show="usernameError">{{usernameError}}</div>
-    <div class="alert alert-danger animated fadeIn" ng-show="emailError">{{emailError}}</div-->
+    <div class="alert alert-danger animated fadeIn" ng-show="emailError">{{emailError}}</div>
 
     <div class="txt-center" style="margin-left: 15%;margin-right: 15%">
         <img style="border-radius: 50%;width: 50px;height: 50px" src="/theme/assets/img/upload.png">
@@ -25,17 +25,17 @@
                     <input type="text" class="form-control input-sm" placeholder="First Name" ng-model="user.profile.firstname">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control input-sm" placeholder="Second Name" ng-model="user.profile.lastname">
+                    <input type="text" class="form-control input-sm" placeholder="Last Name" ng-model="user.profile.lastname">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control input-sm" placeholder="Email" ng-model="user.email">
+                    <input type="email" class="form-control input-sm" placeholder="Email" ng-model="user.email">
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control input-sm" placeholder="Date of Birth" ng-model="user.profile.dob">
                 </div>
                 <div class="form-group">
                     <select class="form-control input-sm" placeholder="Gender" ng-model="user.profile.gender">
-                        <option>Gender</option>
+                        <option></option>
                         <option>Male</option>
                         <option>Female</option>
                     </select>
@@ -45,7 +45,7 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <select class="form-control input-sm" ng-model="user.profile.address.country">
-                        <option>Select country</option>
+                        <option></option>
                         <option>USA</option>
                         <option>Canada</option>
                     </select>
