@@ -1,11 +1,11 @@
-<div data-ng-controller="DashboardController">
+<div>
     <div>
         <table style="width: 100%">
             <tr>
                 <td style="vertical-align: top; width:40%">
                     <ul class="list-group">
                         <li ng-click="selectAppointment(iteration._id)" class="list-group-item" ng-class="appointment._id==iteration._id?'main-color':''" ng-repeat="iteration in appointments">
-                            {{iteration.title}}
+                            {{iteration.title}} <small style="float: right; opacity: .5">{{iteration.creation}}</small>
                         </li>
                     </ul>
                 </td>

@@ -8,26 +8,26 @@ angular.module('mean.dashboard').controller('DashboardController', ['$scope', 'G
       };
 
       $scope.appointments = [
-          { _id: 1, 'title': 'Eye Check up with Dr. Abou', 'content': 'Eye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. Abou'},
-          { _id: 2, 'title': 'Dentist Check with Dr. Amadu', 'content': 'Dentist check with Dr. Amadu Dentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. Amadu'},
-          { _id: 3, 'title': 'Notification title here', 'content': 'Dentist check with Dr. Amadu Dentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. Amadu'},
-          { _id: 4, 'title': 'Eye Check up with Dr. Abou', 'content': 'Eye Check up with Dr. Abou Eye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. Abou'},
-          { _id: 5, 'title': 'Dentist Check with Dr. Amadu', 'content': 'Dentist check with Dr. Amadu'},
-          { _id: 6, 'title': 'Eye Check up with Dr. Abou', 'content': 'Eye Check up with Dr. Abou Eye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. Abou'},
-          { _id: 7, 'title': 'Dentist Check with Dr. Amadu', 'content': 'Dentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. Amadu'}
+          { _id: 1, 'title': 'Eye Check up with Dr. Abou', 'creation': '01/02/2015', 'content': 'Eye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. Abou'},
+          { _id: 2, 'title': 'Dentist Check with Dr. Amadu', 'creation': '01/02/2015',  'content': 'Dentist check with Dr. Amadu Dentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. Amadu'},
+          { _id: 3, 'title': 'Notification title here','creation': '01/02/2015', 'content': 'Dentist check with Dr. Amadu Dentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. Amadu'},
+          { _id: 4, 'title': 'Eye Check up with Dr. Abou','creation': '01/02/2015', 'content': 'Eye Check up with Dr. Abou Eye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. Abou'},
+          { _id: 5, 'title': 'Dentist Check with Dr. Amadu', 'creation': '01/02/2015', 'content': 'Dentist check with Dr. Amadu'},
+          { _id: 6, 'title': 'Eye Check up with Dr. Abou','creation': '01/02/2015', 'content': 'Eye Check up with Dr. Abou Eye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. Abou'},
+          { _id: 7, 'title': 'Dentist Check with Dr. Amadu','creation': '01/02/2015', 'content': 'Dentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. Amadu'}
       ];
 
       $scope.notifications = [
-          { _id: 1, 'title': 'Eye Check up with Dr. Abou', 'content': 'Eye Check up with Dr. Abou Eye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. Abou'},
-          { _id: 2, 'title': 'Dentist Check with Dr. Amadu', 'content': 'Dentist check with Dr. Amadu Dentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. Amadu'},
-          { _id: 3, 'title': 'Notification title here', 'content': 'Dentist check with Dr. Amadu Eye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. Abou'},
-          { _id: 5, 'title': 'Dentist Check with Dr. Amadu', 'content': 'Dentist check with Dr. Amadu Eye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. Abou'},
-          { _id: 6, 'title': 'Eye Check up with Dr. Abou', 'content': 'Eye Check up with Dr. Abou Eye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. Abou Eye Check up with Dr. Abou'},
-          { _id: 7, 'title': 'Dentist Check with Dr. Amadu', 'content': 'Dentist check with Dr. Amadu Dentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. Amadu'}
+          { _id: 1, 'title': 'Eye Check up with Dr. Abou','creation': '01/02/2015', 'content': 'Eye Check up with Dr. Abou Eye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. Abou'},
+          { _id: 2, 'title': 'Dentist Check with Dr. Amadu','creation': '01/02/2015', 'content': 'Dentist check with Dr. Amadu Dentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. Amadu'},
+          { _id: 3, 'title': 'Notification title here', 'creation': '01/02/2015','content': 'Dentist check with Dr. Amadu Eye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. Abou'},
+          { _id: 5, 'title': 'Dentist Check with Dr. Amadu','creation': '01/02/2015', 'content': 'Dentist check with Dr. Amadu Eye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. Abou'},
+          { _id: 6, 'title': 'Eye Check up with Dr. Abou','creation': '01/02/2015', 'content': 'Eye Check up with Dr. Abou Eye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. AbouEye Check up with Dr. Abou Eye Check up with Dr. Abou'},
+          { _id: 7, 'title': 'Dentist Check with Dr. Amadu','creation': '01/02/2015', 'content': 'Dentist check with Dr. Amadu Dentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. AmaduDentist check with Dr. Amadu'}
       ];
 
-      $scope.appointment = { _id: 2, 'title': 'Eye Check up with Dr. Abou', 'content': 'Eye Check up with Dr. Abou'};
-      $scope.notification = { _id: 3, 'title': 'Eye Check up with Dr. Abou', 'content': 'Eye Check up with Dr. Abou'};
+      $scope.appointment = { _id: 2, 'title': 'Eye Check up with Dr. Abou', 'content': 'Eye Check up with Dr. Abou',  'creation': '01/02/2015'};
+      $scope.notification = { _id: 3, 'title': 'Eye Check up with Dr. Abou', 'content': 'Eye Check up with Dr. Abou', 'creation': '01/02/2015'};
 
       $scope.selectAppointment = function(id){
           $scope.appointment = $filter('filter')($scope.appointments, {_id: id}, true)[0];
@@ -133,8 +133,8 @@ angular.module('mean.dashboard').controller('DashboardController', ['$scope', 'G
               height: 450,
               editable: true,
               header:{
-                  left: 'title',
-                  center: 'month agendaWeek',
+                  left: 'month agendaWeek',
+                  center: 'title',
                   right: 'today prev,next'
               },
               eventClick: $scope.alertOnEventClick,

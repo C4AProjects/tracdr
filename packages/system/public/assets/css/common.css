@@ -194,6 +194,7 @@ footer p {
 
 .list-group .list-group-item{
     border-radius: 0;
+    cursor: pointer;
 }
 
 .bg-primary{
