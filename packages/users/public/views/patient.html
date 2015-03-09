@@ -1,12 +1,28 @@
-<div data-ng-controller="RegisterCtrl">
-    <div ng-repeat="error in registerError">
+<div data-ng-controller="RegisterCtrl" flow-init
+     flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"
+     flow-files-submitted="$flow.upload()" >
+
+    <!--div ng-repeat="error in registerError">
         <div class="alert alert-danger animated fadeIn">{{error.msg}}</div>
-    </div>
-    <div class="alert alert-danger animated fadeIn" ng-show="usernameError">{{usernameError}}</div>
-    <div class="alert alert-danger animated fadeIn" ng-show="emailError">{{emailError}}</div>
+    </div-->
+    <!--div class="alert alert-danger animated fadeIn" ng-show="usernameError">{{usernameError}}</div>
+    <div class="alert alert-danger animated fadeIn" ng-show="emailError">{{emailError}}</div-->
 
     <div class="txt-center" style="margin-left: 15%;margin-right: 15%">
-        <img style="border-radius: 50%;width: 50px;height: 50px" src="/theme/assets/img/upload.png">
+        <div>
+            <a href="#" class="btn" flow-btn flow-attrs="{accept:'image/*'}">
+                <img style="border-radius: 50%;width: 50px;height: 50px"  flow-img="$flow.files[0]" ng-show="$flow.files.length"/>
+                <img style="border-radius: 50%;width: 50px;height: 50px" src="/theme/assets/img/upload.png"  ng-hide="$flow.files.length"/>
+            </a>
+
+            <div>
+                <!--a href="#" class="btn" ng-hide="$flow.files.length" flow-btn flow-attrs="{accept:'image/*'}">Select image</a>
+                <a href="#" class="btn" ng-show="$flow.files.length" flow-btn flow-attrs="{accept:'image/*'}">Change</a>
+                <a href="#" class="btn btn-danger" ng-show="$flow.files.length" ng-click="$flow.cancel()">
+                    Remove
+                </a-->
+            </div>
+        </div>
         <h4 class="txt-color">I'm a new Patient</h4>
     </div>
     <div ui-view>

@@ -5,6 +5,8 @@ var users = require('../controllers/users'),
     config = require('meanio').loadConfig();
 
 module.exports = function(MeanUser, app, auth, database, passport) {
+  app.route('/upload')
+      .get(users.upload);
 
   app.route('/logout')
     .get(users.signout);

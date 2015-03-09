@@ -12,6 +12,11 @@ var mongoose = require('mongoose'),
   templates = require('../template'),
 _ = require('lodash');
 
+exports.upload = function(req, res){
+    console.dir(req.query);
+    res.status(200);
+};
+
 /**
 * Set local user profile
 */

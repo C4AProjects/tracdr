@@ -15,7 +15,6 @@ angular.module('mean.users').config(['$meanStateProvider',
           $timeout(deferred.reject);
           $location.url('/dashboard');
         }
-
         // Not Authenticated
         else $timeout(deferred.resolve);
       });
