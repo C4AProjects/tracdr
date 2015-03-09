@@ -5,11 +5,15 @@
             <img src="/dashboard/assets/img/profile.png" class="img-profile">
           </div>
           <div class="col-xs-7">
-           <h5 class="profile-name">Firstname Lastname</h5>
+           <h5 class="profile-name">{{global.user.name}}</h5>
             <p>
-                <a>Account Settings</a>
+                <a href="#">
+                     Account Settings
+                </a>
                 <br>
-                <a>Sign out</a>
+                <a href="/logout">
+                    Log Out
+                </a>
             </p>
           </div>
           <div class="3">
@@ -18,39 +22,46 @@
       </div>
       <div class="row">
             <div class="col-xs-2 text-right">
-                <div class="btn bg-primary btn-dash btn-dash-orange">
-                    <a ui-sref="dashboard">
-                        <img src="/dashboard/assets/img/my-profile.png">
-                    </a>
-                    <h6>My profile</h6>
-                </div>
-                <div class="btn bg-primary btn-dash">
-                    <a ui-sref="dashboard.appointments">
-                        <img src="/dashboard/assets/img/appointments.png">
-                    </a>
-                    <h6>Appointments</h6>
-                </div>
-                <div class="btn bg-primary btn-dash">
-                    <a ui-sref="dashboard.notifications">
-                        <img src="/dashboard/assets/img/notifications.png">
-                    </a>
-                    <h6>Notifications</h6>
-                </div>
-                <div class="btn bg-primary btn-dash">
-                    <a ui-sref="dashboard.calendar">
-                        <img src="/dashboard/assets/img/calendar.png">
-                    </a>
-                    <h6>Calendar</h6>
-                </div>
+                <a ui-sref="dashboard" ng-click="active='profile'">
+                    <div class="btn bg-primary btn-dash" ng-class="active=='profile'?'btn-dash-orange':''">
+                            <img src="/dashboard/assets/img/my-profile.png">
+                        <h6>My profile</h6>
+                    </div>
+                </a>
+                <a ui-sref="dashboard.appointments" ng-click="active='appointments'">
+                    <div class="btn bg-primary btn-dash" ng-class="active=='appointments'?'btn-dash-orange':''">
+                            <img src="/dashboard/assets/img/appointments.png">
+                        <h6>Appointments</h6>
+                    </div>
+                </a>
+                <a ui-sref="dashboard.notifications" ng-click="active='notifications'">
+                    <div class="btn bg-primary btn-dash" ng-class="active=='notifications'?'btn-dash-orange':''">
+                            <img src="/dashboard/assets/img/notifications.png">
+                        <h6>Notifications</h6>
+                    </div>
+                </a>
+                <a ui-sref="dashboard.calendar" ng-click="active='calendar'">
+                    <div class="btn bg-primary btn-dash" ng-class="active=='calendar'?'btn-dash-orange':''">
+                            <img src="/dashboard/assets/img/calendar.png">
+                        <h6>Calendar</h6>
+                    </div>
+                </a>
             </div>
-            <div class="col-xs-10" ui-view>
+            <div class="col-xs-10" data-ng-controller="DashboardController" ui-view>
                 <div class="container">
-                   <div class="row" style="min-height:200px">
-                       <div class="col-xs-4">
-
+                   <div class="row" style="min-height:200px;width:60%;">
+                       <div class="col-sm-2 text-right">
+                           <img src="/dashboard/assets/img/profile.png" class="img-profile">
                        </div>
-                       <div class="col-xs-8">
-
+                       <div class="col-sm-10">
+                           <div class="row">
+                               <div class="col-md-3 text-right">
+                                   Full name
+                               </div>
+                               <div class="col-md-9 text-right">
+                                    {{global.user.name}}
+                               </div>
+                           </div>
                        </div>
                    </div>
                 </div>

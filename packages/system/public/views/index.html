@@ -11,11 +11,12 @@
             </h6>
         </span>
         <div class="main-form main-form-tracdr" ng-controller="AuthCtrl" ng-class="{'register-form' : global.registerForm}">
+            <span ng-controller="HeaderController" data-ng-hide="global.authenticated">
+                <div class="login-form__left" >
+                    <div data-ng-include="'/users/views/login.html'" ></div>
 
-            <div class="login-form__left">
-                <div data-ng-include="'/users/views/login.html'"></div>
-
-            </div>
+                </div>
+            </span>
         </div>
 
     </div>

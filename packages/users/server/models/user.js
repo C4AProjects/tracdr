@@ -96,10 +96,14 @@ var UserSchema = new Schema({
       state: String
     }
   },
+  doctor: {
+      type: Schema.Types.ObjectId,
+      ref: 'Doctor'
+  }/*,
   doctors: [{
     type: Schema.Types.ObjectId,
     ref: 'Doctor'
-  }]
+  }]*/
 });
 
 /**

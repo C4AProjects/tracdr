@@ -10,7 +10,7 @@
 }
 
 .profile-name{
-    color: #005991;
+    color: #0078ba;
     font-weight: bold;
 }
 
@@ -32,4 +32,26 @@
 .btn-dash-orange{
     background-color: #ff8c27;
     border-color: #ff8c27;
+}
+
+.fc-border-separate tr.fc-last th {
+    border-bottom-width: 1px;
+    background-color: #0078ba;
+    height: 35px;
+    vertical-align: middle;
+    color: #ffffff;
+}
+
+.fc-event-title {
+    height: 45px;
+}
+
+/*.fc-state-default.fc-corner-left {
+    border-radius: 0;
+    background-color: #ff8c27;
+    color: #ffffff;
+}*/
+
+.fc-header-title {
+    color: #0078ba;
 }

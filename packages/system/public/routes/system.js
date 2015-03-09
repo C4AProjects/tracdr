@@ -52,11 +52,32 @@ angular.module('mean.system').config(['$meanStateProvider', '$urlRouterProvider'
     // For unmatched routes:
     $urlRouterProvider.otherwise('/');
 
+      var checkLoggedOut = function($q, $timeout, $http, $location) {
+          // Initialize a new promise
+          var deferred = $q.defer();
+
+          // Make an AJAX call to check if the user is logged in
+          $http.get('/loggedin').success(function(user) {
+              // Authenticated
+              if (user !== '0') {
+                  $timeout(deferred.reject);
+                  $location.url('/dashboard');
+              }
+
+              // Not Authenticated
+              else $timeout(deferred.resolve);
+          });
+
+          return deferred.promise;
+      };
     // states for my app
     $meanStateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'system/views/index.html'
+        templateUrl: 'system/views/index.html',
+        resolve: {
+            loggedin: checkLoggedOut
+        }
       });
   }
 ]).config(['$locationProvider',

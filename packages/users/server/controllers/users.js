@@ -12,6 +12,11 @@ var mongoose = require('mongoose'),
   templates = require('../template'),
 _ = require('lodash');
 
+exports.upload = function(req, res){
+    console.dir(req.query);
+    res.status(200);
+};
+
 /**
 * Set local user profile
 */
@@ -63,6 +68,7 @@ exports.session = function(req, res) {
  */
 exports.create = function(req, res, next) {
   var user = new User(req.body);
+    console.log(user);
 
   user.provider = 'local';
   
@@ -77,6 +83,7 @@ exports.create = function(req, res, next) {
 
   var errors = req.validationErrors();
   if (errors) {
+     // console.log(errors)
     return res.status(400).send(errors);
   }
 

@@ -13,9 +13,8 @@ angular.module('mean.users').config(['$meanStateProvider',
         // Authenticated
         if (user !== '0') {
           $timeout(deferred.reject);
-          $location.url('/');
+          $location.url('/dashboard');
         }
-
         // Not Authenticated
         else $timeout(deferred.resolve);
       });
@@ -47,6 +46,20 @@ angular.module('mean.users').config(['$meanStateProvider',
       .state('join.patient.step2', {
             url: '/2',
             templateUrl: 'users/views/patient-step2.html',
+            resolve: {
+                loggedin: checkLoggedOut
+            }
+      })
+      .state('join.patient.step3', {
+            url: '/3',
+            templateUrl: 'users/views/patient-step3.html',
+            resolve: {
+                loggedin: checkLoggedOut
+            }
+      })
+      .state('join.patient.step4', {
+            url: '/4',
+            templateUrl: 'users/views/patient-step4.html',
             resolve: {
                 loggedin: checkLoggedOut
             }
