@@ -19,6 +19,22 @@ module.exports.update=function(id,doc,cb){
         else cb(null, usr)
     });
 }
+module.exports.get=function(id,cb){
+
+    APP.DB.DOCTOR.findOne({ _id: id }, function (er, usr){
+
+        if (er ) cb("ERROR finding Doctor :"+er)
+        else cb(null, usr)
+    });
+}
+module.exports.delete=function(id,cb){
+
+    APP.DB.DOCTOR.findOne({ _id: id }, function (er, usr){
+
+        if (er ) cb("ERROR deleting Doctor :"+er)
+        else {  usr.remove(); cb(null, usr)}
+    });
+}
 
 module.exports.getList=function(cb){
 
