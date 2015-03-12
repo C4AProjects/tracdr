@@ -42,6 +42,15 @@ app.get('/', function(req, res){
 INFO("Loading Dorctor Route")
 require('./route/doctorRoute')(app)
 
+INFO("Loading Patient Route")
+require('./route/patientRoute')(app)
+
+INFO("Loading Notification Route")
+require('./route/notificationRoute')(app)
+
+INFO("Loading Appointment Route")
+require('./route/appointmentRoute')(app)
+
 app.listen(4000, function(){
     INFO('listening on *:4000');
 });

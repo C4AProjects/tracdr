@@ -32,7 +32,8 @@ module.exports.delete=function(id,cb){
     APP.DB.DOCTOR.findOne({ _id: id }, function (er, usr){
 
         if (er ) cb("ERROR deleting Doctor :"+er)
-        else {  usr.remove(); cb(null, usr)}
+        else if (usr) {  usr.remove(); cb(null, usr)}
+        else {   cb( "Doctor Not Found")}
     });
 }
 

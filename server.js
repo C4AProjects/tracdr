@@ -13,7 +13,9 @@ APP.LOGGER = require("./api/api");
 DEBUG("Loading Models....")
 APP.DB={};
 require("./api/models/doctor")(APP.DB);
-
+require("./api/models/patient")(APP.DB);
+require("./api/models/notification")(APP.DB);
+require("./api/models/appointment")(APP.DB);
 
 DEBUG("loading DB Module...")
 require('./api/utils/connexionUtils')(APP.DB);
