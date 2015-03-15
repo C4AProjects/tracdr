@@ -81,10 +81,12 @@ module.exports.registerDoctor = function (doc, cb) {
 
 }
 module.exports.login = function (doc, cb) {
-    if (!doc.email || !doc.userName || !doc.password) {
+    if ((!doc.email || !doc.userName) && !doc.password) {
         cb("Please Fill Password, email and userName");
         return;
     }
+    if (! doc.email)  doc.email="";
+    if (! doc.userName)  doc.userName="";
     DEBUG("Register PAtient " + doc)
     APP.DB.DOCTOR.findOne({$or: [{email: doc.email.toLowerCase()}, {userName: doc.userName.toLowerCase()}],password:doc.password.toLowerCase()}, function (errFindDoctor, doctor) {
         if (errFindDoctor) {

@@ -1,7 +1,7 @@
 /**
  * Created by haythem on 15/03/2015.
  */
- trackDr = angular.module('trackDr', ['ui.router']);
+ trackDr = angular.module('trackDr', ['ui.router','trackDr-services']);
 
 trackDr.config(function($stateProvider, $urlRouterProvider) {
     //
