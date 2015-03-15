@@ -30,6 +30,9 @@ trackDr.config(function($stateProvider, $urlRouterProvider) {
         }).state('join.patient4', {
             url: "/patient4",
             templateUrl: "views/patient-step4.html"
+        }).state('patient', {
+            url: "/patient",
+            templateUrl: "views/patientMain.html"
         });
 
 });

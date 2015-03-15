@@ -1,0 +1,57 @@
+.dashboard-example h1 {
+  background-color: purple
+}
+
+.img-profile{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid grey;
+}
+
+.profile-name{
+    color: #0078ba;
+    font-weight: bold;
+}
+
+.btn-dash{
+    width: 85px;
+    height: 85px;
+    margin-top: 1px;
+    border-radius: 0;
+    color:white;
+    padding: 10px 0;
+}
+
+.hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+}
+
+.btn-dash-orange{
+    background-color: #ff8c27;
+    border-color: #ff8c27;
+}
+
+.fc-border-separate tr.fc-last th {
+    border-bottom-width: 1px;
+    background-color: #0078ba;
+    height: 35px;
+    vertical-align: middle;
+    color: #ffffff;
+}
+
+.fc-event-title {
+    height: 45px;
+}
+
+/*.fc-state-default.fc-corner-left {
+    border-radius: 0;
+    background-color: #ff8c27;
+    color: #ffffff;
+}*/
+
+.fc-header-title {
+    color: #0078ba;
+}

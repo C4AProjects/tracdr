@@ -15,7 +15,7 @@ patient_schema = new Schema({
     location: String,
     phone: String,
     gender : String,
-    dateOfBirth:Date,
+    dateOfBirth:String,//Date
     created_date: {type: Date, default: Date.now},
     modified_date: {type: Date, default: Date.now}
 })
