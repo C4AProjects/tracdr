@@ -7,8 +7,7 @@ APP.CONFIG=require("./config/config").loadConfig();
 APP.LOGGER = require("./api/logger/logger");
 APP.LOGGER.init(APP.CONFIG.logger);
 
-INFO("Starting API")
-APP.LOGGER = require("./api/api");
+
 
 DEBUG("Loading Models....")
 APP.DB={};
@@ -19,4 +18,7 @@ require("./api/models/appointment")(APP.DB);
 
 DEBUG("loading DB Module...")
 require('./api/utils/connexionUtils')(APP.DB);
+
+INFO("Starting API")
+require("./api/api");
 APP.DB.connect(APP.CONFIG.DB);

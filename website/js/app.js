@@ -18,15 +18,18 @@ trackDr.config(function($stateProvider, $urlRouterProvider) {
             url: "/join",
             templateUrl: "views/join.html"
         })
-        .state('state2', {
-            url: "/state2",
-            templateUrl: "partials/state2.html"
-        })
-        .state('state2.list', {
-            url: "/list",
-            templateUrl: "partials/state2.list.html",
-            controller: function($scope) {
-                $scope.things = ["A", "Set", "Of", "Things"];
-            }
+        .state('join.patient', {
+            url: "/patient",
+            templateUrl: "views/patient.html"
+        })  .state('join.patient2', {
+            url: "/patient2",
+            templateUrl: "views/patient-step2.html"
+        })  .state('join.patient3', {
+            url: "/patient3",
+            templateUrl: "views/patient-step3.html"
+        }).state('join.patient4', {
+            url: "/patient4",
+            templateUrl: "views/patient-step4.html"
         });
+
 });

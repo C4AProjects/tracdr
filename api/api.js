@@ -28,7 +28,7 @@ app.use(session({ resave: true,
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(multer());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static("website"));
 app.use(compress());
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -37,7 +37,7 @@ app.use(function(req, res, next) {
     next();
 });
 app.get('/', function(req, res){
-    res.send("Welcome to trackDr Api");
+    res.sendfile("website/index.html");
 });
 INFO("Loading Dorctor Route")
 require('./route/doctorRoute')(app)

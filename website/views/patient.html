@@ -1,0 +1,88 @@
+
+
+
+<div class="txt-center" style="margin-left: 15%;margin-right: 15%">
+
+
+    <a href="#" class="btn" flow-btn flow-attrs="{accept:'image/*'}">
+        <img style="border-radius: 50%;width: 50px;height: 50px"  flow-img="$flow.files[0]" ng-show="$flow.files.length"/>
+        <img style="border-radius: 50%;width: 50px;height: 50px" src="img/upload.png"  ng-hide="$flow.files.length"/>
+    </a>
+    <h4 class="txt-color">I'm a new Patient</h4>
+    </div>
+<div flow-init
+     flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"
+     flow-files-submitted="$flow.upload()" >
+
+    <!--div ng-repeat="error in registerError">
+        <div class="alert alert-danger animated fadeIn">{{error.msg}}</div>
+    </div-->
+    <!--div class="alert alert-danger animated fadeIn" ng-show="usernameError">{{usernameError}}</div>
+    <div class="alert alert-danger animated fadeIn" ng-show="emailError">{{emailError}}</div-->
+
+
+
+        <div class="progress row" style="margin-left: 16%;margin-right: 16%">
+            <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="4" style="width: 25%;">
+                1/4
+            </div>
+        </div>
+
+        <div class="row" style="margin-left: 16%;text-align: left">
+            <h5>Enter Your Personal Details</h5>
+        </div>
+        <div class="row" style="margin-left: 15%;margin-right: 15%">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <input type="text" class="form-control input-sm" placeholder="First Name" ng-model="user.profile.firstname">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control input-sm" placeholder="Last Name" ng-model="user.profile.lastname">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control input-sm" placeholder="Email" ng-model="user.email">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control input-sm" placeholder="Date of Birth" ng-model="user.profile.dob">
+                </div>
+                <div class="form-group">
+                    <select class="form-control input-sm" placeholder="Gender" ng-model="user.profile.gender">
+                        <option></option>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <select class="form-control input-sm" ng-model="user.profile.address.country">
+                        <option></option>
+                        <option>USA</option>
+                        <option>Canada</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control input-sm" placeholder="State" ng-model="user.profile.address.state">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control input-sm" placeholder="Post Code" ng-model="user.profile.address.postcode">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control input-sm" placeholder="Phone Number" ng-model="user.profile.phone">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control input-sm" placeholder="Next of Kin Phone Number" ng-model="user.profile.kinphone">
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-left: 15%;margin-right: 15%">
+            <div class="col-lg-12 text-center">
+                <br>
+                <button class="btn btn-default btn-grey" ui-sref='join'>BACK</button>
+                <button class="btn btn-primary btn-orange" ui-sref='join.patient2'>NEXT</button>
+            </div>
+        </div>
+
+</div>
