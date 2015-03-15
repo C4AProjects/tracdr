@@ -16,7 +16,8 @@ trackDr.config(function($stateProvider, $urlRouterProvider) {
         })
         .state('join', {
             url: "/join",
-            templateUrl: "views/join.html"
+            templateUrl: "views/join.html",
+            controller:"joinCtrl"
         })
         .state('join.patient', {
             url: "/patient",

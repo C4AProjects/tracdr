@@ -28,6 +28,20 @@ angular.module('trackDr-services', [])
                     // Erase the token if the user fails to log in
 
                     delete $window.sessionStorage.token; error();})
+            },
+            registerPAtient: function (user, success, error) {
+
+                $http.post(serverApi + '/register/patient/', user).success(function (res) {
+                    if (!res.error) {
+                        changeUser(res);
+                        $window.sessionStorage.token = res.token;
+                        window.localStorage.setItem("user", JSON.stringify(res));
+                        success(res);
+                    }
+                    else {
+                        error(res);
+                    }
+                }).error(error);
             }
 
 
