@@ -11,6 +11,8 @@
 "serve-favicon":"*",
     "method-override":"*",
     "express-session":"*",
+    "express-jwt":"*",
+    "jsonwebtoken":"*",
     "body-parser":"*",
     "multer":"*",
 

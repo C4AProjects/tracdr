@@ -7,10 +7,11 @@ var mongoose = require('mongoose'),
     ObjectId = Schema.ObjectId;
 
 patient_schema = new Schema({
-    email: String,
+    email: {type:String,lowercase: true, trim: true},
     firstName: String,
     lastName: String,
-
+    userName: {type:String,lowercase: true, trim: true},
+    password:{type:String,lowercase: true, trim: true},
     location: String,
     phone: String,
     gender : String,

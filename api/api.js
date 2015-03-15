@@ -13,7 +13,9 @@ var express = require('express');
 var path = require('path');
 
 var favicon = require('serve-favicon');
-
+var  expressJwt = require('express-jwt');
+ jwt = require('jsonwebtoken');
+secret="trackDr@2015"
 var methodOverride = require('method-override');
 var session = require('express-session');
 var bodyParser = require('body-parser');
@@ -22,9 +24,9 @@ var errorHandler = require('errorhandler');
 var compress = require('compression');
 var app = express();
 app.use(methodOverride());
-app.use(session({ resave: true,
+/*app.use(session({ resave: true,
     saveUninitialized: true,
-    secret: 'trackDR@2015' }));
+    secret: 'trackDR@2015' }));*/
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(multer());
@@ -36,9 +38,26 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
+app.use('/api/secured', expressJwt({secret:  secret}));
+app.use(function(err, req, res, next){
+    if (err.constructor.name === 'UnauthorizedError') {
+        res.send(401, 'Unauthorized');
+    }
+});
+
 app.get('/', function(req, res){
     res.sendfile("website/index.html");
 });
+
+app.get('/api', function(req, res){
+    res.send("trackDr Api v1.0");
+});
+
+
+INFO("Loading Auth Route")
+require('./route/authRoute')(app)
+
+
 INFO("Loading Dorctor Route")
 require('./route/doctorRoute')(app)
 

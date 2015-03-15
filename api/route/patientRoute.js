@@ -6,7 +6,7 @@
  */
 var patientCtrl=require("../controllers/patientController")
 module.exports = function (app) {
-    app.post("/patient", function(req, res){
+    app.post("/api/secured/patient", function(req, res){
         DEBUG("Adding patient")
         patientCtrl.add(req.body,function(err,doc){
             if (err) res.send({error:err})
@@ -16,7 +16,7 @@ module.exports = function (app) {
 
     });
 
-    app.get("/patient", function(req, res){
+    app.get("/api/secured/patient", function(req, res){
         DEBUG("Getting All patient")
         patientCtrl.getList(function(err,doc){
             if (err) res.send({error:err})
@@ -25,7 +25,7 @@ module.exports = function (app) {
         })
 
     });
-    app.get("/patient/:ID", function(req, res){
+    app.get("/api/secured/patient/:ID", function(req, res){
         DEBUG("Getting a patient")
         patientCtrl.get(req.params.ID,function(err,doc){
             if (err) res.send({error:err})
@@ -34,7 +34,7 @@ module.exports = function (app) {
         })
 
     });
-    app.put("/patient/:ID", function(req, res){
+    app.put("/api/secured/patient/:ID", function(req, res){
         DEBUG("Updating patient")
         patientCtrl.update(req.params.ID,req.body,function(err,doc){
             if (err) res.send({error:err})
@@ -43,7 +43,7 @@ module.exports = function (app) {
         })
 
     });
-    app.delete("/patient/:ID", function(req, res){
+    app.delete("/api/secured/patient/:ID", function(req, res){
         DEBUG("Deleting patient")
         patientCtrl.delete(req.params.ID,function(err,doc){
             if (err) res.send({error:err})

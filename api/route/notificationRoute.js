@@ -4,7 +4,7 @@
  */
 var notifCtrl=require("../controllers/notificationController")
 module.exports = function (app) {
-    app.post("/notification", function(req, res){
+    app.post("/api/secured/notification", function(req, res){
         DEBUG("Adding notification")
         notifCtrl.add(req.body,function(err,doc){
             if (err) res.send({error:err})
@@ -14,7 +14,7 @@ module.exports = function (app) {
 
     });
 
-    app.get("/notification", function(req, res){
+    app.get("/api/secured/notification", function(req, res){
         DEBUG("Getting All notification")
         notifCtrl.getList(function(err,doc){
             if (err) res.send({error:err})
@@ -23,7 +23,7 @@ module.exports = function (app) {
         })
 
     });
-    app.get("/notification/:ID", function(req, res){
+    app.get("/api/secured/notification/:ID", function(req, res){
         DEBUG("Getting a notification")
         notifCtrl.get(req.params.ID,function(err,doc){
             if (err) res.send({error:err})
@@ -32,7 +32,7 @@ module.exports = function (app) {
         })
 
     });
-    app.put("/notification/:ID", function(req, res){
+    app.put("/api/secured/notification/:ID", function(req, res){
         DEBUG("Updating notification")
         notifCtrl.update(req.params.ID,req.body,function(err,doc){
             if (err) res.send({error:err})
@@ -41,7 +41,7 @@ module.exports = function (app) {
         })
 
     });
-    app.delete("/notification/:ID", function(req, res){
+    app.delete("/api/secured/notification/:ID", function(req, res){
         DEBUG("Deleting notification")
         notifCtrl.delete(req.params.ID,function(err,doc){
             if (err) res.send({error:err})
