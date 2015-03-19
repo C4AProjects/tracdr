@@ -11,7 +11,8 @@
     "angular-bootstrap": "0.11.0",
     "angular-ui-router": "#master",
     "angular-ui-calendar": "~0.8.1",
-    "ng-flow": "~2.6.0"
+    "ng-flow": "~2.6.0",
+    "fontawesome": "~4.3.0"
   },
   "resolutions": {
     "jquery": "~2.x",
