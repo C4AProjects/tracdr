@@ -18,7 +18,7 @@
                 </p>
             </div>
             <div class="3">
-                <input type="search" placeholder="Search">
+                <input type="search" placeholder="Search" ng-model="dashboard.search">
             </div>
         </div>
         <div class="row">
@@ -63,7 +63,7 @@
                                 <tr>
                                     <td style="vertical-align: top; width:40%">
                                         <ul class="list-group">
-                                            <li ng-click="selectPatient(iteration._id)" class="list-group-item" ng-class="appointment._id==iteration._id?'main-color':''" ng-repeat="iteration in patients">
+                                            <li ng-click="selectPatient(iteration._id)" class="list-group-item" ng-class="appointment._id==iteration._id?'main-color':''" ng-repeat="iteration in patients | filter:dashboard.search">
                                                 {{iteration.userName}} <small style="float: right; opacity: .5">{{iteration.modified_date| date : 'medium'}}</small>
                                             </li>
                                         </ul>

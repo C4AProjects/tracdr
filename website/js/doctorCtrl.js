@@ -2,7 +2,8 @@
  * Created by haythem on 20/03/2015.
  */
 trackDr.controller('doctorCtrl', function ($scope,Auth,$filter,Patients,Appointments,uiCalendarConfig, $modal){
-    $scope.active='patients'
+    $scope.active='patients',
+        $scope.dashboard={};
     $scope.user = Auth.getUser().doctor;
 
         Patients.getAll(function(res,err){
