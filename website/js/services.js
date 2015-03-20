@@ -50,11 +50,7 @@ angular.module('trackDr-services', [])
         };
     })   .factory('Patients', function ($http,$window) {
 
-
-
-
-
-        return {
+    return {
 
             getAll: function (success, error) {
 
@@ -68,6 +64,50 @@ angular.module('trackDr-services', [])
                     }
                 }).error(function (data, status, headers, config) {
                    })
+            }
+
+
+        };
+    }) .factory('Appointments', function ($http,$window) {
+
+        return {
+
+            getAll: function (success, error) {
+
+                $http.get(serverApi + '/secured/appointment/').success(function (res) {
+                    if (!res.error) {
+
+                        success(res);
+                    }
+                    else {
+                        error(res);
+                    }
+                }).error(function (data, status, headers, config) {
+                })
+            }, update: function (id,app,success, error) {
+
+                $http.put(serverApi + '/secured/appointment/'+id,app).success(function (res) {
+                    if (!res.error) {
+
+                        success(res);
+                    }
+                    else {
+                        error(res);
+                    }
+                }).error(function (data, status, headers, config) {
+                })
+            }, add: function (app,success, error) {
+
+                $http.post(serverApi + '/secured/appointment/',app).success(function (res) {
+                    if (!res.error) {
+
+                        success(res);
+                    }
+                    else {
+                        error(res);
+                    }
+                }).error(function (data, status, headers, config) {
+                })
             }
 
 

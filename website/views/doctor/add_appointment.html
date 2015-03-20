@@ -1,0 +1,41 @@
+
+    <div class="modal-header">
+        <h3 class="modal-title">Add New Appointment</h3>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-lg-6">
+                <h4>Selecte a patient: {{patient.userName}}</h4>
+                <ul class="list-group">
+                    <li ng-click="selectPatient(iteration._id)" class="list-group-item" ng-class="appointment._id==iteration._id?'main-color':''" ng-repeat="iteration in patients">
+                        {{iteration.userName}} <small style="float: right; opacity: .5">{{iteration.modified_date| date : 'medium'}}</small>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <h4>Day: {{date| date : 'shortDate'}}</h4>
+                <h4>From:</h4>
+                <timepicker ng-model="modal.start"  hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
+                <h4>To:</h4>
+                <timepicker ng-model="modal.end"  hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
+
+            </div>
+
+        </div>
+<div>
+    <div class="input-wrapper">
+        <input required id="email_block" name="subject" placeholder="Subject" ng-model="modal.subject">
+
+
+    </div>
+    <br>
+    <div class="input-wrapper">
+        <textarea required id="password_block" name="details" placeholder="Details" ng-model="modal.details" style="width: 100%"></textarea>
+
+    </div>
+</div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="ok()">OK</button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>

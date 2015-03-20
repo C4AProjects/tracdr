@@ -19,6 +19,8 @@ module.exports = function (backend) {
         _doctor: {type: Schema.Types.ObjectId, ref: 'doctor'},
         details: String,
         subject: String,
+        startTime:{type: Date},
+        endTime:{type: Date},
         created_date: {type: Date, default: Date.now},
         modified_date: {type: Date, default: Date.now}
     })

@@ -8,8 +8,9 @@ trackDr.controller('loginCtrl', function ($scope,Auth,$state){
     $scope.login = function () {
         $scope.loginError={}
         Auth.login($scope.user, function (res) {
-
-            $state.go("patient")
+if (res.doctor)
+            $state.go("doctor")
+            else if (res.patient)   $state.go("patient")
         },    function (err) {
             $scope.loginError={}
             $scope.loginError.errorMessage=err.error;
