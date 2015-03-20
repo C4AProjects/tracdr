@@ -33,7 +33,12 @@ trackDr.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: "views/patient-step4.html"
         }).state('patient', {
             url: "/patient",
-            templateUrl: "views/patientMain.html"
-        });
+            templateUrl: "views/patientMain.html",
+            controller:"patientCtrl"
+        }).state('doctor', {
+        url: "/doctor",
+        templateUrl: "views/doctor/doctor_dashboard.html",
+            controller:"doctorCtrl"
+    });
 
 });

@@ -42,6 +42,32 @@ angular.module('trackDr-services', [])
                         error(res);
                     }
                 }).error(error);
+            },getUser:function(){
+                return user;
+            }
+
+
+        };
+    })   .factory('Patients', function ($http,$window) {
+
+
+
+
+
+        return {
+
+            getAll: function (success, error) {
+
+                $http.get(serverApi + '/secured/patient/').success(function (res) {
+                    if (!res.error) {
+
+                        success(res);
+                    }
+                    else {
+                        error(res);
+                    }
+                }).error(function (data, status, headers, config) {
+                   })
             }
 
 

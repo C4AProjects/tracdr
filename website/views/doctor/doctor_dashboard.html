@@ -1,0 +1,100 @@
+<div class="hr">
+    <div class="container" >
+        <div class="row">
+            <div class="col-xs-2 text-right">
+                <img src="img/profile.png" class="img-profile">
+            </div>
+            <div class="col-xs-7">
+                <h5 class="profile-name">cc{{user.firstName}}</h5>
+                <p>
+                    <a href="#">
+                        Account Settings
+                    </a>
+                    <br>
+                    <a href="/">
+                        Log Out
+                    </a>
+                </p>
+            </div>
+            <div class="3">
+                <input type="search" placeholder="Search">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 text-right">
+                <a ui-sref="dashboard.appointments" ng-click=" active='patients'">
+                    <div class="btn bg-primary btn-dash" ng-class="active=='appointments'?'btn-dash-orange':''">
+                        <img src="img/patient.png">
+                        <h6>Patients</h6>
+                    </div>
+                </a>
+                <a ui-sref="dashboard.appointments" ng-click=" active='appointments'">
+                    <div class="btn bg-primary btn-dash" ng-class="active=='appointments'?'btn-dash-orange':''">
+                        <img src="img/appointments.png">
+                        <h6>Appointments</h6>
+                    </div>
+                </a>
+                <a ui-sref="dashboard.notifications" ng-click=" active='notifications'">
+                    <div class="btn bg-primary btn-dash" ng-class="active=='notifications'?'btn-dash-orange':''">
+                        <img src="img/notifications.png">
+                        <h6>Notifications</h6>
+                    </div>
+                </a>
+                <a ui-sref="dashboard.calendar" ng-click="active='calendar'">
+                    <div class="btn bg-primary btn-dash" ng-class="active=='calendar'?'btn-dash-orange':''">
+                        <img src="img/calendar.png">
+                        <h6>Calendar</h6>
+                    </div>
+                </a>
+                <a ui-sref="dashboard" ng-click=" active='profile'">
+                    <div class="btn bg-primary btn-dash" ng-class="active=='profile'?'btn-dash-orange':''">
+                        <img src="img/my-profile.png">
+                        <h6>My profile</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-10" >
+                <div class="container">
+                    <div>
+                        <div>
+                            <table style="width: 100%">
+                                <tr>
+                                    <td style="vertical-align: top; width:40%">
+                                        <ul class="list-group">
+                                            <li ng-click="selectAppointment(iteration._id)" class="list-group-item" ng-class="appointment._id==iteration._id?'main-color':''" ng-repeat="iteration in patients">
+                                                {{iteration.userName}} <small style="float: right; opacity: .5">{{iteration.modified_date| date : 'medium'}}</small>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td style="vertical-align: top">
+                                        <ul class="list-group">
+                                            <li class="list-group-item ">
+                                                <b class="txt-color">{{patient.email}}</b>
+                                            </li>
+                                            <li class="list-group-item" style="min-height: 250px">
+
+                                                <div class="col-lg-4">
+                                                    <img src="img/join-patient.png">
+                                                </div>
+                                                <div class="col-lg-8">
+
+                                                    <b>First Name:</b> {{patient.firstName}}<br>
+                                                    <b>LAst Name:</b> {{patient.lastName}}<br>
+                                                        <b>Email:</b> {{patient.email}}
+                                                </div>
+
+                                                <br>
+
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

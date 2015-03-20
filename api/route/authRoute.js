@@ -24,7 +24,7 @@ module.exports = function (app) {
             if (err) res.send({error:err})
             else{
                 var token = jwt.sign({userId: "2014", date:new Date()}, secret);
-                res.send({success:true,patient:doc,role:"patient",token:token})
+                res.send({success:true,doctor:doc,role:"doctor",token:token})
             }
 
         })
