@@ -70,8 +70,8 @@ require('./route/notificationRoute')(app)
 INFO("Loading Appointment Route")
 require('./route/appointmentRoute')(app)
 
-app.listen(4000, function(){
-    INFO('listening on *:4000');
+app.listen(3000, function(){
+    INFO('listening on *:3000');
 });
 
 
