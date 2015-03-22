@@ -45,6 +45,9 @@ trackDr.config(function($stateProvider, $urlRouterProvider) {
         }).state('doctor.calendar', {
             url: "/calendar",
             templateUrl: "views/doctor/doctor_calendar.html"
+        }).state('doctor.notifications', {
+            url: "/notification",
+            templateUrl: "views/doctor/notifications.html"
         });
 
 });

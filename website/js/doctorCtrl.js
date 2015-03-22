@@ -107,7 +107,19 @@ if(event){
 
     Appointments.add(event,function(res){
         console.log("added");
+        $scope.appointments.push(res.appointment)
 
+
+        $scope.events.events.push({
+            title:res.appointment.subject,
+            start: res.appointment.startTime,
+            end:  res.appointment.endTime,
+            details:  res.appointment.details,
+
+            eventId:res.appointment._id,
+            className: ['openSesame'],
+            allDay: false
+        });
 
     },function(err){alert(err)})
 
@@ -148,6 +160,15 @@ if(event){
         $modalInstance.dismiss('cancel');
     };
     $scope.ok = function () {
+
+        $scope.modal.start.setFullYear(obj.date.getFullYear())
+        $scope.modal.start.setMonth(obj.date.getMonth())
+        $scope.modal.start.setDate(obj.date.getDate())
+
+        $scope.modal.end.setFullYear(obj.date.getFullYear())
+        $scope.modal.end.setMonth(obj.date.getMonth())
+        $scope.modal.end.setDate(obj.date.getDate())
+
         if ($scope.patient._id){
         $scope.event={}
         $scope.event.startTime=$scope.modal.start;
