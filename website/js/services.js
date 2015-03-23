@@ -112,6 +112,82 @@ angular.module('trackDr-services', [])
 
 
         };
+    }).factory('Doctors', function ($http,$window) {
+
+        return {
+
+            getAll: function (success, error) {
+
+                $http.get(serverApi + '/secured/patient/').success(function (res) {
+                    if (!res.error) {
+
+                        success(res);
+                    }
+                    else {
+                        error(res);
+                    }
+                }).error(function (data, status, headers, config) {
+                })
+            }
+
+
+        };
+    }) .factory('Appointments', function ($http,$window) {
+
+        return {
+
+            getAll: function (success, error) {
+
+                $http.get(serverApi + '/secured/doctor/').success(function (res) {
+                    if (!res.error) {
+
+                        success(res);
+                    }
+                    else {
+                        error(res);
+                    }
+                }).error(function (data, status, headers, config) {
+                })
+            }, update: function (id,app,success, error) {
+
+                $http.put(serverApi + '/secured/doctor/'+id,app).success(function (res) {
+                    if (!res.error) {
+
+                        success(res);
+                    }
+                    else {
+                        error(res);
+                    }
+                }).error(function (data, status, headers, config) {
+                })
+            }, add: function (app,success, error) {
+
+                $http.post(serverApi + '/secured/doctor/',app).success(function (res) {
+                    if (!res.error) {
+
+                        success(res);
+                    }
+                    else {
+                        error(res);
+                    }
+                }).error(function (data, status, headers, config) {
+                })
+            }, find: function (name,success, error) {
+
+                $http.post(serverApi + '/secured/doctor/find/'+name,{}).success(function (res) {
+                    if (!res.error) {
+
+                        success(res);
+                    }
+                    else {
+                        error(res);
+                    }
+                }).error(function (data, status, headers, config) {
+                })
+            }
+
+
+        };
     }).factory('authInterceptor', function ($rootScope, $q, $window) {
         return {
             request: function (config) {

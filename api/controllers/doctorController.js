@@ -36,7 +36,15 @@ module.exports.delete=function(id,cb){
         else {   cb( "Doctor Not Found")}
     });
 }
+module.exports.find=function(name,cb){
 
+    APP.DB.DOCTOR.find({ $or:[{firstName:{$regex:new RegExp("^" + name, "i")}},{lastName:{$regex:new RegExp("^" + name, "i")}}]  }, function (er, usr){
+
+        if (er ) cb("ERROR finding Doctor :"+er)
+        else if (usr) { cb(null, usr)}
+        else {   cb( "Doctor Not Found")}
+    });
+}
 module.exports.getList=function(cb){
 
     APP.DB.DOCTOR.find({ }, function (er, doctors){
