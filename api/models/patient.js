@@ -12,7 +12,10 @@ patient_schema = new Schema({
     lastName: String,
     userName: {type:String,lowercase: true, trim: true},
     password:{type:String,lowercase: true, trim: true},
-    location: String,
+    country: String,
+    state: String,
+    postcode: String,
+    kinphone: String,
     phone: String,
     gender : String,
     dateOfBirth:String,//Date

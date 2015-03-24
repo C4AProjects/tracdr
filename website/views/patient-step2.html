@@ -2,41 +2,63 @@
 
 
     <div class="progress row" style="margin-left: 16%;margin-right: 16%">
-        <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="4" style="width: 50%;">
-            2/4
+        <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="3" style="width: 66%;">
+            2/3
         </div>
+        {{notfound}}
     </div>
     <div>
         <div class="row" style="margin-left: 16%;text-align: left">
-            <h5>Can't track your doc? please give us his/her information and we will make sure they are track-able</h5>
-            <a ui-sref='join.patient.step3'>Skip this Step</a>
+            <h5>Find your Doctor: </h5>
+
         </div>
         <div class="row" style="margin-left: 15%;margin-right: 15%">
             <div class="col-lg-6">
                 <div class="form-group">
-                    <input type="text" class="form-control input-sm" placeholder="First Name">
+                    <input type="text" class="form-control input-sm" ng-model="join.searchStr" ng-model-options="{debounce: 1000}" placeholder="Type your doctor name...">
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+                <ul class="list-group">
+                    <li  class="list-group-item" ng-repeat="doc in searchresult" ng-click="selectDoctor(doc)">
+                     DR. {{doc.firstName}}  {{doc.lastName}} <small style="float: right; opacity: .5"> {{doc.specialty}}</small>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 16%;text-align: left">
+            <h5></h5>
+            <a ng-click="join.notfound=true">Can't track your doc? please give us his/her information and we will make sure they are track-able</a>
+        </div>
+        <div class="row" style="margin-left: 15%;margin-right: 15%" ng-show="join.notfound">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <input type="text" class="form-control input-sm" placeholder="First Name" ng-model="doctor.firstName">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control input-sm" placeholder="Second Name">
+                    <input type="text" class="form-control input-sm" placeholder="Second Name" ng-model="doctor.firstName">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control input-sm" placeholder="Practice">
+                    <input type="text" class="form-control input-sm" placeholder="Practice" ng-model="doctor.specialty">
                 </div>
             </div>
 
             <div class="col-lg-6">
                 <div class="form-group">
-                    <select class="form-control input-sm" >
+                    <select class="form-control input-sm" ng-model="doctor.country">
                         <option>Select country</option>
                         <option>USA</option>
                         <option>Canada</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control input-sm" placeholder="State">
+                    <input type="text" class="form-control input-sm" placeholder="State" ng-model="doctor.state">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control input-sm" placeholder="Hospital">
+                    <input type="text" class="form-control input-sm" placeholder="Hospital" ng-model="doctor.hospital">
                 </div>
             </div>
         </div>

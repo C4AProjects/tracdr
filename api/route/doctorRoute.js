@@ -12,7 +12,15 @@ module.exports = function (app) {
         })
 
     });
+    app.post("/api/secured/doctor/find/:name", function(req, res){
+        DEBUG("Find Doctor")
+        doctorCtrl.find(req.params.name,function(err,doc){
+            if (err) res.send({error:err})
+            else res.send({success:true,doctor:doc})
 
+        })
+
+    });
     app.get("/api/secured/doctor", function(req, res){
         DEBUG("Getting All Doctor")
         doctorCtrl.getList(function(err,doc){
