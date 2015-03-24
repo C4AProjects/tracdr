@@ -330,9 +330,17 @@ footer p {
 .navbar-brand{
     margin-top:-25px;
 }
-
-
-/*========== Mobile Css =========*/
+.join-form{
+    margin-left: 15%;
+    margin-right: 15%
+}
+.join-form .row{
+    margin-left: 15%;
+    margin-right: 15%
+}
+/* =========================================================================
+   ==========                        Mobile Css                    =========
+   =======================================================================*/
 
 .navbar-toggle {
   border-color: transparent !important;
@@ -404,6 +412,17 @@ footer p {
     margin-left: 0;
     border-radius: 10px;
 }
+.opacity-img{
+            opacity: .8;
+        }
+        .join-form{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.join-form .row{
+     margin-left: 5px;
+    margin-right: 5px;
+}
 }
 
 /* Extra Small Devices, Phones */ 
@@ -437,6 +456,17 @@ footer p {
     margin-top: 5px;
     margin-left: 0;
     border-radius: 10px;
+}
+.opacity-img{
+            opacity: .8;
+        }
+        .join-form{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.join-form .row{
+     margin-left: 5px;
+    margin-right: 5px;
 }
 }
 
@@ -476,5 +506,16 @@ footer p {
 }
 .navbar-brand{
     margin-top:2px;
+}
+ .opacity-img{
+            opacity: .8;
+        }
+        .join-form{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.join-form .row{
+     margin-left: 5px;
+    margin-right: 5px;
 }
 }
