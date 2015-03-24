@@ -52,5 +52,21 @@ module.exports.getList=function(cb){
        cb(er, doctors)
     });
 }
+module.exports.addPatient=function(docId,patId,cb){
+
+    APP.DB.DOCTOR.findOne({_id:docId}, function (er, doctors){
+if(er) cb(er)
+        if (doctors){
+            if (!doctors.patients) doctors.patients=[];
+                doctors.patients.push(patId)
+            doctors.save();
+            cb(null, doctors)
+}else{
+            cb("Doctor Not Found")
+        }
+
+    });
+}
+
 
 

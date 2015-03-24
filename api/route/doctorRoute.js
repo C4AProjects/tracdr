@@ -12,6 +12,30 @@ module.exports = function (app) {
         })
 
     });
+    app.post("/api/secured/doctor/:patId", function(req, res){
+        DEBUG("Adding Doctor")
+        doctorCtrl.add(req.body,function(err,doc){
+            if (err) res.send({error:err})
+            else {
+                doctorCtrl.addPatient(doc._id,req.params.patId,function(err1,doc1){
+                    if (err1) res.send({error:err1})
+                    else  res.send({success:true,doctor:doc})
+                })
+
+            }
+
+        })
+
+    });
+    app.post("/api/secured/doctor/:docID/patien/:patientID", function(req, res){
+        DEBUG("Adding Doctor")
+        doctorCtrl.addPatient(req.params.docID,req.params.patientID,function(err,doc){
+            if (err) res.send({error:err})
+            else res.send({success:true})
+
+        })
+
+    });
     app.post("/api/secured/doctor/find/:name", function(req, res){
         DEBUG("Find Doctor")
         doctorCtrl.find(req.params.name,function(err,doc){

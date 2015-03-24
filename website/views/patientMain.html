@@ -1,11 +1,11 @@
 <div class="hr">
-    <div class="container" >
+    <div class="container">
         <div class="row">
             <div class="col-xs-2 text-right">
                 <img src="img/profile.png" class="img-profile">
             </div>
             <div class="col-xs-7">
-                <h5 class="profile-name">cc{{user.firstName}}</h5>
+                <h5 class="profile-name">Welcome {{user.firstName}}</h5>
                 <p>
                     <a href="#">
                         Account Settings
@@ -22,34 +22,249 @@
         </div>
         <div class="row">
             <div class="col-xs-2 text-right">
-                <a ui-sref="dashboard" ng-click="active='profile'">
+                <a ui-sref="patient" ng-click="active='profile'">
                     <div class="btn bg-primary btn-dash" ng-class="active=='profile'?'btn-dash-orange':''">
                         <img src="img/my-profile.png">
                         <h6>My profile</h6>
                     </div>
                 </a>
-                <a ui-sref="dashboard.appointments" ng-click="active='appointments'">
+                <a ui-sref="patient.appointments" ng-click="active='appointments'">
                     <div class="btn bg-primary btn-dash" ng-class="active=='appointments'?'btn-dash-orange':''">
                         <img src="img/appointments.png">
                         <h6>Appointments</h6>
                     </div>
                 </a>
-                <a ui-sref="dashboard.notifications" ng-click="active='notifications'">
+                <a ui-sref="patient.notification" ng-click="active='notifications'">
                     <div class="btn bg-primary btn-dash" ng-class="active=='notifications'?'btn-dash-orange':''">
                         <img src="img/notifications.png">
                         <h6>Notifications</h6>
                     </div>
                 </a>
-                <a ui-sref="dashboard.calendar" ng-click="active='calendar'">
+                <a ui-sref="patient.calendar" ng-click="active='calendar'">
                     <div class="btn bg-primary btn-dash" ng-class="active=='calendar'?'btn-dash-orange':''">
                         <img src="img/calendar.png">
                         <h6>Calendar</h6>
                     </div>
                 </a>
             </div>
-            <div class="col-xs-10" >
-                <div class="container">
-                    <div class="row" style="min-height:200px;width:60%;">
+            <div class="col-xs-10">
+                <div class="container" ui-view>
+                    <div class="row" style="min-height:200px;width:80%;">
+                        <div class="col-sm-6">
+                            <div style="background-color: #0078BA;color: white;padding: 5px">
+                                Login Information
+                            </div>
+
+                            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                                <div class="col-md-2" style="margin-top: 5px">Username</div>
+                                <div class="col-md-8">
+                                    <div class="input-group col-md-12">
+
+                                        <input type="text" class="form-control " id="inputPassword" ng-model="user.firstName">
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="margin-top: 5px;color:#ff8c27;">Edit</div>
+                            </div>
+
+                            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                                <div class="col-md-2" style="margin-top: 5px">Password</div>
+                                <div class="col-md-8">
+                                    <div class="input-group col-md-12">
+
+                                        <input type="password" class="form-control " id="inputPassword" placeholder="Password" ng-model="user.password">
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="margin-top: 5px;color:#ff8c27;">Edit</div>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-6">
+                            <div style="background-color: #0078BA;color: white;padding: 5px">
+                                Location Information
+                            </div>
+
+                            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                                <div class="col-md-2" style="margin-top: 5px">Country</div>
+                                <div class="col-md-8">
+                                    <div class="input-group col-md-12">
+
+                                        <input type="text" class="form-control " id="inputPassword" placeholder="Country" ng-model="user.country">
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="margin-top: 5px;color:#ff8c27;">Edit</div>
+                            </div>
+                            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                                <div class="col-md-2" style="margin-top: 5px">State</div>
+                                <div class="col-md-8">
+                                    <div class="input-group col-md-12">
+
+                                        <input type="text" class="form-control " id="inputPassword" ng-model="user.state" >
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="margin-top: 5px;color:#ff8c27;">Edit</div>
+                            </div>
+
+                            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                                <div class="col-md-2" style="margin-top: 5px">PostCode</div>
+                                <div class="col-md-8">
+                                    <div class="input-group col-md-12">
+
+                                        <input type="text" class="form-control " id="inputPassword" placeholder="Post Code" ng-model="user.postCode">
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="margin-top: 5px;color:#ff8c27;">Edit</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row" style="min-height:200px;width:80%;">
+                        <div class="col-sm-6">
+                            <div style="background-color: #0078BA;color: white;padding: 5px">
+                                Personal Information
+                            </div>
+
+                            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                                <div class="col-md-2" style="margin-top: 5px">Firsnname</div>
+                                <div class="col-md-8">
+                                    <div class="input-group col-md-12">
+
+                                        <input type="text" class="form-control " id="inputPassword"  ng-model="user.firstName">
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="margin-top: 5px;color:#ff8c27;">Edit</div>
+                            </div>
+
+                            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                                <div class="col-md-2" style="margin-top: 5px">Lastname</div>
+                                <div class="col-md-8">
+                                    <div class="input-group col-md-12">
+
+                                        <input type="text" class="form-control " id="inputPassword" ng-model="user.lastName">
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="margin-top: 5px;color:#ff8c27;">Edit</div>
+                            </div>
+
+                            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                                <div class="col-md-2" style="margin-top: 5px">Phone</div>
+                                <div class="col-md-8">
+                                    <div class="input-group col-md-12">
+
+                                        <input type="text" class="form-control " id="inputPassword"  ng-model="user.phone">
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="margin-top: 5px;color:#ff8c27;">Edit</div>
+                            </div>
+
+                            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                                <div class="col-md-2" style="margin-top: 5px">Email</div>
+                                <div class="col-md-8">
+                                    <div class="input-group col-md-12">
+
+                                        <input type="text" class="form-control " id="inputPassword"  ng-model="user.email">
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="margin-top: 5px;color:#ff8c27;">Edit</div>
+                            </div>
+
+                            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                                <div class="col-md-2" style="margin-top: 5px">Birth</div>
+                                <div class="col-md-8">
+                                    <div class="input-group col-md-12">
+
+                                        <input type="text" class="form-control " id="inputPassword"  ng-model="user.dateOfBirth">
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="margin-top: 5px;color:#ff8c27;">Edit</div>
+                            </div>
+
+                            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                                <div class="col-md-2" style="margin-top: 5px">Gender</div>
+                                <div class="col-md-8">
+                                    <div class="input-group col-md-12">
+
+                                        <input type="text" class="form-control " id="inputPassword" ng-model="user.gender">
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="margin-top: 5px;color:#ff8c27;">Edit</div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-sm-6">
+                            <div style="background-color: #0078BA;color: white;padding: 5px">
+                              Doctor Information
+                            </div>
+
+                            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                                <div class="col-md-2" style="margin-top: 5px">Firsnname</div>
+                                <div class="col-md-8">
+                                    <div class="input-group col-md-12">
+
+                                        <input type="text" class="form-control " id="inputPassword" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="margin-top: 5px;color:#ff8c27;">Edit</div>
+                            </div>
+
+                            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                                <div class="col-md-2" style="margin-top: 5px">Lastname</div>
+                                <div class="col-md-8">
+                                    <div class="input-group col-md-12">
+
+                                        <input type="text" class="form-control " id="inputPassword" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="margin-top: 5px;color:#ff8c27;">Edit</div>
+                            </div>
+
+                            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                                <div class="col-md-2" style="margin-top: 5px">Phone</div>
+                                <div class="col-md-8">
+                                    <div class="input-group col-md-12">
+
+                                        <input type="text" class="form-control " id="inputPassword" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="margin-top: 5px;color:#ff8c27;">Edit</div>
+                            </div>
+
+                            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                                <div class="col-md-2" style="margin-top: 5px">Email</div>
+                                <div class="col-md-8">
+                                    <div class="input-group col-md-12">
+
+                                        <input type="text" class="form-control " id="inputPassword" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="margin-top: 5px;color:#ff8c27;">Edit</div>
+                            </div>
+
+                            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                                <div class="col-md-2" style="margin-top: 5px">Hospital</div>
+                                <div class="col-md-8">
+                                    <div class="input-group col-md-12">
+
+                                        <input type="text" class="form-control " id="inputPassword" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="margin-top: 5px;color:#ff8c27;">Edit</div>
+                            </div>
+
+                            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                                <div class="col-md-2" style="margin-top: 5px">Practice</div>
+                                <div class="col-md-8">
+                                    <div class="input-group col-md-12">
+
+                                        <input type="text" class="form-control " id="inputPassword" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="margin-top: 5px;color:#ff8c27;">Edit</div>
+                            </div>
+
+                        </div>
 
                     </div>
                 </div>

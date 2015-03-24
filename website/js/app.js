@@ -35,7 +35,24 @@ trackDr.config(function($stateProvider, $urlRouterProvider) {
             url: "/patient",
             templateUrl: "views/patientMain.html",
             controller:"patientCtrl"
-        }).state('doctor', {
+        }).state('patient.appointments', {
+            url: "/appointments",
+            templateUrl: "views/appointment.html"
+
+        }).state('patient.calendar', {
+            url: "/calendar",
+            templateUrl: "views/calendar.html"
+
+        }).state('patient.notification', {
+            url: "/notification",
+            templateUrl: "views/notification.html"
+
+        })
+
+
+
+
+        .state('doctor', {
         url: "/doctor",
         templateUrl: "views/doctor/doctor_dashboard.html",
             controller:"doctorCtrl"

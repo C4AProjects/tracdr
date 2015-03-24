@@ -1,14 +1,30 @@
 /**
  * Created by haythem on 15/03/2015.
  */
-trackDr.controller('joinCtrl', function ($scope,Auth,$state,$http){
+trackDr.controller('joinCtrl', function ($scope,Auth,$state,$http,Doctors){
     $scope.user={}
+
     $scope.join={};
     $scope.doctor={}
     $scope.join.notfound=false;
     $scope.registerPAtient = function () {
 
         Auth.registerPAtient($scope.user, function (res) {
+
+            if ( $scope.join.notfound){
+                //post  $scope.doctor={}
+                //add the new doctor
+
+                $http.post(serverApi + '/secured/doctor/'+res.patient._id, $scope.doctor).success(function(data) {
+                    console.log(data)
+                });
+            }else{
+
+                //   app.post("/api/secured/doctor/:docID/patien/:patientID", function(req, res){
+                $http.post(serverApi + '/secured/doctor/'  +$scope.doctor._id+'/patien/'+res.patient._id, $scope.doctor).success(function(data) {
+                    console.log(data)
+                });
+            }
 
             $state.go("patient")
         },    function (err) {
