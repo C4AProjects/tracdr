@@ -1,0 +1,12 @@
+2015-03-23T18:27:16.389Z - debug: LoggerService Started
+2015-03-23T18:27:16.393Z - debug: Loading Models....
+2015-03-23T18:27:18.213Z - debug: loading DB Module...
+2015-03-23T18:27:18.221Z - info: Starting API
+2015-03-23T18:27:19.399Z - info: Loading Auth Route
+2015-03-23T18:27:19.431Z - info: Loading Dorctor Route
+2015-03-23T18:27:19.437Z - info: Loading Patient Route
+2015-03-23T18:27:19.441Z - info: Loading Notification Route
+2015-03-23T18:27:19.447Z - info: Loading Appointment Route
+2015-03-23T18:27:19.469Z - debug: [DB]: Connecting...
+2015-03-23T18:27:19.489Z - info: listening on *:3000
+2015-03-23T18:27:21.051Z - info: [DB]: Connected OK

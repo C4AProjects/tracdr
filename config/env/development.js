@@ -16,7 +16,7 @@ module.exports = {
     },
     //the Database config
     DB:{
-        url:'mongodb://localhost/trackDr'
+        url:'mongodb://localhost:27017/trackDr'
       /*  auth:
         {
             user: 'portal',

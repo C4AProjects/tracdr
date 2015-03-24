@@ -46,237 +46,244 @@ footer p {
 }
 /*.ng-invalid.ng-dirty{*/
     /*border-color:#FA787E;*/
-/*}*/
-/*.ng-valid.ng-dirty{*/
-    /*border-color:#78FA89;*/
-/*}*/
+    /*}*/
+    /*.ng-valid.ng-dirty{*/
+        /*border-color:#78FA89;*/
+        /*}*/
 
-.jumbotron.tracdr-container {
-    background-color: #FFFFFF;
-    padding: 0;
-    padding-top: 150px;
-    border-radius: 0;
+        .jumbotron.tracdr-container {
+            background-color: #FFFFFF;
+            padding: 0;
+            padding-top: 150px;
+            border-radius: 0;
+        }
+
+        .tracdr-header{
+            background-color: #FFFFFF;
+            border: 0;
+            border-radius: 0;
+            margin-bottom: 5px;
+        }
+
+        .horizontal-bar{
+            width: 100%;
+            height: 8px;
+            background-color: #0078ba;
+        }
+
+        .footer.tracdr-footer{
+            background-color: #005991;
+            color: #FFFFFF;
+
+        }
+
+        .navbar-fixed-top {
+            border-width: 0 0 15px;
+        }
+
+        .navbar-right {
+            padding-top: 45px;
+        }
+
+        .pic.password.tracdr-pwd {
+            position: absolute;
+            background: url("../img/eye_password.png") no-repeat 50% 50%;
+            width: 33px;
+            height: 20px;
+            top: 6px;
+            right: 22px;
+            cursor: pointer;
+        }
+
+        .pic.email.tracdr-email {
+            position: absolute;
+            background: url("../img/mail_login.png")  no-repeat 50% 50%;
+            width: 33px;
+            height: 21px;
+            top: 6px;
+            right: 22px;
+            cursor: pointer;
+        }
+
+        .main-form.main-form-tracdr{
+            background: #ffffff;
+            height: 165px;
+            width: 70%;
+            margin-top: 5px;
+            margin-left: 0;
+            border-radius: 10px;
+        }
+
+        .main-form.main-form-tracdr .input-wrapper input {
+            width: 80%;
+            border: 1px solid #d3d3d3;
+            border-radius: 5px;
+            padding: 5px 0 5px 5px;
+            outline: none;
+            font-size: 15px;
+            font-family: 'proxima_nova_rgregular';
+            line-height: 22px;
+        }
+
+        .tracdr-theme{
+            background-color: #0078ba;
+        }
+
+        .home-login{
+            background-color: #0078ba;
+            min-height: 400px;
+            padding-right: 15%;
+            padding-left: 15%;
+            padding-top: 15px
+        }
+
+
+        .txt-center{
+            text-align: center;
+        }
+        .text-right{
+            text-align: right;
+        }
+
+        .txt-color{
+            color: #0078ba;
+        }
+
+        .revert-color{
+            color: #ff8c27;
+        }
+
+        .btn-orange{
+            background-color: #ff8c27;
+            border-color: #ff8c27;
+            width:100px;
+        }
+
+        .btn-blue{
+            background-color: #005991;
+            width:100px;
+        }
+
+        .main-color {
+            background-color: #0078ba;
+            color: #ffffff;
+        }
+        .btn-grey{
+            background-color: #cfced3;
+            color: #ffffff;
+            min-width: 100px;
+        }
+
+        .opacity-img{
+            opacity: .4;
+        }
+
+        .vertical_bar {
+            background: url("../img/vertical-bar.png") no-repeat 50% 30%;
+            opacity: .4;
+        }
+
+        .vertical_bar p {
+            margin-top: 281px;
+            font-family: 'proxima_novalight';
+            font-size: 16px;
+        }
+
+        .footer-social {
+            background-color: #0078ba;
+            text-align: center;
+            padding-top: 3px;
+            height: 145px;
+            margin-bottom: 2px;
+        }
+
+        .list-group .list-group-item{
+            border-radius: 0;
+            cursor: pointer;
+        }
+
+        .bg-primary{
+            background-color: #0078ba;
+        }
+
+        .menuextras {
+          font-size: 0.85em;
+          height: 30px;
+      }
+
+      .menuextras ul {
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+          float: right;
+          padding: 3px 0;
+      }
+      .menuextras .extras li {
+          padding: 0 8px;
+      }
+      .menuextras li {
+          float: left;
+          padding: 0 8px;
+      }
+
+      .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+          color: #0078ba;
+          background-color: transparent; !important;
+          text-transform: uppercase;
+      }
+
+      .navbar-default .navbar-nav > li > a {
+          text-transform: uppercase;
+          font-weight:bold;
+      }
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border-color: #0078ba;
 }
-
-.tracdr-header{
-    background-color: #FFFFFF;
-    border: 0;
-    border-radius: 0;
-    margin-bottom: 5px;
-}
-
-.horizontal-bar{
-    width: 100%;
-    height: 8px;
-    background-color: #0078ba;
-}
-
-.footer.tracdr-footer{
-    background-color: #005991;
-    color: #FFFFFF;
-
-}
-
-.navbar-fixed-top {
-    border-width: 0 0 15px;
-}
-
-.navbar-right {
-    padding-top: 45px;
-}
-
-.pic.password.tracdr-pwd {
-    position: absolute;
-    background: url("/theme/assets/img/eye_password.png") no-repeat 50% 50%;
-    width: 33px;
-    height: 20px;
-    top: 6px;
-    right: 22px;
-    cursor: pointer;
-}
-
-.pic.email.tracdr-email {
-    position: absolute;
-    background: url("/theme/assets/img/mail_login.png")  no-repeat 50% 50%;
-    width: 33px;
-    height: 21px;
-    top: 6px;
-    right: 22px;
-    cursor: pointer;
-}
-
-.main-form.main-form-tracdr{
-    background: #ffffff;
-    height: 165px;
-    width: 70%;
-    margin-top: 5px;
-    margin-left: 0;
-    border-radius: 10px;
-}
-
-.main-form.main-form-tracdr .input-wrapper input {
-    width: 80%;
-    border: 1px solid #d3d3d3;
-    border-radius: 5px;
-    padding: 5px 0 5px 5px;
-    outline: none;
-    font-size: 15px;
-    font-family: 'proxima_nova_rgregular';
-    line-height: 22px;
-}
-
-.tracdr-theme{
-    background-color: #0078ba;
-}
-
-.home-login{
-    background-color: #0078ba;
-    min-height: 390px;
-}
-
-.txt-center{
-    text-align: center;
-}
-.text-right{
-    text-align: right;
-}
-
-.txt-color{
-    color: #0078ba;
-}
-
-.revert-color{
-    color: #ff8c27;
-}
-
-.btn-orange{
-    background-color: #ff8c27;
-    border-color: #ff8c27;
-    width:100px;
-}
-
-.btn-blue{
-    background-color: #005991;
-    width:100px;
-}
-
-.main-color {
-    background-color: #0078ba;
-    color: #ffffff;
-}
-.btn-grey{
-    background-color: #cfced3;
-    color: #ffffff;
-    min-width: 100px;
-}
-
-.opacity-img{
-    opacity: .4;
-}
-
-.vertical_bar {
-    background: url("/theme/assets/img/vertical-bar.png") no-repeat 50% 30%;
-    opacity: .4;
-}
-
-.vertical_bar p {
-    margin-top: 281px;
-    font-family: 'proxima_novalight';
-    font-size: 16px;
-}
-
-.footer-social {
-    background-color: #0078ba;
-    text-align: center;
-    padding-top: 3px;
-    height: 145px;
-    margin-bottom: 2px;
-}
-
-.list-group .list-group-item{
-    border-radius: 0;
-    cursor: pointer;
-}
-
-.bg-primary{
-    background-color: #0078ba;
-}
-
-.menuextras {
-  font-size: 0.85em;
-  height: 30px;
-}
-
-.menuextras ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  float: right;
-  padding: 3px 0;
-}
-.menuextras .extras li {
-  padding: 0 8px;
-}
-.menuextras li {
-  float: left;
-  padding: 0 8px;
-}
-
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: #1A04D2;
-  background-color: transparent !important;
-  text-transform: uppercase;
-}
-
-.navbar-default .navbar-nav > li > a {
-  text-transform: uppercase;
-}
+      /*-------------------------------*/
+      /*      Code snippet             */
+      /*      for Quote Carousel       */
+      /*-------------------------------*/
 
 
-/*-------------------------------*/
-/*      Code snippet             */
-/*      for Quote Carousel       */
-/*-------------------------------*/
+      section {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 
+    .quote {
+        color: rgba(0,0,0,.1);
+        text-align: center;
+        margin-bottom: 30px;
+    }
 
-section {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
+    /*-------------------------------*/
+    /*    Carousel Fade Transition   */
+    /*-------------------------------*/
 
-.quote {
-    color: rgba(0,0,0,.1);
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-/*-------------------------------*/
-/*    Carousel Fade Transition   */
-/*-------------------------------*/
-
-#fade-quote-carousel.carousel {
-  padding-bottom: 60px;
-}
-#fade-quote-carousel.carousel .carousel-inner .item {
-  opacity: 0;
-  -webkit-transition-property: opacity;
+    #fade-quote-carousel.carousel {
+      padding-bottom: 60px;
+  }
+  #fade-quote-carousel.carousel .carousel-inner .item {
+      opacity: 0;
+      -webkit-transition-property: opacity;
       -ms-transition-property: opacity;
-          transition-property: opacity;
-}
-#fade-quote-carousel.carousel .carousel-inner .active {
-  opacity: 1;
-  -webkit-transition-property: opacity;
+      transition-property: opacity;
+  }
+  #fade-quote-carousel.carousel .carousel-inner .active {
+      opacity: 1;
+      -webkit-transition-property: opacity;
       -ms-transition-property: opacity;
-          transition-property: opacity;
-}
-#fade-quote-carousel.carousel .carousel-indicators {
-  bottom: 10px;
-}
-#fade-quote-carousel.carousel .carousel-indicators > li {
-  background-color: orange;
-  border: none;
-}
-#fade-quote-carousel blockquote {
+      transition-property: opacity;
+  }
+  #fade-quote-carousel.carousel .carousel-indicators {
+      bottom: 10px;
+  }
+  #fade-quote-carousel.carousel .carousel-indicators > li {
+      background-color: orange;
+      border: none;
+  }
+  #fade-quote-carousel blockquote {
     text-align: center;
     border: none;
 }
@@ -299,7 +306,7 @@ section {
     background: silver;
     padding: 0px;
     margin: 0px;
-    height:200px;
+    height:220px;
     color: white;
     font-weight: bold;
     font-size: 18px;
@@ -315,4 +322,159 @@ section {
 .cover-card:hover > p {
     color: white;
     text-shadow: 3px 3px 10px #000;
+}
+
+#navbar-collapsible{
+    float:right;
+}
+.navbar-brand{
+    margin-top:-25px;
+}
+
+
+/*========== Mobile Css =========*/
+
+.navbar-toggle {
+  border-color: transparent !important;
+}
+.navbar-toggle {
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 4px;
+  color:#0078ba !important;
+  background-color: #0078ba !important;
+  border-radius: 1px;
+}
+@media (min-width: 240px) and (max-width: 800px) {
+
+    
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+          color: white;
+          background-color: #0078ba !important;
+          text-transform: uppercase;
+      }
+
+      .navbar-default .navbar-nav > li > a {
+          text-transform: uppercase;
+          font-weight:bold;
+      }
+#navbar-collapsible{
+    float:none;
+}
+
+ .home-login{
+    background-color: #0078ba;
+    min-height: 380px;
+    padding-right: 1%;
+    padding-left: 1%;
+    padding-top: 2px;
+}
+.main-form.main-form-tracdr{
+    background: #ffffff;
+    height: 155px;
+    width: 100%;
+    margin-top: 5px;
+    margin-left: 0;
+    border-radius: 10px;
+}
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+    .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+          color: white;
+          background-color: #0078ba !important;
+          text-transform: uppercase;
+      }
+
+      .navbar-default .navbar-nav > li > a {
+          text-transform: uppercase;
+          font-weight:bold;
+      }
+
+#navbar-collapsible{
+    float:none;
+}
+
+ .home-login{
+    background-color: #0078ba;
+    min-height: 380px;
+    padding-right: 1%;
+    padding-left: 1%;
+    padding-top: 2px;
+}
+.main-form.main-form-tracdr{
+    background: #ffffff;
+    height: 155px;
+    width: 100%;
+    margin-top: 5px;
+    margin-left: 0;
+    border-radius: 10px;
+}
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+    .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+          color: white;
+          background-color: #0078ba !important;
+          text-transform: uppercase;
+      }
+
+      .navbar-default .navbar-nav > li > a {
+          text-transform: uppercase;
+          font-weight:bold;
+      }
+#navbar-collapsible{
+    float:none;
+}
+
+ .home-login{
+    background-color: #0078ba;
+    min-height: 380px;
+    padding-right: 1%;
+    padding-left: 1%;
+    padding-top: 2px;
+}
+.main-form.main-form-tracdr{
+    background: #ffffff;
+    height: 155px;
+    width: 100%;
+    margin-top: 5px;
+    margin-left: 0;
+    border-radius: 10px;
+}
+#logo{
+    height:40px;
+}
+.navbar-brand{
+    margin-top:2px;
+}
 }
