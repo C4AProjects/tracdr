@@ -1,9 +1,10 @@
 /**
  * Created by haythem on 20/03/2015.
  */
-trackDr.controller('doctorCtrl', function ($scope,Auth,$filter,Patients,Appointments,uiCalendarConfig, $modal){
+trackDr.controller('doctorCtrl', function ($scope,Auth,$filter,Patients,Appointments,uiCalendarConfig, $modal,$http){
     $scope.active='patients',
         $scope.dashboard={};
+    $scope.notifications={};
     $scope.user = Auth.getUser().doctor;
 
         Patients.getAll(function(res,err){
@@ -38,6 +39,10 @@ trackDr.controller('doctorCtrl', function ($scope,Auth,$filter,Patients,Appointm
 
         }
     })
+    $http.get(serverApi + '/secured/notification').success(function(data) {
+        // update the textarea
+        $scope.notifications=data;
+    });
     $scope.selectPatient = function(id){
         $scope.patient = $filter('filter')($scope.patients, {_id: id}, true)[0];
     };
@@ -47,7 +52,7 @@ trackDr.controller('doctorCtrl', function ($scope,Auth,$filter,Patients,Appointm
     };
 
     $scope.selectNotification = function(id){
-        $scope.patient = $filter('filter')($scope.patients, {_id: id}, true)[0];
+        $scope.snotif = $filter('filter')($scope.notifications, {_id: id}, true)[0];
     };
     $scope.alertOnDrop = function(event, delta, revertFunc, jsEvent, ui, view){
        console.log(event)

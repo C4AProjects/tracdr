@@ -10,3 +10,259 @@
 2015-03-23T18:27:19.469Z - debug: [DB]: Connecting...
 2015-03-23T18:27:19.489Z - info: listening on *:3000
 2015-03-23T18:27:21.051Z - info: [DB]: Connected OK
+2015-03-24T21:48:39.014Z - debug: LoggerService Started
+2015-03-24T21:48:39.017Z - debug: Loading Models....
+2015-03-24T21:48:40.150Z - debug: loading DB Module...
+2015-03-24T21:48:40.157Z - info: Starting API
+2015-03-24T21:48:41.094Z - info: Loading Auth Route
+2015-03-24T21:48:41.122Z - info: Loading Dorctor Route
+2015-03-24T21:48:41.128Z - info: Loading Patient Route
+2015-03-24T21:48:41.132Z - info: Loading Notification Route
+2015-03-24T21:48:41.137Z - info: Loading Appointment Route
+2015-03-24T21:48:41.154Z - debug: [DB]: Connecting...
+2015-03-24T21:48:41.191Z - info: listening on *:3000
+2015-03-24T21:48:41.218Z - info: [DB]: Connected OK
+2015-03-24T21:49:14.203Z - debug: login
+2015-03-24T21:49:14.207Z - debug: Register PAtient [object Object]
+2015-03-24T21:49:14.853Z - debug: Getting All patient
+2015-03-24T21:49:14.876Z - debug: Getting All Appointment
+2015-03-24T21:54:06.068Z - debug: LoggerService Started
+2015-03-24T21:54:06.068Z - debug: Loading Models....
+2015-03-24T21:54:07.224Z - debug: loading DB Module...
+2015-03-24T21:54:07.240Z - info: Starting API
+2015-03-24T21:54:08.093Z - info: Loading Auth Route
+2015-03-24T21:54:08.118Z - info: Loading Dorctor Route
+2015-03-24T21:54:08.122Z - info: Loading Patient Route
+2015-03-24T21:54:08.126Z - info: Loading Notification Route
+2015-03-24T21:54:08.131Z - info: Loading Appointment Route
+2015-03-24T21:54:08.146Z - debug: [DB]: Connecting...
+2015-03-24T21:54:08.166Z - info: listening on *:3000
+2015-03-24T21:54:08.197Z - info: [DB]: Connected OK
+2015-03-25T19:33:51.104Z - debug: LoggerService Started
+2015-03-25T19:33:51.104Z - debug: Loading Models....
+2015-03-25T19:33:52.217Z - debug: loading DB Module...
+2015-03-25T19:33:52.224Z - info: Starting API
+2015-03-25T19:33:53.143Z - info: Loading Auth Route
+2015-03-25T19:33:53.172Z - info: Loading Dorctor Route
+2015-03-25T19:33:53.177Z - info: Loading Patient Route
+2015-03-25T19:33:53.181Z - info: Loading Notification Route
+2015-03-25T19:33:53.187Z - info: Loading Appointment Route
+2015-03-25T19:33:53.189Z - debug: [DB]: Connecting...
+2015-03-25T19:33:53.236Z - info: listening on *:3000
+2015-03-25T19:33:53.267Z - info: [DB]: Connected OK
+2015-03-25T19:35:01.897Z - debug: Find Doctor
+2015-03-25T19:35:18.608Z - debug: Find Doctor
+2015-03-25T19:35:37.794Z - debug: login
+2015-03-25T19:35:37.795Z - debug: Register PAtient [object Object]
+2015-03-25T19:35:48.512Z - debug: login
+2015-03-25T19:35:48.531Z - debug: Register PAtient [object Object]
+2015-03-25T19:35:49.040Z - debug: Getting All patient
+2015-03-25T19:35:49.070Z - debug: Getting All Appointment
+2015-03-25T19:43:25.237Z - debug: LoggerService Started
+2015-03-25T19:43:25.239Z - debug: Loading Models....
+2015-03-25T19:43:26.350Z - debug: loading DB Module...
+2015-03-25T19:43:26.356Z - info: Starting API
+2015-03-25T19:43:27.240Z - info: Loading Auth Route
+2015-03-25T19:43:27.265Z - info: Loading Dorctor Route
+2015-03-25T19:43:27.270Z - info: Loading Patient Route
+2015-03-25T19:43:27.273Z - info: Loading Notification Route
+2015-03-25T19:43:27.276Z - info: Loading Appointment Route
+2015-03-25T19:43:27.291Z - debug: [DB]: Connecting...
+2015-03-25T19:43:27.321Z - info: listening on *:3000
+2015-03-25T19:43:27.350Z - info: [DB]: Connected OK
+2015-03-25T19:43:54.060Z - debug: Find Doctor
+2015-03-25T19:44:03.442Z - debug: Register Patient
+2015-03-25T19:44:03.444Z - debug: Register PAtient [object Object]
+2015-03-25T19:44:03.918Z - debug: Adding Doctor
+2015-03-25T19:45:31.179Z - debug: Getting All notification
+2015-03-25T19:48:59.888Z - debug: LoggerService Started
+2015-03-25T19:48:59.891Z - debug: Loading Models....
+2015-03-25T19:49:00.892Z - debug: loading DB Module...
+2015-03-25T19:49:00.899Z - info: Starting API
+2015-03-25T19:49:01.832Z - info: Loading Auth Route
+2015-03-25T19:49:01.861Z - info: Loading Dorctor Route
+2015-03-25T19:49:01.868Z - info: Loading Patient Route
+2015-03-25T19:49:01.872Z - info: Loading Notification Route
+2015-03-25T19:49:01.876Z - info: Loading Appointment Route
+2015-03-25T19:49:01.893Z - debug: [DB]: Connecting...
+2015-03-25T19:49:01.928Z - info: listening on *:3000
+2015-03-25T19:49:01.960Z - info: [DB]: Connected OK
+2015-03-25T19:49:06.004Z - debug: Getting All notification
+2015-03-25T19:49:42.657Z - debug: LoggerService Started
+2015-03-25T19:49:42.660Z - debug: Loading Models....
+2015-03-25T19:49:43.581Z - debug: loading DB Module...
+2015-03-25T19:49:43.586Z - info: Starting API
+2015-03-25T19:49:44.519Z - info: Loading Auth Route
+2015-03-25T19:49:44.550Z - info: Loading Dorctor Route
+2015-03-25T19:49:44.561Z - info: Loading Patient Route
+2015-03-25T19:49:44.566Z - info: Loading Notification Route
+2015-03-25T19:49:44.570Z - info: Loading Appointment Route
+2015-03-25T19:49:44.588Z - debug: [DB]: Connecting...
+2015-03-25T19:49:44.624Z - info: listening on *:3000
+2015-03-25T19:49:44.658Z - info: [DB]: Connected OK
+2015-03-25T19:49:47.651Z - debug: Getting All notification
+2015-03-25T19:49:55.860Z - debug: Getting All notification
+2015-03-25T19:50:09.936Z - debug: LoggerService Started
+2015-03-25T19:50:09.938Z - debug: Loading Models....
+2015-03-25T19:50:10.972Z - debug: loading DB Module...
+2015-03-25T19:50:10.979Z - info: Starting API
+2015-03-25T19:50:11.949Z - info: Loading Auth Route
+2015-03-25T19:50:11.976Z - info: Loading Dorctor Route
+2015-03-25T19:50:11.983Z - info: Loading Patient Route
+2015-03-25T19:50:11.986Z - info: Loading Notification Route
+2015-03-25T19:50:11.990Z - info: Loading Appointment Route
+2015-03-25T19:50:12.005Z - debug: [DB]: Connecting...
+2015-03-25T19:50:12.036Z - info: listening on *:3000
+2015-03-25T19:50:12.063Z - info: [DB]: Connected OK
+2015-03-25T19:50:13.180Z - debug: Getting All notification
+2015-03-25T19:50:15.052Z - debug: Getting All notification
+2015-03-25T19:50:16.999Z - debug: Getting All notification
+2015-03-25T19:50:32.051Z - debug: LoggerService Started
+2015-03-25T19:50:32.051Z - debug: Loading Models....
+2015-03-25T19:50:33.100Z - debug: loading DB Module...
+2015-03-25T19:50:33.108Z - info: Starting API
+2015-03-25T19:50:34.025Z - info: Loading Auth Route
+2015-03-25T19:50:34.056Z - info: Loading Dorctor Route
+2015-03-25T19:50:34.063Z - info: Loading Patient Route
+2015-03-25T19:50:34.068Z - info: Loading Notification Route
+2015-03-25T19:50:34.072Z - info: Loading Appointment Route
+2015-03-25T19:50:34.078Z - debug: [DB]: Connecting...
+2015-03-25T19:50:34.130Z - info: listening on *:3000
+2015-03-25T19:50:34.168Z - info: [DB]: Connected OK
+2015-03-25T19:50:34.508Z - debug: Getting All notification
+2015-03-25T19:51:20.017Z - debug: LoggerService Started
+2015-03-25T19:51:20.017Z - debug: Loading Models....
+2015-03-25T19:51:21.120Z - debug: loading DB Module...
+2015-03-25T19:51:21.126Z - info: Starting API
+2015-03-25T19:51:22.027Z - info: Loading Auth Route
+2015-03-25T19:51:22.053Z - info: Loading Dorctor Route
+2015-03-25T19:51:22.058Z - info: Loading Patient Route
+2015-03-25T19:51:22.062Z - info: Loading Notification Route
+2015-03-25T19:51:22.065Z - info: Loading Appointment Route
+2015-03-25T19:51:22.080Z - debug: [DB]: Connecting...
+2015-03-25T19:51:22.111Z - info: listening on *:3000
+2015-03-25T19:51:22.138Z - info: [DB]: Connected OK
+2015-03-25T19:51:29.092Z - debug: Getting All notification
+2015-03-25T19:51:56.772Z - debug: LoggerService Started
+2015-03-25T19:51:56.775Z - debug: Loading Models....
+2015-03-25T19:51:57.881Z - debug: loading DB Module...
+2015-03-25T19:51:57.888Z - info: Starting API
+2015-03-25T19:51:58.853Z - info: Loading Auth Route
+2015-03-25T19:51:58.879Z - info: Loading Dorctor Route
+2015-03-25T19:51:58.885Z - info: Loading Patient Route
+2015-03-25T19:51:58.889Z - info: Loading Notification Route
+2015-03-25T19:51:58.892Z - info: Loading Appointment Route
+2015-03-25T19:51:58.906Z - debug: [DB]: Connecting...
+2015-03-25T19:51:58.921Z - info: listening on *:3000
+2015-03-25T19:51:58.951Z - info: [DB]: Connected OK
+2015-03-25T19:52:05.374Z - debug: Getting All notification
+2015-03-25T19:52:28.430Z - debug: LoggerService Started
+2015-03-25T19:52:28.430Z - debug: Loading Models....
+2015-03-25T19:52:29.575Z - debug: loading DB Module...
+2015-03-25T19:52:29.575Z - info: Starting API
+2015-03-25T19:52:30.511Z - info: Loading Auth Route
+2015-03-25T19:52:30.544Z - info: Loading Dorctor Route
+2015-03-25T19:52:30.551Z - info: Loading Patient Route
+2015-03-25T19:52:30.556Z - info: Loading Notification Route
+2015-03-25T19:52:30.560Z - info: Loading Appointment Route
+2015-03-25T19:52:30.577Z - debug: [DB]: Connecting...
+2015-03-25T19:52:30.613Z - info: listening on *:3000
+2015-03-25T19:52:30.643Z - info: [DB]: Connected OK
+2015-03-25T19:52:32.467Z - debug: Getting All notification
+2015-03-25T19:55:33.674Z - debug: Getting All notification
+2015-03-25T19:55:35.622Z - debug: Getting All notification
+2015-03-25T19:55:36.298Z - debug: Getting All notification
+2015-03-25T19:55:43.331Z - debug: Getting All notification
+2015-03-25T20:01:59.084Z - debug: login
+2015-03-25T20:01:59.084Z - debug: Register PAtient [object Object]
+2015-03-25T20:01:59.191Z - debug: Getting All patient
+2015-03-25T20:01:59.239Z - debug: Getting All Appointment
+2015-03-25T20:02:21.407Z - debug: Getting All patient
+2015-03-25T20:02:21.415Z - debug: Getting All Appointment
+2015-03-25T20:02:46.194Z - debug: Getting All patient
+2015-03-25T20:02:46.213Z - debug: Getting All Appointment
+2015-03-25T20:02:46.216Z - debug: Getting All notification
+2015-03-25T20:05:30.644Z - debug: Getting All patient
+2015-03-25T20:05:30.646Z - debug: Getting All Appointment
+2015-03-25T20:05:30.670Z - debug: Getting All notification
+2015-03-25T20:05:43.269Z - debug: Getting All patient
+2015-03-25T20:05:43.280Z - debug: Getting All Appointment
+2015-03-25T20:05:43.290Z - debug: Getting All notification
+2015-03-25T20:06:23.960Z - debug: Getting All patient
+2015-03-25T20:06:23.978Z - debug: Getting All Appointment
+2015-03-25T20:06:23.993Z - debug: Getting All notification
+2015-03-25T20:06:38.630Z - debug: Getting All patient
+2015-03-25T20:06:38.642Z - debug: Getting All Appointment
+2015-03-25T20:06:38.652Z - debug: Getting All notification
+2015-03-25T20:11:35.680Z - debug: Getting All patient
+2015-03-25T20:11:35.682Z - debug: Getting All Appointment
+2015-03-25T20:11:35.701Z - debug: Getting All notification
+2015-03-25T20:12:50.372Z - debug: LoggerService Started
+2015-03-25T20:12:50.372Z - debug: Loading Models....
+2015-03-25T20:12:51.506Z - debug: loading DB Module...
+2015-03-25T20:12:51.513Z - info: Starting API
+2015-03-25T20:12:52.433Z - info: Loading Auth Route
+2015-03-25T20:12:52.463Z - info: Loading Dorctor Route
+2015-03-25T20:12:52.469Z - info: Loading Patient Route
+2015-03-25T20:12:52.473Z - info: Loading Notification Route
+2015-03-25T20:12:52.476Z - info: Loading Appointment Route
+2015-03-25T20:12:52.494Z - debug: [DB]: Connecting...
+2015-03-25T20:12:52.514Z - info: listening on *:3000
+2015-03-25T20:12:52.547Z - info: [DB]: Connected OK
+2015-03-25T20:12:56.505Z - debug: Getting All patient
+2015-03-25T20:12:56.535Z - debug: Getting All Appointment
+2015-03-25T20:12:56.540Z - debug: Getting All notification
+2015-03-25T20:21:42.873Z - debug: LoggerService Started
+2015-03-25T20:21:42.873Z - debug: Loading Models....
+2015-03-25T20:21:43.997Z - debug: loading DB Module...
+2015-03-25T20:21:44.004Z - info: Starting API
+2015-03-25T20:21:44.924Z - info: Loading Auth Route
+2015-03-25T20:21:44.954Z - info: Loading Dorctor Route
+2015-03-25T20:21:44.961Z - info: Loading Patient Route
+2015-03-25T20:21:44.966Z - info: Loading Notification Route
+2015-03-25T20:21:44.970Z - info: Loading Appointment Route
+2015-03-25T20:21:44.989Z - debug: [DB]: Connecting...
+2015-03-25T20:21:45.025Z - info: listening on *:3000
+2015-03-25T20:21:45.058Z - info: [DB]: Connected OK
+2015-03-25T20:22:03.022Z - debug: Updating Appointment
+2015-03-25T20:22:10.104Z - debug: Getting All patient
+2015-03-25T20:22:10.110Z - debug: Getting All Appointment
+2015-03-25T20:22:10.147Z - debug: Getting All notification
+2015-03-25T20:22:29.860Z - debug: Getting All notification
+2015-03-25T20:26:46.772Z - debug: LoggerService Started
+2015-03-25T20:26:46.775Z - debug: Loading Models....
+2015-03-25T20:26:47.843Z - debug: loading DB Module...
+2015-03-25T20:26:47.848Z - info: Starting API
+2015-03-25T20:26:48.731Z - info: Loading Auth Route
+2015-03-25T20:26:48.759Z - info: Loading Dorctor Route
+2015-03-25T20:26:48.765Z - info: Loading Patient Route
+2015-03-25T20:26:48.769Z - info: Loading Notification Route
+2015-03-25T20:26:48.773Z - info: Loading Appointment Route
+2015-03-25T20:26:48.776Z - debug: [DB]: Connecting...
+2015-03-25T20:26:48.791Z - info: listening on *:3000
+2015-03-25T20:26:48.822Z - info: [DB]: Connected OK
+2015-03-25T20:27:24.639Z - debug: Getting All patient
+2015-03-25T20:27:24.665Z - debug: Getting All notification
+2015-03-25T20:27:24.670Z - debug: Getting All Appointment
+2015-03-25T20:27:28.196Z - debug: Updating Appointment
+2015-03-25T20:27:37.279Z - debug: Updating Appointment
+2015-03-25T20:27:43.715Z - debug: Getting All patient
+2015-03-25T20:27:43.733Z - debug: Getting All Appointment
+2015-03-25T20:27:43.736Z - debug: Getting All notification
+2015-03-25T20:31:22.814Z - debug: LoggerService Started
+2015-03-25T20:31:22.817Z - debug: Loading Models....
+2015-03-25T20:31:23.882Z - debug: loading DB Module...
+2015-03-25T20:31:23.888Z - info: Starting API
+2015-03-25T20:31:24.857Z - info: Loading Auth Route
+2015-03-25T20:31:24.883Z - info: Loading Dorctor Route
+2015-03-25T20:31:24.891Z - info: Loading Patient Route
+2015-03-25T20:31:24.895Z - info: Loading Notification Route
+2015-03-25T20:31:24.897Z - info: Loading Appointment Route
+2015-03-25T20:31:24.914Z - debug: [DB]: Connecting...
+2015-03-25T20:31:24.929Z - info: listening on *:3000
+2015-03-25T20:31:24.961Z - info: [DB]: Connected OK
+2015-03-25T20:31:28.959Z - debug: Getting All notification
+2015-03-25T20:31:47.234Z - debug: Updating Appointment
+2015-03-25T20:31:53.644Z - debug: Getting All notification
+2015-03-25T20:33:41.756Z - debug: Getting a notification
+2015-03-25T20:33:58.132Z - debug: Getting All notification

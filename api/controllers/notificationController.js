@@ -48,7 +48,7 @@ module.exports.delete=function(id,cb){
 
 module.exports.getList=function(cb){
 
-    APP.DB.NOTIFICATION.find({ }, function (er, notifs){
+    APP.DB.NOTIFICATION.find({ }).populate('_doctor _patient _appointment','-password').exec( function (er, notifs){
 
         cb(er, notifs)
     });
