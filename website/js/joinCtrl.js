@@ -49,6 +49,18 @@ trackDr.controller('joinCtrl', function ($scope,Auth,$state,$http,Doctors){
             }
         }, 1000);
     });
+
+    $scope.registerDoctor=function(){
+        $scope.user.userName= $scope.user.firstName
+        Auth.registerDoctor($scope.user, function (res) {
+
+
+
+            $state.go("doctor")
+        },    function (err) {
+            alert(err.error)
+        })
+    }
 $scope.selectDoctor=function(doc){
     $scope.doctor={}
     $scope.doctor._id=doc._id;

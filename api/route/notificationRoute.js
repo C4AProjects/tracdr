@@ -32,6 +32,24 @@ module.exports = function (app) {
         })
 
     });
+    app.get("/api/secured/notification/doctor/:ID", function(req, res){
+        DEBUG("Getting a notification by doctor")
+        notifCtrl.getMyByDoc(req.params.ID,function(err,doc){
+            if (err) res.send({error:err})
+            else res.send(doc)
+
+        })
+
+    });
+    app.get("/api/secured/notification/patient/:ID", function(req, res){
+        DEBUG("Getting a notification by patient")
+        notifCtrl.getMyByPat(req.params.ID,function(err,doc){
+            if (err) res.send({error:err})
+            else res.send(doc)
+
+        })
+
+    });
     app.put("/api/secured/notification/:ID", function(req, res){
         DEBUG("Updating notification")
         notifCtrl.update(req.params.ID,req.body,function(err,doc){

@@ -24,6 +24,25 @@ module.exports = function (app) {
         })
 
     });
+    app.get("/api/secured/appointment/doctor/:ID", function(req, res){
+        DEBUG("Getting my Appointment")
+        appointmentCtrl.getMy(req.params.ID,function(err,doc){
+            if (err) res.send({error:err})
+            else res.send(doc)
+
+        })
+
+    });
+    app.get("/api/secured/appointment/patient/:ID", function(req, res){
+        DEBUG("Getting my Appointment")
+        appointmentCtrl.getMyPAt(req.params.ID,function(err,doc){
+            if (err) res.send({error:err})
+            else res.send(doc)
+
+        })
+
+    });
+
     app.get("/api/secured/appointment/:ID", function(req, res){
         DEBUG("Getting a Appointment")
         appointmentCtrl.get(req.params.ID,function(err,doc){
@@ -46,7 +65,7 @@ module.exports = function (app) {
                     _to:doc._patient,
                     _appointment:doc._id,
                     details: "The Doctor has updated your Appointment",
-                    subject: "Appointment Updated: "
+                    subject: "Appointment Updated"
                 }
                 notifCtrl.add(notification,function(er,re){
                     if (er) console.log(er)

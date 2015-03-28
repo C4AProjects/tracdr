@@ -5,17 +5,31 @@
             <tr>
                 <td style="vertical-align: top; width:40%">
                     <ul class="list-group">
-                        <li  class="list-group-item">
-                            There is no notification
+                        <li class="list-group-item " ng-repeat="notif in notifications" ng-click="selectNotification(notif._id)">
+                            <b class="txt-color">{{notif.subject}}</b>
+                        </li>
+                        <li  class="list-group-item" ng-if="notifications.length<1">
+                            You don't have any Notification
                         </li>
                     </ul>
                 </td>
                 <td style="vertical-align: top">
-                    <ul class="list-group">
+                    <ul class="list-group" ng-if="notifications.length>0">
                         <li class="list-group-item ">
-                            <b class="txt-color">Notification Datails:</b>
+                            <b class="txt-color">Notifications Details:</b>
                         </li>
+                        <li class="list-group-item" style="min-height: 250px">
+                            {{snotif.details}}
 
+                            <h3>Doctor Info</h3>
+                            <b>First Name:</b>  {{snotif._doctor.firstName}}<br>
+                            <b>Last Name:</b> {{snotif._doctor.lastName}}<br>
+                            <b>Email:</b> {{snotif._doctor.email}}
+
+
+                            <br>
+
+                        </li>
                     </ul>
                 </td>
             </tr>

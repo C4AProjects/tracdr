@@ -55,3 +55,18 @@ module.exports.getList=function(cb){
 }
 
 
+module.exports.getMyByDoc=function(id,cb){
+
+    APP.DB.NOTIFICATION.find({_to:id }).populate('_patient _appointment','-password').exec( function (er, notifs){
+
+        cb(er, notifs)
+    });
+}
+
+module.exports.getMyByPat=function(id,cb){
+
+    APP.DB.NOTIFICATION.find({_to:id }).populate('_doctor _appointment','-password').exec( function (er, notifs){
+
+        cb(er, notifs)
+    });
+}

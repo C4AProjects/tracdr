@@ -11,7 +11,7 @@
                         Account Settings
                     </a>
                     <br>
-                    <a href="/">
+                    <a ng-click="logout()">
                         Log Out
                     </a>
                 </p>
@@ -22,12 +22,7 @@
         </div>
         <div class="row">
             <div class="col-xs-2 text-right">
-                <a ui-sref="patient" ng-click="active='profile'">
-                    <div class="btn bg-primary btn-dash" ng-class="active=='profile'?'btn-dash-orange':''">
-                        <img src="img/my-profile.png">
-                        <h6>My profile</h6>
-                    </div>
-                </a>
+
                 <a ui-sref="patient.appointments" ng-click="active='appointments'">
                     <div class="btn bg-primary btn-dash" ng-class="active=='appointments'?'btn-dash-orange':''">
                         <img src="img/appointments.png">
@@ -44,6 +39,12 @@
                     <div class="btn bg-primary btn-dash" ng-class="active=='calendar'?'btn-dash-orange':''">
                         <img src="img/calendar.png">
                         <h6>Calendar</h6>
+                    </div>
+                </a>
+                <a ui-sref="patient" ng-click="active='profile'">
+                    <div class="btn bg-primary btn-dash" ng-class="active=='profile'?'btn-dash-orange':''">
+                        <img src="img/my-profile.png">
+                        <h6>My profile</h6>
                     </div>
                 </a>
             </div>

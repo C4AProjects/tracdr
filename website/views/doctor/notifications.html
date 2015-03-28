@@ -8,10 +8,13 @@
                         <li class="list-group-item " ng-repeat="notif in notifications" ng-click="selectNotification(notif._id)">
                             <b class="txt-color">{{notif.subject}}</b>
                         </li>
+                        <li  class="list-group-item" ng-if="notifications.length<1">
+                            You don't have any Notification
+                        </li>
                     </ul>
                 </td>
                 <td style="vertical-align: top">
-                    <ul class="list-group">
+                    <ul class="list-group" ng-if="notifications.length>0">
                         <li class="list-group-item ">
                             <b class="txt-color">Notifications Details:</b>
                         </li>

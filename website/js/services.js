@@ -28,6 +28,11 @@ angular.module('trackDr-services', [])
                     // Erase the token if the user fails to log in
 
                     delete $window.sessionStorage.token; error();})
+            }, logout: function ( success, error) {
+
+
+
+                    delete $window.sessionStorage.token; ;
             },
             registerPAtient: function (user, success, error) {
 
@@ -42,7 +47,23 @@ angular.module('trackDr-services', [])
                         error(res);
                     }
                 }).error(error);
-            },getUser:function(){
+            },
+            registerDoctor: function (user, success, error) {
+
+                $http.post(serverApi + '/register/doctor/', user).success(function (res) {
+                    if (!res.error) {
+                        changeUser(res);
+                        $window.sessionStorage.token = res.token;
+                        window.localStorage.setItem("user", JSON.stringify(res));
+                        success(res);
+                    }
+                    else {
+                        error(res);
+                    }
+                }).error(error);
+            }
+
+            ,getUser:function(){
                 return user;
             }
 
@@ -64,14 +85,38 @@ angular.module('trackDr-services', [])
                     }
                 }).error(function (data, status, headers, config) {
                    })
-            }
+            },       getMesPatient: function (id,success, error) {
+
+            $http.get(serverApi + '/secured/patient/doctor/'+id).success(function (res) {
+                if (!res.error) {
+
+                    success(res);
+                }
+                else {
+                    error(res);
+                }
+            }).error(function (data, status, headers, config) {
+            })
+        }
 
 
         };
     }) .factory('Appointments', function ($http,$window) {
 
         return {
+            getMy: function (id,success, error) {
 
+                $http.get(serverApi + '/secured/appointment/doctor/'+id).success(function (res) {
+                    if (!res.error) {
+
+                        success(res);
+                    }
+                    else {
+                        error(res);
+                    }
+                }).error(function (data, status, headers, config) {
+                })
+            },
             getAll: function (success, error) {
 
                 $http.get(serverApi + '/secured/appointment/').success(function (res) {

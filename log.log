@@ -266,3 +266,286 @@
 2015-03-25T20:31:53.644Z - debug: Getting All notification
 2015-03-25T20:33:41.756Z - debug: Getting a notification
 2015-03-25T20:33:58.132Z - debug: Getting All notification
+2015-03-25T20:40:38.201Z - debug: Getting All notification
+2015-03-28T09:29:26.035Z - debug: LoggerService Started
+2015-03-28T09:29:26.051Z - debug: Loading Models....
+2015-03-28T09:29:32.381Z - debug: loading DB Module...
+2015-03-28T09:29:32.412Z - info: Starting API
+2015-03-28T09:29:41.349Z - info: Loading Auth Route
+2015-03-28T09:29:42.005Z - info: Loading Dorctor Route
+2015-03-28T09:29:42.052Z - info: Loading Patient Route
+2015-03-28T09:29:42.067Z - info: Loading Notification Route
+2015-03-28T09:29:42.083Z - info: Loading Appointment Route
+2015-03-28T09:29:42.130Z - debug: [DB]: Connecting...
+2015-03-28T09:29:42.161Z - info: listening on *:3000
+2015-03-28T09:29:42.192Z - info: [DB]: Connected OK
+2015-03-28T09:30:47.940Z - debug: Find Doctor
+2015-03-28T09:33:30.387Z - debug: Find Doctor
+2015-03-28T09:33:33.179Z - debug: Find Doctor
+2015-03-28T09:33:40.361Z - debug: Find Doctor
+2015-03-28T09:34:06.508Z - debug: login
+2015-03-28T09:34:06.510Z - debug: Register PAtient [object Object]
+2015-03-28T09:34:07.151Z - debug: Getting All patient
+2015-03-28T09:34:07.366Z - debug: Getting All Appointment
+2015-03-28T09:34:07.459Z - debug: Getting All notification
+2015-03-28T09:42:47.406Z - debug: LoggerService Started
+2015-03-28T09:42:47.409Z - debug: Loading Models....
+2015-03-28T09:42:48.420Z - debug: loading DB Module...
+2015-03-28T09:42:48.426Z - info: Starting API
+2015-03-28T09:42:49.180Z - info: Loading Auth Route
+2015-03-28T09:42:49.202Z - info: Loading Dorctor Route
+2015-03-28T09:42:49.207Z - info: Loading Patient Route
+2015-03-28T09:42:49.210Z - info: Loading Notification Route
+2015-03-28T09:42:49.213Z - info: Loading Appointment Route
+2015-03-28T09:42:49.227Z - debug: [DB]: Connecting...
+2015-03-28T09:42:49.253Z - info: listening on *:3000
+2015-03-28T09:42:49.274Z - info: [DB]: Connected OK
+2015-03-28T09:43:40.799Z - debug: Getting my patient
+2015-03-28T09:44:01.552Z - debug: LoggerService Started
+2015-03-28T09:44:01.552Z - debug: Loading Models....
+2015-03-28T09:44:02.700Z - debug: loading DB Module...
+2015-03-28T09:44:02.716Z - info: Starting API
+2015-03-28T09:44:03.657Z - info: Loading Auth Route
+2015-03-28T09:44:03.682Z - info: Loading Dorctor Route
+2015-03-28T09:44:03.689Z - info: Loading Patient Route
+2015-03-28T09:44:03.693Z - info: Loading Notification Route
+2015-03-28T09:44:03.696Z - info: Loading Appointment Route
+2015-03-28T09:44:03.701Z - debug: [DB]: Connecting...
+2015-03-28T09:44:03.717Z - info: listening on *:3000
+2015-03-28T09:44:03.748Z - info: [DB]: Connected OK
+2015-03-28T09:44:11.484Z - debug: Getting my patient
+2015-03-28T09:47:33.595Z - debug: login
+2015-03-28T09:47:33.595Z - debug: Register PAtient [object Object]
+2015-03-28T09:47:33.712Z - debug: Getting my patient
+2015-03-28T09:47:33.717Z - debug: Getting All Appointment
+2015-03-28T09:47:33.724Z - debug: Getting All notification
+2015-03-28T09:52:37.333Z - debug: LoggerService Started
+2015-03-28T09:52:37.348Z - debug: Loading Models....
+2015-03-28T09:52:38.471Z - debug: loading DB Module...
+2015-03-28T09:52:38.477Z - info: Starting API
+2015-03-28T09:52:39.252Z - info: Loading Auth Route
+2015-03-28T09:52:39.278Z - info: Loading Dorctor Route
+2015-03-28T09:52:39.284Z - info: Loading Patient Route
+2015-03-28T09:52:39.287Z - info: Loading Notification Route
+2015-03-28T09:52:39.290Z - info: Loading Appointment Route
+2015-03-28T09:52:39.306Z - debug: [DB]: Connecting...
+2015-03-28T09:52:39.339Z - info: listening on *:3000
+2015-03-28T09:52:39.363Z - info: [DB]: Connected OK
+2015-03-28T09:53:56.695Z - debug: Getting All Appointment
+2015-03-28T09:54:22.374Z - debug: Getting my Appointment
+2015-03-28T09:54:39.376Z - debug: Getting my Appointment
+2015-03-28T09:59:13.297Z - debug: LoggerService Started
+2015-03-28T09:59:13.300Z - debug: Loading Models....
+2015-03-28T09:59:14.374Z - debug: loading DB Module...
+2015-03-28T09:59:14.383Z - info: Starting API
+2015-03-28T09:59:15.327Z - info: Loading Auth Route
+2015-03-28T09:59:15.355Z - info: Loading Dorctor Route
+2015-03-28T09:59:15.362Z - info: Loading Patient Route
+2015-03-28T09:59:15.367Z - info: Loading Notification Route
+2015-03-28T09:59:15.370Z - info: Loading Appointment Route
+2015-03-28T09:59:15.386Z - debug: [DB]: Connecting...
+2015-03-28T09:59:15.404Z - info: listening on *:3000
+2015-03-28T09:59:15.435Z - info: [DB]: Connected OK
+2015-03-28T09:59:27.592Z - debug: Getting a notification by doctor
+2015-03-28T10:00:00.308Z - debug: Getting a notification by doctor
+2015-03-28T10:00:44.379Z - debug: Getting a notification by doctor
+2015-03-28T10:00:56.572Z - debug: Getting a notification by patient
+2015-03-28T10:03:25.037Z - debug: login
+2015-03-28T10:03:25.039Z - debug: Register PAtient [object Object]
+2015-03-28T10:03:25.149Z - debug: Getting my patient
+2015-03-28T10:04:16.690Z - debug: login
+2015-03-28T10:04:16.692Z - debug: Register PAtient [object Object]
+2015-03-28T10:04:17.131Z - debug: Getting my patient
+2015-03-28T10:05:26.771Z - debug: login
+2015-03-28T10:05:26.772Z - debug: Register PAtient [object Object]
+2015-03-28T10:05:26.876Z - debug: Getting my patient
+2015-03-28T11:00:13.120Z - debug: login
+2015-03-28T11:00:13.121Z - debug: Register PAtient [object Object]
+2015-03-28T11:00:13.948Z - debug: Getting my patient
+2015-03-28T11:02:28.611Z - debug: login
+2015-03-28T11:02:28.612Z - debug: Register PAtient [object Object]
+2015-03-28T11:02:28.783Z - debug: Getting my patient
+2015-03-28T11:04:47.946Z - debug: login
+2015-03-28T11:04:47.947Z - debug: Register PAtient [object Object]
+2015-03-28T11:04:48.073Z - debug: Getting my patient
+2015-03-28T11:05:31.437Z - debug: login
+2015-03-28T11:05:31.453Z - debug: Register PAtient [object Object]
+2015-03-28T11:05:31.563Z - debug: Getting my patient
+2015-03-28T11:05:31.575Z - debug: Getting my Appointment
+2015-03-28T11:05:31.581Z - debug: Getting a notification by doctor
+2015-03-28T11:06:27.366Z - debug: Find Doctor
+2015-03-28T11:06:43.261Z - debug: Register Patient
+2015-03-28T11:06:43.262Z - debug: Register PAtient [object Object]
+2015-03-28T11:06:43.708Z - debug: Adding Doctor
+2015-03-28T11:07:07.812Z - debug: login
+2015-03-28T11:07:07.813Z - debug: Register PAtient [object Object]
+2015-03-28T11:07:07.919Z - debug: Getting my patient
+2015-03-28T11:07:07.926Z - debug: Getting my Appointment
+2015-03-28T11:07:07.929Z - debug: Getting a notification by doctor
+2015-03-28T11:07:34.574Z - debug: Adding Appointment
+2015-03-28T11:07:47.516Z - debug: login
+2015-03-28T11:07:47.516Z - debug: Register PAtient [object Object]
+2015-03-28T11:08:22.625Z - debug: Getting a notification by patient
+2015-03-28T11:08:26.618Z - debug: Getting a notification by patient
+2015-03-28T11:08:44.228Z - debug: login
+2015-03-28T11:08:44.228Z - debug: Register PAtient [object Object]
+2015-03-28T11:08:44.360Z - debug: Getting my patient
+2015-03-28T11:08:44.365Z - debug: Getting my Appointment
+2015-03-28T11:08:44.374Z - debug: Getting a notification by doctor
+2015-03-28T11:08:48.911Z - debug: Updating Appointment
+2015-03-28T11:08:53.050Z - debug: Getting a notification by patient
+2015-03-28T11:10:44.713Z - debug: LoggerService Started
+2015-03-28T11:10:44.713Z - debug: Loading Models....
+2015-03-28T11:10:45.883Z - debug: loading DB Module...
+2015-03-28T11:10:45.890Z - info: Starting API
+2015-03-28T11:10:46.895Z - info: Loading Auth Route
+2015-03-28T11:10:46.930Z - info: Loading Dorctor Route
+2015-03-28T11:10:46.940Z - info: Loading Patient Route
+2015-03-28T11:10:46.947Z - info: Loading Notification Route
+2015-03-28T11:10:46.951Z - info: Loading Appointment Route
+2015-03-28T11:10:46.973Z - debug: [DB]: Connecting...
+2015-03-28T11:10:47.013Z - info: listening on *:3000
+2015-03-28T11:10:47.045Z - info: [DB]: Connected OK
+2015-03-28T11:11:05.811Z - debug: login
+2015-03-28T11:11:05.811Z - debug: Register PAtient [object Object]
+2015-03-28T11:11:05.982Z - debug: Getting my patient
+2015-03-28T11:11:05.991Z - debug: Getting my Appointment
+2015-03-28T11:11:06.001Z - debug: Getting a notification by doctor
+2015-03-28T11:11:29.742Z - debug: Getting a notification by patient
+2015-03-28T11:11:30.686Z - debug: Getting a notification by patient
+2015-03-28T11:11:37.998Z - debug: LoggerService Started
+2015-03-28T11:11:38.001Z - debug: Loading Models....
+2015-03-28T11:11:39.192Z - debug: loading DB Module...
+2015-03-28T11:11:39.192Z - info: Starting API
+2015-03-28T11:11:40.220Z - info: Loading Auth Route
+2015-03-28T11:11:40.267Z - info: Loading Dorctor Route
+2015-03-28T11:11:40.267Z - info: Loading Patient Route
+2015-03-28T11:11:40.283Z - info: Loading Notification Route
+2015-03-28T11:11:40.283Z - info: Loading Appointment Route
+2015-03-28T11:11:40.298Z - debug: [DB]: Connecting...
+2015-03-28T11:11:40.345Z - info: listening on *:3000
+2015-03-28T11:11:40.387Z - info: [DB]: Connected OK
+2015-03-28T11:11:48.692Z - debug: Updating Appointment
+2015-03-28T11:11:52.761Z - debug: Updating Appointment
+2015-03-28T11:11:59.464Z - debug: Updating Appointment
+2015-03-28T11:12:00.670Z - debug: Updating Appointment
+2015-03-28T11:12:02.133Z - debug: Updating Appointment
+2015-03-28T11:18:09.239Z - debug: login
+2015-03-28T11:18:09.240Z - debug: Register PAtient [object Object]
+2015-03-28T11:18:09.364Z - debug: Getting my patient
+2015-03-28T11:18:09.372Z - debug: Getting my Appointment
+2015-03-28T11:18:09.382Z - debug: Getting a notification by doctor
+2015-03-28T11:18:12.363Z - debug: login
+2015-03-28T11:18:13.852Z - debug: login
+2015-03-28T11:18:14.027Z - debug: login
+2015-03-28T11:20:01.335Z - debug: login
+2015-03-28T11:20:01.335Z - debug: Register PAtient [object Object]
+2015-03-28T11:20:01.441Z - debug: Getting my patient
+2015-03-28T11:20:01.445Z - debug: Getting my Appointment
+2015-03-28T11:20:01.449Z - debug: Getting a notification by doctor
+2015-03-28T11:20:08.449Z - debug: Updating Appointment
+2015-03-28T11:20:35.478Z - debug: login
+2015-03-28T11:20:39.057Z - debug: Getting my patient
+2015-03-28T11:20:39.062Z - debug: Getting my Appointment
+2015-03-28T11:20:39.065Z - debug: Getting a notification by doctor
+2015-03-28T11:21:28.307Z - debug: login
+2015-03-28T11:21:28.308Z - debug: Register PAtient [object Object]
+2015-03-28T11:22:38.913Z - debug: login
+2015-03-28T11:22:38.914Z - debug: Register PAtient [object Object]
+2015-03-28T11:22:40.175Z - debug: login
+2015-03-28T11:27:23.070Z - debug: login
+2015-03-28T16:59:08.245Z - debug: Register Doctor
+2015-03-28T17:02:31.783Z - debug: Register Doctor
+2015-03-28T17:04:12.895Z - debug: Register Doctor
+2015-03-28T17:04:12.896Z - debug: Register PAtient [object Object]
+2015-03-28T17:04:20.933Z - debug: Register Doctor
+2015-03-28T17:04:20.934Z - debug: Register PAtient [object Object]
+2015-03-28T17:04:24.795Z - debug: Register Doctor
+2015-03-28T17:04:24.796Z - debug: Register PAtient [object Object]
+2015-03-28T17:04:25.190Z - debug: Getting my patient
+2015-03-28T17:04:25.194Z - debug: Getting my Appointment
+2015-03-28T17:04:25.199Z - debug: Getting a notification by doctor
+2015-03-28T17:09:04.657Z - debug: login
+2015-03-28T17:09:04.658Z - debug: Register PAtient [object Object]
+2015-03-28T17:09:05.136Z - debug: Getting my patient
+2015-03-28T17:09:05.141Z - debug: Getting my Appointment
+2015-03-28T17:09:05.145Z - debug: Getting a notification by doctor
+2015-03-28T17:10:59.258Z - debug: login
+2015-03-28T17:10:59.259Z - debug: Register PAtient [object Object]
+2015-03-28T17:10:59.350Z - debug: Getting my patient
+2015-03-28T17:10:59.356Z - debug: Getting my Appointment
+2015-03-28T17:10:59.364Z - debug: Getting a notification by doctor
+2015-03-28T17:11:15.759Z - debug: login
+2015-03-28T17:11:40.088Z - debug: Find Doctor
+2015-03-28T17:11:52.366Z - debug: Register Patient
+2015-03-28T17:11:52.369Z - debug: Register PAtient [object Object]
+2015-03-28T17:11:52.753Z - debug: Adding Doctor
+2015-03-28T17:12:05.993Z - debug: login
+2015-03-28T17:12:10.697Z - debug: login
+2015-03-28T17:12:10.698Z - debug: Register PAtient [object Object]
+2015-03-28T17:12:10.775Z - debug: Getting my patient
+2015-03-28T17:12:10.779Z - debug: Getting my Appointment
+2015-03-28T17:12:10.783Z - debug: Getting a notification by doctor
+2015-03-28T17:12:33.008Z - debug: Adding Appointment
+2015-03-28T17:12:39.543Z - debug: Updating Appointment
+2015-03-28T17:12:41.841Z - debug: login
+2015-03-28T17:12:45.162Z - debug: login
+2015-03-28T17:12:45.163Z - debug: Register PAtient [object Object]
+2015-03-28T17:13:27.221Z - debug: login
+2015-03-28T17:15:15.625Z - debug: login
+2015-03-28T17:15:15.626Z - debug: Register PAtient [object Object]
+2015-03-28T17:18:07.116Z - debug: login
+2015-03-28T17:18:07.117Z - debug: Register PAtient [object Object]
+2015-03-28T17:18:27.856Z - debug: login
+2015-03-28T17:18:27.857Z - debug: Register PAtient [object Object]
+2015-03-28T17:18:27.984Z - debug: Getting a notification by patient
+2015-03-28T17:19:53.722Z - debug: login
+2015-03-28T17:19:53.722Z - debug: Register PAtient [object Object]
+2015-03-28T17:19:53.855Z - debug: Getting a notification by patient
+2015-03-28T17:21:44.658Z - debug: login
+2015-03-28T17:21:44.659Z - debug: Register PAtient [object Object]
+2015-03-28T17:21:44.764Z - debug: Getting a notification by patient
+2015-03-28T17:22:39.274Z - debug: login
+2015-03-28T17:22:39.275Z - debug: Register PAtient [object Object]
+2015-03-28T17:22:39.425Z - debug: Getting a notification by patient
+2015-03-28T17:23:39.648Z - debug: login
+2015-03-28T17:23:39.648Z - debug: Register PAtient [object Object]
+2015-03-28T17:23:39.754Z - debug: Getting a notification by patient
+2015-03-28T17:26:12.868Z - debug: login
+2015-03-28T17:26:12.869Z - debug: Register PAtient [object Object]
+2015-03-28T17:26:13.003Z - debug: Getting a notification by patient
+2015-03-28T19:57:45.732Z - debug: login
+2015-03-28T19:57:45.733Z - debug: Register PAtient [object Object]
+2015-03-28T19:57:46.395Z - debug: Getting a notification by patient
+2015-03-28T19:59:10.045Z - debug: login
+2015-03-28T19:59:10.046Z - debug: Register PAtient [object Object]
+2015-03-28T19:59:10.660Z - debug: Getting a notification by patient
+2015-03-28T20:01:28.352Z - debug: LoggerService Started
+2015-03-28T20:01:28.355Z - debug: Loading Models....
+2015-03-28T20:01:29.526Z - debug: loading DB Module...
+2015-03-28T20:01:29.534Z - info: Starting API
+2015-03-28T20:01:38.739Z - info: Loading Auth Route
+2015-03-28T20:01:38.832Z - info: Loading Dorctor Route
+2015-03-28T20:01:38.864Z - info: Loading Patient Route
+2015-03-28T20:01:38.879Z - info: Loading Notification Route
+2015-03-28T20:01:38.895Z - info: Loading Appointment Route
+2015-03-28T20:01:38.910Z - debug: [DB]: Connecting...
+2015-03-28T20:01:38.942Z - info: listening on *:3000
+2015-03-28T20:01:38.994Z - info: [DB]: Connected OK
+2015-03-28T20:01:45.100Z - debug: login
+2015-03-28T20:01:45.102Z - debug: Register PAtient [object Object]
+2015-03-28T20:01:45.695Z - debug: Getting my Appointment
+2015-03-28T20:01:45.708Z - debug: Getting a notification by patient
+2015-03-28T20:04:20.370Z - debug: login
+2015-03-28T20:04:20.371Z - debug: Register PAtient [object Object]
+2015-03-28T20:04:20.981Z - debug: Getting my Appointment
+2015-03-28T20:04:20.989Z - debug: Getting a notification by patient
+2015-03-28T20:06:27.004Z - debug: login
+2015-03-28T20:06:27.005Z - debug: Register PAtient [object Object]
+2015-03-28T20:06:27.583Z - debug: Getting my Appointment
+2015-03-28T20:06:27.586Z - debug: Getting a notification by patient
+2015-03-28T20:06:43.838Z - debug: login
+2015-03-28T20:06:43.839Z - debug: Register PAtient [object Object]
+2015-03-28T20:06:44.988Z - debug: Getting my patient
+2015-03-28T20:06:44.993Z - debug: Getting my Appointment
+2015-03-28T20:06:44.998Z - debug: Getting a notification by doctor

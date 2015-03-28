@@ -34,6 +34,15 @@ module.exports = function (app) {
         })
 
     });
+    app.get("/api/secured/patient/doctor/:ID", function(req, res){
+        DEBUG("Getting my patient")
+        patientCtrl.getmy(req.params.ID,function(err,doc){
+            if (err) res.send({error:err})
+            else res.send(doc)
+
+        })
+
+    });
     app.put("/api/secured/patient/:ID", function(req, res){
         DEBUG("Updating patient")
         patientCtrl.update(req.params.ID,req.body,function(err,doc){

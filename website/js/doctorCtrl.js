@@ -1,13 +1,13 @@
 /**
  * Created by haythem on 20/03/2015.
  */
-trackDr.controller('doctorCtrl', function ($scope,Auth,$filter,Patients,Appointments,uiCalendarConfig, $modal,$http){
+trackDr.controller('doctorCtrl', function ($scope,Auth,$filter,Patients,Appointments,uiCalendarConfig, $modal,$http,$state){
     $scope.active='patients',
         $scope.dashboard={};
     $scope.notifications={};
     $scope.user = Auth.getUser().doctor;
-
-        Patients.getAll(function(res,err){
+if(! Auth.getUser().doctor) $state.go("index");
+        Patients.getMesPatient($scope.user._id,function(res,err){
             if (res){
                 $scope.patients =res;
             }
@@ -20,8 +20,14 @@ trackDr.controller('doctorCtrl', function ($scope,Auth,$filter,Patients,Appointm
         ]
     };
     $scope.eventSources = [  $scope.events];
-    Appointments.getAll(function(res,err){
-        if (res){
+    $scope.logout = function () {
+        Auth.logout();
+        $state.go("index");
+    }
+
+    $http.get(serverApi + '/secured/appointment/doctor/'+$scope.user._id).success(function (res) {
+        if (!res.error) {
+
             $scope.appointments =res;
             res.forEach(function(appoint){
                 $scope.events.events.push({
@@ -35,11 +41,13 @@ trackDr.controller('doctorCtrl', function ($scope,Auth,$filter,Patients,Appointm
                     allDay: false
                 });
             })
-          //  $scope.eventSources = [  $scope.events];
-
         }
+        else {
+            //error(res);
+        }
+    }).error(function (data, status, headers, config) {
     })
-    $http.get(serverApi + '/secured/notification').success(function(data) {
+    $http.get(serverApi + '/secured/notification/doctor/'+$scope.user._id).success(function(data) {
         // update the textarea
         $scope.notifications=data;
     });

@@ -33,6 +33,15 @@ module.exports.get=function(id,cb){
         else cb(null, pat)
     });
 }
+module.exports.getmy=function(id,cb){
+
+    APP.DB.DOCTOR.findOne({ _id: id }).populate('patients','-password').exec( function (er, pat){
+
+        if (er ) cb("ERROR finding Patient :"+er)
+        else cb(null, pat.patients)
+    });
+
+}
 module.exports.delete=function(id,cb){
 
     APP.DB.PATIENT.findOne({ _id: id }, function (er, pat){

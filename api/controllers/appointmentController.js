@@ -47,5 +47,18 @@ module.exports.getList=function(cb){
         cb(er, appoints)
     });
 }
+module.exports.getMy=function(id,cb){
 
+    APP.DB.APPOINTMENT.find({_doctor:id}, function (er, appoints){
 
+        cb(er, appoints)
+    });
+}
+
+module.exports.getMyPAt=function(id,cb){
+
+    APP.DB.APPOINTMENT.find({_patient:id}, function (er, appoints){
+
+        cb(er, appoints)
+    });
+}
