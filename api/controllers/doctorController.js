@@ -52,6 +52,14 @@ module.exports.getList=function(cb){
        cb(er, doctors)
     });
 }
+
+module.exports.getByPatient=function(docId,cb){
+
+    APP.DB.DOCTOR.findOne({patients:docId }, function (er, doctors){
+
+        cb(er, doctors)
+    });
+}
 module.exports.addPatient=function(docId,patId,cb){
 
     APP.DB.DOCTOR.findOne({_id:docId}, function (er, doctors){
@@ -67,6 +75,8 @@ if(er) cb(er)
 
     });
 }
+
+
 
 
 

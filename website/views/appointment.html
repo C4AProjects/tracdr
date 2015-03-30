@@ -1,4 +1,4 @@
-<h3>Appointments</h3>
+<h4>Appointments</h4>
 <div>
     <div>
         <table style="width: 100%">
@@ -9,8 +9,11 @@
                             {{iteration.subject}} <small style="float: right; opacity: .5">{{iteration.startTime| date : 'medium'}}</small>
                         </li>
                     </ul>
+                    <li  class="list-group-item" ng-if="appointments.length<1">
+                        You don't have any Appointment
+                    </li>
                 </td>
-                <td style="vertical-align: top">
+                <td style="vertical-align: top" ng-if="appointments.length>0">
                     <ul class="list-group">
                         <li class="list-group-item ">
                             <b class="txt-color">Appointment: {{appointment.startTime| date : 'medium'}} To  {{appointment.endTime| date : 'medium'}}</b>

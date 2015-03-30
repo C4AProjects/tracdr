@@ -89,6 +89,22 @@ module.exports = function (app) {
         })
 
     });
+    app.get("/api/secured/doctor/patient/:ID", function(req, res){
+        DEBUG("Getting my Doctor")
+        doctorCtrl.getByPatient(req.params.ID,function(err,doc){
+            if (err) res.send({error:err})
+            else {
+                if (doc)
+                    res.send(doc)
+                else
+                    res.send({})
+            }
+
+
+        })
+
+    });
+
     app.put("/api/secured/doctor/:ID", function(req, res){
         DEBUG("Updating Doctor")
         doctorCtrl.update(req.params.ID,req.body,function(err,doc){

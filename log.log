@@ -549,3 +549,453 @@
 2015-03-28T20:06:44.988Z - debug: Getting my patient
 2015-03-28T20:06:44.993Z - debug: Getting my Appointment
 2015-03-28T20:06:44.998Z - debug: Getting a notification by doctor
+2015-03-28T20:10:13.952Z - debug: LoggerService Started
+2015-03-28T20:10:13.955Z - debug: Loading Models....
+2015-03-28T20:10:15.123Z - debug: loading DB Module...
+2015-03-28T20:10:15.130Z - info: Starting API
+2015-03-28T20:10:16.081Z - info: Loading Auth Route
+2015-03-28T20:10:16.112Z - info: Loading Dorctor Route
+2015-03-28T20:10:16.119Z - info: Loading Patient Route
+2015-03-28T20:10:16.124Z - info: Loading Notification Route
+2015-03-28T20:10:16.128Z - info: Loading Appointment Route
+2015-03-28T20:10:16.149Z - debug: [DB]: Connecting...
+2015-03-28T20:10:16.187Z - info: listening on *:3000
+2015-03-28T20:10:16.217Z - info: [DB]: Connected OK
+2015-03-28T20:10:36.012Z - debug: Adding Appointment
+2015-03-28T20:10:45.696Z - debug: login
+2015-03-28T20:10:45.696Z - debug: Register PAtient [object Object]
+2015-03-28T20:10:46.234Z - debug: Getting my Appointment
+2015-03-28T20:10:46.245Z - debug: Getting a notification by patient
+2015-03-30T20:31:58.458Z - debug: LoggerService Started
+2015-03-30T20:31:58.461Z - debug: Loading Models....
+2015-03-30T20:32:07.397Z - debug: loading DB Module...
+2015-03-30T20:32:07.419Z - info: Starting API
+2015-03-30T20:32:16.994Z - info: Loading Auth Route
+2015-03-30T20:32:17.281Z - info: Loading Dorctor Route
+2015-03-30T20:32:17.334Z - info: Loading Patient Route
+2015-03-30T20:32:17.342Z - info: Loading Notification Route
+2015-03-30T20:32:17.391Z - info: Loading Appointment Route
+2015-03-30T20:32:17.412Z - debug: [DB]: Connecting...
+2015-03-30T20:32:17.452Z - info: listening on *:3000
+2015-03-30T20:32:17.488Z - info: [DB]: Connected OK
+2015-03-30T20:40:23.615Z - debug: login
+2015-03-30T20:40:23.620Z - debug: Register PAtient [object Object]
+2015-03-30T20:40:24.919Z - debug: Getting my Appointment
+2015-03-30T20:40:24.929Z - debug: Getting a notification by patient
+2015-03-30T20:42:17.965Z - debug: login
+2015-03-30T20:42:17.966Z - debug: Register PAtient [object Object]
+2015-03-30T20:42:18.655Z - debug: Getting my Appointment
+2015-03-30T20:42:18.657Z - debug: Getting a notification by patient
+2015-03-30T20:42:55.495Z - debug: login
+2015-03-30T20:42:55.496Z - debug: Register PAtient [object Object]
+2015-03-30T20:42:55.610Z - debug: Getting my Appointment
+2015-03-30T20:42:55.624Z - debug: Getting a notification by patient
+2015-03-30T20:43:50.334Z - debug: login
+2015-03-30T20:43:50.335Z - debug: Register PAtient [object Object]
+2015-03-30T20:43:50.486Z - debug: Getting my Appointment
+2015-03-30T20:43:50.488Z - debug: Getting a notification by patient
+2015-03-30T20:44:42.405Z - debug: login
+2015-03-30T20:44:42.406Z - debug: Register PAtient [object Object]
+2015-03-30T20:44:42.511Z - debug: Getting my Appointment
+2015-03-30T20:44:42.516Z - debug: Getting a notification by patient
+2015-03-30T20:49:19.425Z - debug: LoggerService Started
+2015-03-30T20:49:19.428Z - debug: Loading Models....
+2015-03-30T20:49:20.620Z - debug: loading DB Module...
+2015-03-30T20:49:20.627Z - info: Starting API
+2015-03-30T20:49:21.607Z - info: Loading Auth Route
+2015-03-30T20:49:21.639Z - info: Loading Dorctor Route
+2015-03-30T20:49:21.648Z - info: Loading Patient Route
+2015-03-30T20:49:21.652Z - info: Loading Notification Route
+2015-03-30T20:49:21.656Z - info: Loading Appointment Route
+2015-03-30T20:49:21.676Z - debug: [DB]: Connecting...
+2015-03-30T20:49:21.716Z - info: listening on *:3000
+2015-03-30T20:49:21.749Z - info: [DB]: Connected OK
+2015-03-30T20:51:19.576Z - debug: LoggerService Started
+2015-03-30T20:51:19.579Z - debug: Loading Models....
+2015-03-30T20:51:20.730Z - debug: loading DB Module...
+2015-03-30T20:51:20.737Z - info: Starting API
+2015-03-30T20:51:21.706Z - info: Loading Auth Route
+2015-03-30T20:51:21.737Z - info: Loading Dorctor Route
+2015-03-30T20:51:21.744Z - info: Loading Patient Route
+2015-03-30T20:51:21.749Z - info: Loading Notification Route
+2015-03-30T20:51:21.754Z - info: Loading Appointment Route
+2015-03-30T20:51:21.772Z - debug: [DB]: Connecting...
+2015-03-30T20:51:21.814Z - info: listening on *:3000
+2015-03-30T20:51:21.849Z - info: [DB]: Connected OK
+2015-03-30T20:51:25.858Z - debug: Getting a Doctor
+2015-03-30T20:51:28.986Z - debug: Getting a Doctor
+2015-03-30T20:52:12.057Z - debug: LoggerService Started
+2015-03-30T20:52:12.060Z - debug: Loading Models....
+2015-03-30T20:52:13.252Z - debug: loading DB Module...
+2015-03-30T20:52:13.260Z - info: Starting API
+2015-03-30T20:52:14.243Z - info: Loading Auth Route
+2015-03-30T20:52:14.276Z - info: Loading Dorctor Route
+2015-03-30T20:52:14.285Z - info: Loading Patient Route
+2015-03-30T20:52:14.290Z - info: Loading Notification Route
+2015-03-30T20:52:14.294Z - info: Loading Appointment Route
+2015-03-30T20:52:14.314Z - debug: [DB]: Connecting...
+2015-03-30T20:52:14.352Z - info: listening on *:3000
+2015-03-30T20:52:14.382Z - info: [DB]: Connected OK
+2015-03-30T20:52:15.511Z - debug: Getting a Doctor
+2015-03-30T20:52:17.073Z - debug: Getting a Doctor
+2015-03-30T20:53:07.720Z - debug: LoggerService Started
+2015-03-30T20:53:07.723Z - debug: Loading Models....
+2015-03-30T20:53:08.929Z - debug: loading DB Module...
+2015-03-30T20:53:08.937Z - info: Starting API
+2015-03-30T20:53:09.906Z - info: Loading Auth Route
+2015-03-30T20:53:09.935Z - info: Loading Dorctor Route
+2015-03-30T20:53:09.942Z - info: Loading Patient Route
+2015-03-30T20:53:09.946Z - info: Loading Notification Route
+2015-03-30T20:53:09.950Z - info: Loading Appointment Route
+2015-03-30T20:53:09.969Z - debug: [DB]: Connecting...
+2015-03-30T20:53:10.004Z - info: listening on *:3000
+2015-03-30T20:53:10.036Z - info: [DB]: Connected OK
+2015-03-30T20:53:11.062Z - debug: Getting a Doctor
+2015-03-30T20:53:11.078Z - info: 
+2015-03-30T20:53:31.572Z - debug: LoggerService Started
+2015-03-30T20:53:31.575Z - debug: Loading Models....
+2015-03-30T20:53:32.831Z - debug: loading DB Module...
+2015-03-30T20:53:32.839Z - info: Starting API
+2015-03-30T20:53:33.872Z - info: Loading Auth Route
+2015-03-30T20:53:33.903Z - info: Loading Dorctor Route
+2015-03-30T20:53:33.911Z - info: Loading Patient Route
+2015-03-30T20:53:33.916Z - info: Loading Notification Route
+2015-03-30T20:53:33.920Z - info: Loading Appointment Route
+2015-03-30T20:53:33.940Z - debug: [DB]: Connecting...
+2015-03-30T20:53:33.979Z - info: listening on *:3000
+2015-03-30T20:53:34.012Z - info: [DB]: Connected OK
+2015-03-30T20:53:35.635Z - debug: Getting a Doctor
+2015-03-30T20:53:35.650Z - info: 
+2015-03-30T20:54:55.550Z - debug: Getting a Doctor
+2015-03-30T20:54:55.587Z - info:  strictMode=true, selected=undefined, shardval=undefined, saveError=undefined, validationError=undefined, adhocPaths=undefined, removing=undefined, inserting=undefined, version=undefined, , _id=undefined, populate=undefined, populated=undefined, wasPopulated=false, scope=undefined, patients=init, created_date=init, modified_date=init, __v=init, password=init, userName=init, email=init, lastName=init, firstName=init, _id=init, , , patients=true, __v=true, created_date=true, modified_date=true, password=true, userName=true, email=true, lastName=true, firstName=true, _id=true, , , stateNames=[require, modify, init, default, ignore], ownerDocument=undefined, fullPath=undefined, isNew=false, errors=undefined, _maxListeners=0, patients=[_bsontype=ObjectID, id=UæXÈ*ÔS:, _bsontype=ObjectID, id=UCsÁtõðâ], created_date=Fri Mar 20 2015 11:08:49 GMT+0100 (Paris, Madrid), modified_date=Sat Mar 28 2015 12:06:43 GMT+0100 (Paris, Madrid), __v=2, password=doctor, userName=doctor, email=doctor, lastName=my lastname, firstName=doctor, _bsontype=ObjectID, id=Uñ±0  c, save=[function (next) {
+    // validate all document arrays.
+    // we keep the error semaphore to make sure we don't
+    // call `save` unnecessarily (we only need 1 error)
+    var subdocs = 0
+      , error = false
+      , self = this;
+
+    // check for DocumentArrays
+    var arrays = this.$__.activePaths
+    .map('init', 'modify', function (i) {
+      return self.getValue(i);
+    })
+    .filter(function (val) {
+      return val && val instanceof DocumentArray && val.length;
+    });
+
+    if (!arrays.length)
+      return next();
+
+    arrays.forEach(function (array) {
+      if (error) return;
+
+      // handle sparse arrays by using for loop vs array.forEach
+      // which skips the sparse elements
+
+      var len = array.length
+      subdocs += len;
+
+      for (var i = 0; i < len; ++i) {
+        if (error) break;
+
+        var doc = array[i];
+        if (!doc) {
+          --subdocs || next();
+          continue;
+        }
+
+        doc.save(handleSave);
+      }
+    });
+
+    function handleSave (err) {
+      if (error) return;
+
+      if (err) {
+        self.$__.validationError = undefined;
+        return next(error = err);
+      }
+
+      --subdocs || next();
+    }
+
+  }, function checkForExistingErrors(next) {
+    // if any doc.set() calls failed
+    var err = this.$__.saveError;
+    if (err) {
+      this.$__.saveError = null;
+      next(err);
+    } else {
+      next();
+    }
+  }, function validation(next) {
+    return this.validate(next);
+  }, function (next) {
+            // do stuff
+            this.modified_date = new Date();
+
+            next();
+        }], save=[], save=function () {
+      var self = this
+        , hookArgs // arguments eventually passed to the hook - are mutable
+        , lastArg = arguments[arguments.length-1]
+        , pres = this._pres[name]
+        , posts = this._posts[name]
+        , _total = pres.length
+        , _current = -1
+        , _asyncsLeft = proto[name].numAsyncPres
+        , _next = function () {
+            if (arguments[0] instanceof Error) {
+              return handleError(arguments[0]);
+            }
+            var _args = Array.prototype.slice.call(arguments)
+              , currPre
+              , preArgs;
+            if (_args.length && !(arguments[0] == null && typeof lastArg === 'function'))
+              hookArgs = _args;
+            if (++_current < _total) {
+              currPre = pres[_current]
+              if (currPre.isAsync && currPre.length < 2)
+                throw new Error("Your pre must have next and done arguments -- e.g., function (next, done, ...)");
+              if (currPre.length < 1)
+                throw new Error("Your pre must have a next argument -- e.g., function (next, ...)");
+              preArgs = (currPre.isAsync
+                          ? [once(_next), once(_asyncsDone)]
+                          : [once(_next)]).concat(hookArgs);
+              return currPre.apply(self, preArgs);
+            } else if (!proto[name].numAsyncPres) {
+              return _done.apply(self, hookArgs);
+            }
+          }
+        , _done = function () {
+            var args_ = Array.prototype.slice.call(arguments)
+              , ret, total_, current_, next_, done_, postArgs;
+            if (_current === _total) {
+              ret = fn.apply(self, args_);
+              total_ = posts.length;
+              current_ = -1;
+              next_ = function () {
+                if (arguments[0] instanceof Error) {
+                  return handleError(arguments[0]);
+                }
+                var args_ = Array.prototype.slice.call(arguments, 1)
+                  , currPost
+                  , postArgs;
+                if (args_.length) hookArgs = args_;
+                if (++current_ < total_) {
+                  currPost = posts[current_]
+                  if (currPost.length < 1)
+                    throw new Error("Your post must have a next argument -- e.g., function (next, ...)");
+                  postArgs = [once(next_)].concat(hookArgs);
+                  return currPost.apply(self, postArgs);
+                }
+              };
+              if (total_) return next_();
+              return ret;
+            }
+          };
+      if (_asyncsLeft) {
+        function _asyncsDone (err) {
+          if (err && err instanceof Error) {
+            return handleError(err);
+          }
+          --_asyncsLeft || _done.apply(self, hookArgs);
+        }
+      }
+      function handleError (err) {
+        if ('function' == typeof lastArg)
+          return lastArg(err);
+        if (errorCb) return errorCb.call(self, err);
+        throw err;
+      }
+      return _next.apply(this, arguments);
+    }, 
+2015-03-30T20:56:00.065Z - debug: LoggerService Started
+2015-03-30T20:56:00.069Z - debug: Loading Models....
+2015-03-30T20:56:01.312Z - debug: loading DB Module...
+2015-03-30T20:56:01.323Z - info: Starting API
+2015-03-30T20:56:02.384Z - info: Loading Auth Route
+2015-03-30T20:56:02.412Z - info: Loading Dorctor Route
+2015-03-30T20:56:02.419Z - info: Loading Patient Route
+2015-03-30T20:56:02.424Z - info: Loading Notification Route
+2015-03-30T20:56:02.428Z - info: Loading Appointment Route
+2015-03-30T20:56:02.444Z - debug: [DB]: Connecting...
+2015-03-30T20:56:02.462Z - info: listening on *:3000
+2015-03-30T20:56:02.492Z - info: [DB]: Connected OK
+2015-03-30T20:56:04.009Z - debug: Getting my Doctor
+2015-03-30T20:59:44.550Z - debug: login
+2015-03-30T20:59:44.552Z - debug: Register PAtient [object Object]
+2015-03-30T20:59:44.710Z - debug: Getting my Appointment
+2015-03-30T20:59:44.719Z - debug: Getting a notification by patient
+2015-03-30T21:00:28.133Z - debug: login
+2015-03-30T21:00:28.134Z - debug: Register PAtient [object Object]
+2015-03-30T21:00:28.303Z - debug: Getting my Doctor
+2015-03-30T21:00:28.305Z - debug: Getting my Appointment
+2015-03-30T21:00:28.311Z - debug: Getting a notification by patient
+2015-03-30T21:01:38.997Z - debug: login
+2015-03-30T21:01:38.998Z - debug: Register PAtient [object Object]
+2015-03-30T21:01:39.153Z - debug: Getting my Doctor
+2015-03-30T21:01:39.158Z - debug: Getting my Appointment
+2015-03-30T21:01:39.160Z - debug: Getting a notification by patient
+2015-03-30T21:02:03.845Z - debug: login
+2015-03-30T21:02:03.846Z - debug: Register PAtient [object Object]
+2015-03-30T21:02:03.997Z - debug: Getting my Doctor
+2015-03-30T21:02:04.004Z - debug: Getting my Appointment
+2015-03-30T21:02:04.008Z - debug: Getting a notification by patient
+2015-03-30T21:04:24.364Z - debug: login
+2015-03-30T21:04:24.365Z - debug: Register PAtient [object Object]
+2015-03-30T21:04:24.527Z - debug: Getting my Doctor
+2015-03-30T21:04:24.533Z - debug: Getting a notification by patient
+2015-03-30T21:04:24.537Z - debug: Getting my Appointment
+2015-03-30T21:05:05.457Z - debug: login
+2015-03-30T21:05:05.458Z - debug: Register PAtient [object Object]
+2015-03-30T21:05:05.621Z - debug: Getting my Doctor
+2015-03-30T21:05:05.626Z - debug: Getting my Appointment
+2015-03-30T21:05:05.632Z - debug: Getting a notification by patient
+2015-03-30T21:05:38.842Z - debug: login
+2015-03-30T21:05:38.844Z - debug: Register PAtient [object Object]
+2015-03-30T21:05:39.475Z - debug: Getting my patient
+2015-03-30T21:05:39.480Z - debug: Getting my Appointment
+2015-03-30T21:05:39.483Z - debug: Getting a notification by doctor
+2015-03-30T21:07:20.313Z - debug: login
+2015-03-30T21:07:20.315Z - debug: Register PAtient [object Object]
+2015-03-30T21:07:20.395Z - debug: Getting my patient
+2015-03-30T21:07:20.424Z - debug: Getting my Appointment
+2015-03-30T21:07:20.426Z - debug: Getting a notification by doctor
+2015-03-30T21:07:55.279Z - debug: login
+2015-03-30T21:07:55.281Z - debug: Register PAtient [object Object]
+2015-03-30T21:07:55.376Z - debug: Getting my patient
+2015-03-30T21:07:55.381Z - debug: Getting my Appointment
+2015-03-30T21:07:55.386Z - debug: Getting a notification by doctor
+2015-03-30T21:13:30.909Z - debug: login
+2015-03-30T21:13:30.910Z - debug: Register PAtient [object Object]
+2015-03-30T21:13:31.511Z - debug: Getting my patient
+2015-03-30T21:13:31.516Z - debug: Getting my Appointment
+2015-03-30T21:13:31.520Z - debug: Getting a notification by doctor
+2015-03-30T21:14:07.247Z - debug: login
+2015-03-30T21:14:07.248Z - debug: Register PAtient [object Object]
+2015-03-30T21:14:07.363Z - debug: Getting my patient
+2015-03-30T21:14:07.367Z - debug: Getting my Appointment
+2015-03-30T21:14:07.379Z - debug: Getting a notification by doctor
+2015-03-30T21:14:27.435Z - debug: login
+2015-03-30T21:14:27.436Z - debug: Register PAtient [object Object]
+2015-03-30T21:14:28.214Z - debug: Getting my Doctor
+2015-03-30T21:14:28.217Z - debug: Getting my Appointment
+2015-03-30T21:14:28.223Z - debug: Getting a notification by patient
+2015-03-30T21:16:16.218Z - debug: login
+2015-03-30T21:16:16.219Z - debug: Register PAtient [object Object]
+2015-03-30T21:16:16.364Z - debug: Getting my patient
+2015-03-30T21:16:16.370Z - debug: Getting my Appointment
+2015-03-30T21:16:16.372Z - debug: Getting a notification by doctor
+2015-03-30T21:17:16.439Z - debug: login
+2015-03-30T21:17:16.440Z - debug: Register PAtient [object Object]
+2015-03-30T21:17:16.585Z - debug: Getting my patient
+2015-03-30T21:17:16.592Z - debug: Getting my Appointment
+2015-03-30T21:17:16.595Z - debug: Getting a notification by doctor
+2015-03-30T21:19:44.938Z - debug: login
+2015-03-30T21:19:44.939Z - debug: Register PAtient [object Object]
+2015-03-30T21:19:45.111Z - debug: Getting my Doctor
+2015-03-30T21:19:45.115Z - debug: Getting my Appointment
+2015-03-30T21:19:45.119Z - debug: Getting a notification by patient
+2015-03-30T21:19:55.912Z - debug: login
+2015-03-30T21:19:55.913Z - debug: Register PAtient [object Object]
+2015-03-30T21:19:55.989Z - debug: Getting my patient
+2015-03-30T21:19:55.993Z - debug: Getting my Appointment
+2015-03-30T21:19:56.005Z - debug: Getting a notification by doctor
+2015-03-30T21:20:54.583Z - debug: login
+2015-03-30T21:20:54.584Z - debug: Register PAtient [object Object]
+2015-03-30T21:20:54.687Z - debug: Getting my patient
+2015-03-30T21:20:54.692Z - debug: Getting my Appointment
+2015-03-30T21:20:54.698Z - debug: Getting a notification by doctor
+2015-03-30T21:23:56.836Z - debug: login
+2015-03-30T21:23:56.837Z - debug: Register PAtient [object Object]
+2015-03-30T21:23:56.935Z - debug: Getting my patient
+2015-03-30T21:23:56.939Z - debug: Getting a notification by doctor
+2015-03-30T21:23:56.944Z - debug: Getting my Appointment
+2015-03-30T21:26:03.495Z - debug: login
+2015-03-30T21:26:03.496Z - debug: Register PAtient [object Object]
+2015-03-30T21:26:03.588Z - debug: Getting my patient
+2015-03-30T21:26:03.595Z - debug: Getting my Appointment
+2015-03-30T21:26:03.610Z - debug: Getting a notification by doctor
+2015-03-30T21:26:23.310Z - debug: login
+2015-03-30T21:26:23.312Z - debug: Register PAtient [object Object]
+2015-03-30T21:26:23.405Z - debug: Getting my patient
+2015-03-30T21:26:23.410Z - debug: Getting my Appointment
+2015-03-30T21:26:23.412Z - debug: Getting a notification by doctor
+2015-03-30T21:29:06.861Z - debug: login
+2015-03-30T21:29:06.862Z - debug: Register PAtient [object Object]
+2015-03-30T21:29:06.947Z - debug: Getting my patient
+2015-03-30T21:29:06.952Z - debug: Getting my Appointment
+2015-03-30T21:29:06.961Z - debug: Getting a notification by doctor
+2015-03-30T21:30:25.955Z - debug: login
+2015-03-30T21:30:25.956Z - debug: Register PAtient [object Object]
+2015-03-30T21:30:26.046Z - debug: Getting my patient
+2015-03-30T21:30:26.050Z - debug: Getting my Appointment
+2015-03-30T21:30:26.053Z - debug: Getting a notification by doctor
+2015-03-30T21:32:23.438Z - debug: login
+2015-03-30T21:32:23.439Z - debug: Register PAtient [object Object]
+2015-03-30T21:32:23.523Z - debug: Getting my patient
+2015-03-30T21:32:23.527Z - debug: Getting my Appointment
+2015-03-30T21:32:23.529Z - debug: Getting a notification by doctor
+2015-03-30T21:41:10.414Z - debug: login
+2015-03-30T21:41:10.415Z - debug: Register PAtient [object Object]
+2015-03-30T21:41:10.502Z - debug: Getting my patient
+2015-03-30T21:41:10.506Z - debug: Getting a notification by doctor
+2015-03-30T21:41:10.511Z - debug: Getting my Appointment
+2015-03-30T21:42:00.337Z - debug: login
+2015-03-30T21:42:00.338Z - debug: Register PAtient [object Object]
+2015-03-30T21:42:00.414Z - debug: Getting my patient
+2015-03-30T21:42:00.418Z - debug: Getting my Appointment
+2015-03-30T21:42:00.421Z - debug: Getting a notification by doctor
+2015-03-30T21:42:20.295Z - debug: Register Patient
+2015-03-30T21:43:23.444Z - debug: login
+2015-03-30T21:43:23.445Z - debug: Register PAtient [object Object]
+2015-03-30T21:43:23.561Z - debug: Getting my patient
+2015-03-30T21:43:23.565Z - debug: Getting my Appointment
+2015-03-30T21:43:23.581Z - debug: Getting a notification by doctor
+2015-03-30T21:43:39.371Z - debug: Register Patient
+2015-03-30T21:44:44.000Z - debug: login
+2015-03-30T21:44:44.001Z - debug: Register PAtient [object Object]
+2015-03-30T21:44:44.602Z - debug: Getting my patient
+2015-03-30T21:44:44.606Z - debug: Getting my Appointment
+2015-03-30T21:44:44.615Z - debug: Getting a notification by doctor
+2015-03-30T21:44:59.205Z - debug: Register Patient
+2015-03-30T21:45:13.525Z - debug: Register Patient
+2015-03-30T21:45:48.973Z - debug: login
+2015-03-30T21:45:48.974Z - debug: Register PAtient [object Object]
+2015-03-30T21:45:49.062Z - debug: Getting my patient
+2015-03-30T21:45:49.068Z - debug: Getting my Appointment
+2015-03-30T21:45:49.070Z - debug: Getting a notification by doctor
+2015-03-30T21:46:07.639Z - debug: Register Patient
+2015-03-30T21:46:17.250Z - debug: Register Patient
+2015-03-30T21:48:55.741Z - debug: login
+2015-03-30T21:48:55.743Z - debug: Register PAtient [object Object]
+2015-03-30T21:48:55.831Z - debug: Getting my patient
+2015-03-30T21:48:55.886Z - debug: Getting my Appointment
+2015-03-30T21:48:55.892Z - debug: Getting a notification by doctor
+2015-03-30T21:49:13.889Z - debug: Register Patient
+2015-03-30T21:49:13.890Z - debug: Register PAtient [object Object]
+2015-03-30T21:49:13.930Z - debug: Adding Doctor
+2015-03-30T21:49:23.938Z - debug: login
+2015-03-30T21:49:23.939Z - debug: Register PAtient [object Object]
+2015-03-30T21:49:24.023Z - debug: Getting my patient
+2015-03-30T21:49:24.027Z - debug: Getting my Appointment
+2015-03-30T21:49:24.030Z - debug: Getting a notification by doctor
+2015-03-30T21:51:53.607Z - debug: Register Patient
+2015-03-30T21:51:53.608Z - debug: Register PAtient [object Object]
+2015-03-30T21:51:53.639Z - debug: Adding Doctor
+2015-03-30T21:53:05.177Z - debug: login
+2015-03-30T21:53:05.178Z - debug: Register PAtient [object Object]
+2015-03-30T21:53:05.288Z - debug: Getting my patient
+2015-03-30T21:53:05.307Z - debug: Getting my Appointment
+2015-03-30T21:53:05.312Z - debug: Getting a notification by doctor
+2015-03-30T21:53:19.476Z - debug: Register Patient
+2015-03-30T21:53:19.477Z - debug: Register PAtient [object Object]
+2015-03-30T21:53:19.506Z - debug: Adding Doctor
+2015-03-30T21:53:37.079Z - debug: Adding Appointment
+2015-03-30T21:53:44.959Z - debug: login
+2015-03-30T21:53:44.961Z - debug: Register PAtient [object Object]
+2015-03-30T21:53:45.643Z - debug: Getting my Doctor
+2015-03-30T21:53:45.650Z - debug: Getting my Appointment
+2015-03-30T21:53:45.653Z - debug: Getting a notification by patient

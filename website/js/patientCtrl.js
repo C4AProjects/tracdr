@@ -18,6 +18,18 @@ trackDr.controller('patientCtrl', function ($scope,Auth,$state,$http,$filter){
         events: [
         ]
     };
+    $scope.mydoctor={};
+    $http.get(serverApi + '/secured/doctor/patient/'+$scope.user._id).success(function (res) {
+        if (!res.error) {
+
+
+            $scope.mydoctor=res;
+        }
+        else {
+            //error(res);
+        }
+    }).error(function (data, status, headers, config) {
+    })
     $scope.eventSources = [  $scope.events];
     $http.get(serverApi + '/secured/appointment/patient/'+$scope.user._id).success(function (res) {
         if (!res.error) {

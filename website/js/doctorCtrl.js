@@ -1,42 +1,41 @@
 /**
  * Created by haythem on 20/03/2015.
  */
-trackDr.controller('doctorCtrl', function ($scope,Auth,$filter,Patients,Appointments,uiCalendarConfig, $modal,$http,$state){
-    $scope.active='patients',
-        $scope.dashboard={};
-    $scope.notifications={};
+trackDr.controller('doctorCtrl', function ($scope, Auth, $filter, Patients, Appointments, uiCalendarConfig, $modal, $http, $state) {
+    $scope.active = 'patients',
+        $scope.dashboard = {};
+    $scope.notifications = {};
     $scope.user = Auth.getUser().doctor;
-if(! Auth.getUser().doctor) $state.go("index");
-        Patients.getMesPatient($scope.user._id,function(res,err){
-            if (res){
-                $scope.patients =res;
-            }
-        })
+    if (!Auth.getUser().doctor) $state.go("index");
+    Patients.getMesPatient($scope.user._id, function (res, err) {
+        if (res) {
+            $scope.patients = res;
+        }
+    })
 
     $scope.events = {
         color: '#0078ba',
         textColor: 'white',
-        events: [
-        ]
+        events: []
     };
-    $scope.eventSources = [  $scope.events];
+    $scope.eventSources = [$scope.events];
     $scope.logout = function () {
         Auth.logout();
         $state.go("index");
     }
 
-    $http.get(serverApi + '/secured/appointment/doctor/'+$scope.user._id).success(function (res) {
+    $http.get(serverApi + '/secured/appointment/doctor/' + $scope.user._id).success(function (res) {
         if (!res.error) {
 
-            $scope.appointments =res;
-            res.forEach(function(appoint){
+            $scope.appointments = res;
+            res.forEach(function (appoint) {
                 $scope.events.events.push({
-                    title:appoint.subject,
+                    title: appoint.subject,
                     start: appoint.startTime,
-                    end:  appoint.endTime,
-                    details:  appoint.details,
+                    end: appoint.endTime,
+                    details: appoint.details,
 
-                    eventId:appoint._id,
+                    eventId: appoint._id,
                     className: ['openSesame'],
                     allDay: false
                 });
@@ -47,46 +46,48 @@ if(! Auth.getUser().doctor) $state.go("index");
         }
     }).error(function (data, status, headers, config) {
     })
-    $http.get(serverApi + '/secured/notification/doctor/'+$scope.user._id).success(function(data) {
+    $http.get(serverApi + '/secured/notification/doctor/' + $scope.user._id).success(function (data) {
         // update the textarea
-        $scope.notifications=data;
+        $scope.notifications = data;
     });
-    $scope.selectPatient = function(id){
+    $scope.selectPatient = function (id) {
         $scope.patient = $filter('filter')($scope.patients, {_id: id}, true)[0];
     };
 
-    $scope.selectAppointment = function(id){
+    $scope.selectAppointment = function (id) {
         $scope.appointment = $filter('filter')($scope.appointments, {_id: id}, true)[0];
     };
 
-    $scope.selectNotification = function(id){
+    $scope.selectNotification = function (id) {
         $scope.snotif = $filter('filter')($scope.notifications, {_id: id}, true)[0];
     };
-    $scope.alertOnDrop = function(event, delta, revertFunc, jsEvent, ui, view){
-       console.log(event)
+    $scope.alertOnDrop = function (event, delta, revertFunc, jsEvent, ui, view) {
+        console.log(event)
         console.log(delta)
-        var updatedEvent={}
-        updatedEvent.endTime=event.end
-        updatedEvent.startTime=event.start
+        var updatedEvent = {}
+        updatedEvent.endTime = event.end
+        updatedEvent.startTime = event.start
 
-        Appointments.update(event.eventId,updatedEvent,function(res){
+        Appointments.update(event.eventId, updatedEvent, function (res) {
             console.log("updated");
 //
-     console.log( $filter('filter')($scope.appointments, {_id: event.eventId}, true)[0])
+            console.log($filter('filter')($scope.appointments, {_id: event.eventId}, true)[0])
 
-        },function(err){alert(err)})
+        }, function (err) {
+            alert(err)
+        })
     };
 
-    $scope.alertEventOnClick= function(start, end, allDay, jsEvent) {
-       $scope. open('lg',start)
+    $scope.alertEventOnClick = function (start, end, allDay, jsEvent) {
+        $scope.open('lg', start)
     }
     /* alert on eventClick */
 
     $scope.uiConfig = {
-        calendar:{
+        calendar: {
             height: 450,
             editable: true,
-            header:{
+            header: {
                 left: 'month agendaWeek',
                 center: 'title',
                 right: 'today prev,next'
@@ -101,50 +102,70 @@ if(! Auth.getUser().doctor) $state.go("index");
     };
     $scope.items = ['item1', 'item2', 'item3'];
     /* event sources array*/
-    $scope.open = function (size,date) {
+
+    $scope.addPatient = function () {
+        var modaladd = $modal.open({
+            templateUrl: 'views/doctor/add_patient.html',
+            controller: 'addPatientCtrl',
+            size: 'lg',
+            resolve: {
+                obj: function () {
+                    return {doctor: $scope.user};
+                }
+            }
+        });
+        modaladd.result.then(function (event) {
+            if (event) {
+                $scope.patients.push(event)
+            }}
+        )
+    }
+    $scope.open = function (size, date) {
 
         var modalInstance = $modal.open({
             templateUrl: 'views/doctor/add_appointment.html',
-           controller: 'ModalInstanceCtrl',
+            controller: 'ModalInstanceCtrl',
             size: size,
             resolve: {
                 obj: function () {
-                    return {itmes:$scope.items,patients:  $scope.patients,date:date};
+                    return {itmes: $scope.items, patients: $scope.patients, date: date};
                 }
             }
         });
 
         modalInstance.result.then(function (event) {
-if(event){
-    event._doctor=$scope.user._id;
+            if (event) {
+                event._doctor = $scope.user._id;
 
-    Appointments.add(event,function(res){
-        console.log("added");
-        $scope.appointments.push(res.appointment)
+                Appointments.add(event, function (res) {
+                    console.log("added");
+                    $scope.appointments.push(res.appointment)
 
 
-        $scope.events.events.push({
-            title:res.appointment.subject,
-            start: res.appointment.startTime,
-            end:  res.appointment.endTime,
-            details:  res.appointment.details,
+                    $scope.events.events.push({
+                        title: res.appointment.subject,
+                        start: res.appointment.startTime,
+                        end: res.appointment.endTime,
+                        details: res.appointment.details,
 
-            eventId:res.appointment._id,
-            className: ['openSesame'],
-            allDay: false
-        });
+                        eventId: res.appointment._id,
+                        className: ['openSesame'],
+                        allDay: false
+                    });
 
-    },function(err){alert(err)})
+                }, function (err) {
+                    alert(err)
+                })
 
-}
+            }
         }, function () {
 
         });
     };
-}).controller('ModalInstanceCtrl', function ($scope, $modalInstance, obj,$filter) {
-    $scope.patient={}
-    $scope.event={}
-    $scope.modal={}
+}).controller('ModalInstanceCtrl', function ($scope, $modalInstance, obj, $filter) {
+    $scope.patient = {}
+    $scope.event = {}
+    $scope.modal = {}
     $scope.modal.start = new Date();
     $scope.modal.end = new Date();
     $scope.hstep = 1;
@@ -159,14 +180,13 @@ if(event){
     };
     $scope.date = obj.date;
     $scope.items = obj.itmes;
-    $scope.patients= obj.patients;
+    $scope.patients = obj.patients;
     $scope.selected = {
         item: $scope.items[0]
     };
-    $scope.selectPatient = function(id){
+    $scope.selectPatient = function (id) {
         $scope.patient = $filter('filter')($scope.patients, {_id: id}, true)[0];
     };
-
 
 
     $scope.cancel = function () {
@@ -182,16 +202,40 @@ if(event){
         $scope.modal.end.setMonth(obj.date.getMonth())
         $scope.modal.end.setDate(obj.date.getDate())
 
-        if ($scope.patient._id){
-        $scope.event={}
-        $scope.event.startTime=$scope.modal.start;
-        $scope.event.endTime=$scope.modal.end;
-        $scope.event.details=$scope.modal.details
-        $scope.event.subject=$scope.modal.subject
-        $scope.event._patient=$scope.patient._id
-        $modalInstance.close($scope.event);
-        }else{
+        if ($scope.patient._id) {
+            $scope.event = {}
+            $scope.event.startTime = $scope.modal.start;
+            $scope.event.endTime = $scope.modal.end;
+            $scope.event.details = $scope.modal.details
+            $scope.event.subject = $scope.modal.subject
+            $scope.event._patient = $scope.patient._id
+            $modalInstance.close($scope.event);
+        } else {
             alert("Please select a Patient")
         }
     };
-});
+}).controller('addPatientCtrl', function ($scope, $modalInstance, obj, $filter,Auth,$http) {
+$scope.nuser={};
+    $scope.doctor = obj.doctor;
+    $scope.cancel = function () {
+        $modalInstance.dismiss('cancel');
+    };
+    $scope.ok = function () {
+        $scope.nuser.userName=$scope.nuser.firstName;
+        Auth.registerPAtient($scope.nuser, function (res) {
+
+
+
+                //   app.post("/api/secured/doctor/:docID/patien/:patientID", function(req, res){
+                $http.post(serverApi + '/secured/doctor/'  +$scope.doctor._id+'/patien/'+res.patient._id, $scope.doctor).success(function(data) {
+                    console.log(data)
+                });
+
+
+            $modalInstance.close(res.patient);
+        },    function (err) {
+            alert(err.error)
+        })
+
+    }
+})

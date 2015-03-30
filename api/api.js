@@ -38,7 +38,7 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
-app.use('/api/secured', expressJwt({secret:  secret}));
+//app.use('/api/secured', expressJwt({secret:  secret}));
 app.use(function(err, req, res, next){
     if (err.constructor.name === 'UnauthorizedError') {
         res.send(401, 'Unauthorized');
