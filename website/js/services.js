@@ -14,7 +14,7 @@ angular.module('trackDr-services', [])
 
             login: function (user, success, error) {
 
-                $http.post(serverApi + '/login/', user).success(function (res) {
+                $http.post('http://169.54.30.34:3000/api/login/', user).success(function (res) {
                     if (!res.error) {
                         changeUser(res);
                         $window.sessionStorage.token = res.token;
@@ -27,7 +27,7 @@ angular.module('trackDr-services', [])
                 }).error(function (data, status, headers, config) {
                     // Erase the token if the user fails to log in
 
-                    delete $window.sessionStorage.token; error();})
+                    delete $window.sessionStorage.token; })
             }, logout: function ( success, error) {
 
 
