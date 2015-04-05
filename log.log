@@ -999,3 +999,110 @@
 2015-03-30T21:53:45.643Z - debug: Getting my Doctor
 2015-03-30T21:53:45.650Z - debug: Getting my Appointment
 2015-03-30T21:53:45.653Z - debug: Getting a notification by patient
+2015-04-05T09:38:34.675Z - debug: LoggerService Started
+2015-04-05T09:38:34.678Z - debug: Loading Models....
+2015-04-05T09:38:45.590Z - debug: loading DB Module...
+2015-04-05T09:38:45.625Z - info: Starting API
+2015-04-05T09:39:14.111Z - info: Loading Auth Route
+2015-04-05T09:39:14.947Z - info: Loading Dorctor Route
+2015-04-05T09:39:15.048Z - info: Loading Patient Route
+2015-04-05T09:39:15.204Z - info: Loading Notification Route
+2015-04-05T09:39:15.240Z - info: Loading Appointment Route
+2015-04-05T09:39:15.361Z - debug: [DB]: Connecting...
+2015-04-05T09:39:15.400Z - info: listening on *:3000
+2015-04-05T09:39:15.432Z - info: [DB]: Connected OK
+2015-04-05T10:29:48.336Z - debug: Find Doctor
+2015-04-05T10:30:01.088Z - debug: Register Patient
+2015-04-05T10:30:01.090Z - debug: Register PAtient [object Object]
+2015-04-05T10:30:01.663Z - debug: Adding Doctor
+2015-04-05T10:30:02.164Z - debug: Getting my Doctor
+2015-04-05T10:30:02.169Z - debug: Getting my Appointment
+2015-04-05T10:30:02.174Z - debug: Getting a notification by patient
+2015-04-05T10:34:35.254Z - debug: Register Doctor
+2015-04-05T10:34:35.256Z - debug: Register PAtient [object Object]
+2015-04-05T10:34:36.073Z - debug: Getting my patient
+2015-04-05T10:34:36.078Z - debug: Getting my Appointment
+2015-04-05T10:34:36.086Z - debug: Getting a notification by doctor
+2015-04-05T10:36:34.273Z - debug: login
+2015-04-05T10:36:46.844Z - debug: login
+2015-04-05T10:36:46.846Z - debug: Register PAtient [object Object]
+2015-04-05T10:36:50.748Z - debug: login
+2015-04-05T10:36:50.750Z - debug: Register PAtient [object Object]
+2015-04-05T10:36:50.875Z - debug: Getting my patient
+2015-04-05T10:36:50.882Z - debug: Getting my Appointment
+2015-04-05T10:36:50.889Z - debug: Getting a notification by doctor
+2015-04-05T10:37:33.291Z - debug: login
+2015-04-05T10:37:33.292Z - debug: Register PAtient [object Object]
+2015-04-05T10:37:33.857Z - debug: Getting my Doctor
+2015-04-05T10:37:33.869Z - debug: Getting my Appointment
+2015-04-05T10:37:33.874Z - debug: Getting a notification by patient
+2015-04-05T16:15:39.188Z - debug: Register Doctor
+2015-04-05T16:15:39.190Z - debug: Register PAtient [object Object]
+2015-04-05T16:15:47.655Z - debug: login
+2015-04-05T16:15:47.657Z - debug: Register PAtient [object Object]
+2015-04-05T16:16:11.812Z - debug: login
+2015-04-05T16:16:11.813Z - debug: Register PAtient [object Object]
+2015-04-05T16:16:53.652Z - debug: login
+2015-04-05T16:16:53.653Z - debug: Register PAtient [object Object]
+2015-04-05T16:17:26.686Z - debug: login
+2015-04-05T16:17:26.687Z - debug: Register PAtient [object Object]
+2015-04-05T16:17:27.223Z - debug: Getting my patient
+2015-04-05T16:17:27.227Z - debug: Getting a notification by doctor
+2015-04-05T16:17:27.231Z - debug: Getting my Appointment
+2015-04-05T16:17:39.586Z - debug: login
+2015-04-05T16:17:39.588Z - debug: Register PAtient [object Object]
+2015-04-05T16:17:40.267Z - debug: Getting my Doctor
+2015-04-05T16:17:40.443Z - debug: Getting my Appointment
+2015-04-05T16:17:40.447Z - debug: Getting a notification by patient
+2015-04-05T16:18:21.280Z - debug: login
+2015-04-05T16:18:21.281Z - debug: Register PAtient [object Object]
+2015-04-05T16:18:21.440Z - debug: Getting my Doctor
+2015-04-05T16:18:21.444Z - debug: Getting my Appointment
+2015-04-05T16:18:21.466Z - debug: Getting a notification by patient
+2015-04-05T16:20:24.403Z - debug: login
+2015-04-05T16:20:24.405Z - debug: Register PAtient [object Object]
+2015-04-05T16:20:24.551Z - debug: Getting my Doctor
+2015-04-05T16:20:24.555Z - debug: Getting a notification by patient
+2015-04-05T16:20:24.559Z - debug: Getting my Appointment
+2015-04-05T16:22:03.543Z - debug: login
+2015-04-05T16:22:03.545Z - debug: Register PAtient [object Object]
+2015-04-05T16:22:03.714Z - debug: Getting my Doctor
+2015-04-05T16:22:03.719Z - debug: Getting my Appointment
+2015-04-05T16:22:03.721Z - debug: Getting a notification by patient
+2015-04-05T16:23:35.758Z - debug: login
+2015-04-05T16:23:35.760Z - debug: Register PAtient [object Object]
+2015-04-05T16:23:35.932Z - debug: Getting my Doctor
+2015-04-05T16:23:35.937Z - debug: Getting my Appointment
+2015-04-05T16:23:35.939Z - debug: Getting a notification by patient
+2015-04-05T16:24:23.723Z - debug: login
+2015-04-05T16:24:23.724Z - debug: Register PAtient [object Object]
+2015-04-05T16:24:23.923Z - debug: Getting my Doctor
+2015-04-05T16:24:23.928Z - debug: Getting my Appointment
+2015-04-05T16:24:23.938Z - debug: Getting a notification by patient
+2015-04-05T16:27:24.957Z - debug: login
+2015-04-05T16:27:24.959Z - debug: Register PAtient [object Object]
+2015-04-05T16:27:25.147Z - debug: Getting my Doctor
+2015-04-05T16:27:25.152Z - debug: Getting my Appointment
+2015-04-05T16:27:25.156Z - debug: Getting a notification by patient
+2015-04-05T16:31:55.606Z - debug: login
+2015-04-05T16:31:55.607Z - debug: Register PAtient [object Object]
+2015-04-05T16:31:55.852Z - debug: Getting my Doctor
+2015-04-05T16:31:55.858Z - debug: Getting my Appointment
+2015-04-05T16:31:55.861Z - debug: Getting a notification by patient
+2015-04-05T16:32:37.985Z - debug: login
+2015-04-05T16:32:37.986Z - debug: Register PAtient [object Object]
+2015-04-05T16:32:38.171Z - debug: Getting my Doctor
+2015-04-05T16:32:38.173Z - debug: Getting my Appointment
+2015-04-05T16:32:38.177Z - debug: Getting a notification by patient
+2015-04-05T16:34:10.277Z - debug: login
+2015-04-05T16:34:10.279Z - debug: Register PAtient [object Object]
+2015-04-05T16:34:10.448Z - debug: Getting my Doctor
+2015-04-05T16:34:10.452Z - debug: Getting my Appointment
+2015-04-05T16:34:10.454Z - debug: Getting a notification by patient
+2015-04-05T16:34:17.972Z - debug: Updating patient
+2015-04-05T16:34:49.055Z - debug: Updating patient
+2015-04-05T16:37:10.106Z - debug: login
+2015-04-05T16:37:10.107Z - debug: Register PAtient [object Object]
+2015-04-05T16:37:10.302Z - debug: Getting my Doctor
+2015-04-05T16:37:10.305Z - debug: Getting my Appointment
+2015-04-05T16:37:10.311Z - debug: Getting a notification by patient

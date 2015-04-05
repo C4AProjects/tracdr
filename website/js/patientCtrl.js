@@ -3,7 +3,7 @@
  */
 trackDr.controller('patientCtrl', function ($scope,Auth,$state,$http,$filter){
 
-    $scope.active='profile'
+    $scope.active='appointments'
     $scope.user = Auth.getUser().patient;
     if(! Auth.getUser().patient) $state.go("index");
     $scope.logout = function () {
@@ -30,6 +30,20 @@ trackDr.controller('patientCtrl', function ($scope,Auth,$state,$http,$filter){
         }
     }).error(function (data, status, headers, config) {
     })
+    $scope.updateProfile=function(){
+        $http.put(serverApi + '/secured/patient/'+$scope.user._id,$scope.user).success(function (res) {
+            if (!res.error) {
+
+
+               console.log("x")
+                console.log(res)
+            }
+            else {
+                //error(res);
+            }
+        }).error(function (data, status, headers, config) {
+        })
+    }
     $scope.eventSources = [  $scope.events];
     $http.get(serverApi + '/secured/appointment/patient/'+$scope.user._id).success(function (res) {
         if (!res.error) {
