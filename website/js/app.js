@@ -13,7 +13,17 @@ trackDr.config(function($stateProvider, $urlRouterProvider) {
         .state('index', {
             url: "/index",
             templateUrl: "views/index.html"
+        }) .state('about', {
+            url: "/about",
+            templateUrl: "views/about.html"
+        }).state('contact_us', {
+            url: "/contact_us",
+            templateUrl: "views/contact_us.html"
+        }).state('faq', {
+            url: "/faq",
+            templateUrl: "views/faq.html"
         })
+
         .state('join', {
             url: "/join",
             templateUrl: "views/join.html",
