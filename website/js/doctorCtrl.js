@@ -133,7 +133,7 @@ $scope.loadAppointment=function(){
     };
 
 
-    $scope.dtOptions = DTOptionsBuilder.fromSource('http://localhost:3000/api/secured/patient/doctor/'+$scope.user._id)
+    $scope.dtOptions = DTOptionsBuilder.fromSource(serverApi+'/secured/patient/doctor/'+$scope.user._id)
         .withPaginationType('full_numbers');
     $scope.dtColumns = [
         DTColumnBuilder.newColumn('firstName').withTitle('First Name'),
