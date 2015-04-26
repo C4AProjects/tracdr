@@ -6,22 +6,20 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "*",
-    "underscore": "*",
-"serve-favicon":"*",
-    "method-override":"*",
-    "express-session":"*",
-    "express-jwt":"*",
-    "jsonwebtoken":"*",
-    "body-parser":"*",
-    "multer":"*",
-
-    "compression":"*",
-    "errorhandler":"*",
-    "winston": "*",
-
+    "body-parser": "*",
+    "compression": "*",
     "debug": "~2.0.0",
-    "mongoose": "*"
-
+    "errorhandler": "*",
+    "express": "*",
+    "express-jwt": "*",
+    "express-session": "*",
+    "jsonwebtoken": "*",
+    "method-override": "*",
+    "mongoose": "*",
+    "multer": "*",
+    "nodemailer": "^1.3.4",
+    "serve-favicon": "*",
+    "underscore": "*",
+    "winston": "*"
   }
 }

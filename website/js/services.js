@@ -13,8 +13,8 @@ angular.module('trackDr-services', [])
         return {
 
             login: function (user, success, error) {
-
-                $http.post('http://169.54.30.34:3000/api/login/', user).success(function (res) {
+//http://169.54.30.34:3000
+                $http.post(serverApi+'/login/', user).success(function (res) {
                     if (!res.error) {
                         changeUser(res);
                         $window.sessionStorage.token = res.token;

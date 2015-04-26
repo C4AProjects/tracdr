@@ -22,7 +22,15 @@ module.exports = {
             user: 'portal',
             pass: 'weenee@p0rtal'
         }*/
+    },
+    mailer: {
+        service: 'Gmail', // Gmail, Zoho, SMTP
+        auth: {
+            user: 'contact.buzzo@gmail.com',
+            pass: 'buzzoadmin'
+        }
     }
+
 
 
 };

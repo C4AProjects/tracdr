@@ -129,6 +129,86 @@ module.exports.login = function (doc, cb) {
     })
 }
 module.exports.forget = function (doc, cb) {
-    // APP.DB.APPOINTMENT();
+    if (!doc.email ) {
+        cb("Please Fill your email");
+        return;
+    }
+    APP.DB.DOCTOR.findOne({email: doc.email.toLowerCase()}, function (errFindDoctor, doctor) {
+        if (errFindDoctor) {
+            cb(errFindDoctor)
+        }
+        else {
+            if (doctor) {
+                var pass=makePass();
+                doctor.password=pass;
+                doctor.save(function(errSaveDoc){
+                    if (errSaveDoc){
+                        cb(errSaveDoc)
+                    }else{
+                        APP.MAILER.sendForgetMail(doctor.email,doctor.firstName,pass,function(err,success){
+                            if(err){
+                                cb(err);
+                            }
+                            if(success){
+                                cb(null,{success:true});
+                            }
+                        })
+                    }
+                });
+
+
+            }
+            else {
+
+                APP.DB.PATIENT.findOne({email: doc.email.toLowerCase()}, function (errFindPatient, patient) {
+                    if (errFindPatient) {
+                        cb(errFindPatient)
+                    }
+                    else {
+                        if (patient) {
+
+                            var pass=makePass();
+                            patient.password=pass;
+                            patient.save(function(errSaveDoc){
+                                if (errSaveDoc){
+                                    cb(errSaveDoc)
+                                }else{
+                                    APP.MAILER.sendForgetMail(patient.email,patient.firstName,pass,function(err,success){
+                                        if(err){
+                                            cb(err);
+                                        }
+                                        if(success){
+                                            cb(null,{success:true});
+                                        }
+                                    })
+                                }
+                            });
+                        }
+                        else {
+
+                            cb("This Mail doesn't exist");
+
+
+                        }
+                    }
+
+
+                })
+
+
+            }
+        }
+
+    })
     console.log(doc)
+}
+var makePass=function ()
+{
+    var text = "";
+    var possible = "abcdefghijklmnopqrstuvwxyz0123456789";
+
+    for( var i=0; i < 6; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
 }

@@ -1,7 +1,7 @@
 /**
  * Created by haythem on 20/03/2015.
  */
-trackDr.controller('doctorCtrl', function ($scope, Auth, $filter, Patients, Appointments, uiCalendarConfig, $modal, $http, $state) {
+trackDr.controller('doctorCtrl', function ($scope, Auth, $filter, Patients,$timeout, Appointments, uiCalendarConfig, $modal, $http, $state,DTOptionsBuilder, DTColumnBuilder,$dialogs) {
     $scope.active = 'patients',
         $scope.dashboard = {};
     $scope.notifications = {};
@@ -12,7 +12,20 @@ trackDr.controller('doctorCtrl', function ($scope, Auth, $filter, Patients, Appo
             $scope.patients = res;
         }
     })
+    $scope.updateProfile=function(){
+        $http.put(serverApi + '/secured/doctor/'+$scope.user._id,$scope.user).success(function (res) {
+            if (!res.error) {
 
+
+                console.log("x")
+                console.log(res)
+            }
+            else {
+                //error(res);
+            }
+        }).error(function (data, status, headers, config) {
+        })
+    }
     $scope.events = {
         color: '#0078ba',
         textColor: 'white',
@@ -23,29 +36,47 @@ trackDr.controller('doctorCtrl', function ($scope, Auth, $filter, Patients, Appo
         Auth.logout();
         $state.go("index");
     }
+    $scope.removeApp=function(id){
+        var       dlg = $dialogs.confirm("Are you sure to delet this Appointment" ,"Are you sure to delet this Appointment" );
+        dlg.result.then(function(btn){
+            $http.delete(serverApi + '/secured/appointment/' + id).success(function (res) {
+                if(res) $scope.loadAppointment();
+            })
+        },function(btn){
+           console.log("cancel delete")
+        });
 
-    $http.get(serverApi + '/secured/appointment/doctor/' + $scope.user._id).success(function (res) {
+    }
+$scope.loadAppointment=function(){
+    $http.get(serverApi + '/secured/appointment/doctor1/' + $scope.user._id).success(function (res) {
         if (!res.error) {
 
-            $scope.appointments = res;
-            res.forEach(function (appoint) {
-                $scope.events.events.push({
-                    title: appoint.subject,
-                    start: appoint.startTime,
-                    end: appoint.endTime,
-                    details: appoint.details,
+            $scope.events.events= []
+                    $scope.appointments = res;
+                    res.forEach(function (appoint) {
+                        console.log("pushing events")
+                        $scope.events.events.push({
+                            title: appoint.subject,
+                            start: appoint.startTime,
+                            end: appoint.endTime,
+                            details: appoint.details,
 
-                    eventId: appoint._id,
-                    className: ['openSesame'],
-                    allDay: false
-                });
+                            eventId: appoint._id,
+                            className: ['openSesame'],
+                            allDay: false
+                        });
+
             })
+
+
         }
         else {
             //error(res);
         }
     }).error(function (data, status, headers, config) {
     })
+}
+    $scope.loadAppointment()
     $http.get(serverApi + '/secured/notification/doctor/' + $scope.user._id).success(function (data) {
         // update the textarea
         $scope.notifications = data;
@@ -72,7 +103,7 @@ trackDr.controller('doctorCtrl', function ($scope, Auth, $filter, Patients, Appo
             console.log("updated");
 //
             console.log($filter('filter')($scope.appointments, {_id: event.eventId}, true)[0])
-
+            $scope.loadAppointment()
         }, function (err) {
             alert(err)
         })
@@ -100,6 +131,20 @@ trackDr.controller('doctorCtrl', function ($scope, Auth, $filter, Patients, Appo
 
         }
     };
+
+
+    $scope.dtOptions = DTOptionsBuilder.fromSource('http://localhost:3000/api/secured/patient/doctor/'+$scope.user._id)
+        .withPaginationType('full_numbers');
+    $scope.dtColumns = [
+        DTColumnBuilder.newColumn('firstName').withTitle('First Name'),
+        DTColumnBuilder.newColumn('lastName').withTitle('Last name'),
+        DTColumnBuilder.newColumn('gender').withTitle('Gender'),
+        DTColumnBuilder.newColumn('dateOfBirth').withTitle('Date of Birth'),
+        DTColumnBuilder.newColumn('state').withTitle('State'),
+            DTColumnBuilder.newColumn('email').withTitle('Email')
+    ];
+
+
     $scope.items = ['item1', 'item2', 'item3'];
     /* event sources array*/
 
@@ -139,7 +184,7 @@ trackDr.controller('doctorCtrl', function ($scope, Auth, $filter, Patients, Appo
 
                 Appointments.add(event, function (res) {
                     console.log("added");
-                    $scope.appointments.push(res.appointment)
+                  /*  $scope.appointments.push(res.appointment)
 
 
                     $scope.events.events.push({
@@ -151,8 +196,8 @@ trackDr.controller('doctorCtrl', function ($scope, Auth, $filter, Patients, Appo
                         eventId: res.appointment._id,
                         className: ['openSesame'],
                         allDay: false
-                    });
-
+                    });*/
+                    $scope.loadAppointment()
                 }, function (err) {
                     alert(err)
                 })
@@ -214,7 +259,8 @@ trackDr.controller('doctorCtrl', function ($scope, Auth, $filter, Patients, Appo
             alert("Please select a Patient")
         }
     };
-}).controller('addPatientCtrl', function ($scope, $modalInstance, obj, $filter,Auth,$http) {
+})
+    .controller('addPatientCtrl', function ($scope, $modalInstance, obj, $filter,Auth,$http) {
 $scope.nuser={};
     $scope.doctor = obj.doctor;
     $scope.cancel = function () {
@@ -238,4 +284,8 @@ $scope.nuser={};
         })
 
     }
-})
+}).controller('WithAjaxCtrl', WithAjaxCtrl);
+
+function WithAjaxCtrl(DTOptionsBuilder, DTColumnBuilder) {
+
+}

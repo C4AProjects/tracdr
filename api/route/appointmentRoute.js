@@ -47,6 +47,15 @@ module.exports = function (app) {
         })
 
     });
+    app.get("/api/secured/appointment/doctor1/:ID", function(req, res){
+        DEBUG("Getting my Appointment")
+        appointmentCtrl.getMy1(req.params.ID,function(err,doc){
+            if (err) res.send({error:err})
+            else res.send(doc)
+
+        })
+
+    });
     app.get("/api/secured/appointment/patient/:ID", function(req, res){
         DEBUG("Getting my Appointment")
         appointmentCtrl.getMyPAt(req.params.ID,function(err,doc){

@@ -8,6 +8,8 @@ APP.LOGGER = require("./api/logger/logger");
 APP.LOGGER.init(APP.CONFIG.logger);
 
 
+require("./api/controllers/mailerController")(APP);
+
 
 DEBUG("Loading Models....")
 APP.DB={};

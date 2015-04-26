@@ -31,8 +31,21 @@ module.exports = function (app) {
 
     });
     app.post("/api/login", function(req, res){
-        DEBUG("login")
+        INFO("login")
         authCtrl.login(req.body,function(err,doc){
+            if (err) res.send({error:err})
+            else {
+                console.log("login %j",doc)
+                res.send(doc)
+            }
+
+        })
+
+    });
+
+    app.post("/api/forget", function(req, res){
+        DEBUG("FogetPassword")
+        authCtrl.forget(req.body,function(err,doc){
             if (err) res.send({error:err})
             else {
                 console.log("login %j",doc)

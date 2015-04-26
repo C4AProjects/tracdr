@@ -1,3 +1,40 @@
-<h3>Calendar</h3>
+<div class=" col-lg-10">
+    <h3>Appointment List</h3>
 
-    <div ui-calendar="uiConfig.calendar" ng-model="eventSources" class="calendar"></div>
+    <table datatable="ng" class="row-border hover">
+        <thead>
+        <tr>
+
+            <th>Patient Name</th>
+            <th>PatientLastName</th>
+            <th>App Subject</th>
+            <th>App Details</th>
+            <th>Date</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="appoint in appointments">
+
+            <td>{{ appoint._patient.firstName }}</td>
+            <td>{{ appoint._patient.lastName }}</td>
+            <td>{{ appoint.subject}}</td>
+            <td>{{ appoint.details }}</td>
+            <td>{{ appoint.startTime | date:"MM/dd/yyyy"}}</td>
+            <td>{{ appoint.startTime | date:"h:mm a"}}</td>
+            <td>{{ appoint.endTime | date:"h:mm a"}}</td>
+            <td>  <button type="button" class="btn btn-danger btn-sm " ng-click="removeApp(appoint._id)">Remove</button>
+
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <h3>Calendar</h3>
+
+    <div ui-calendar="uiConfig.calendar" ng-model="eventSources"  class="calendar"></div>
+</div>
+
+
+

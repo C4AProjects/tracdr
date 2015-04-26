@@ -20,6 +20,13 @@ module.exports = {
          user: 'portal',
          pass: 'weenee@p0rtal'
          }*/
+    },
+    mailer: {
+        service: 'Zoho', // Gmail, Zoho, SMTP
+        auth: {
+            user: 'info@buzzo.me',
+            pass:  'TheBuzZ0$ap)'
+        }
     }
 
 

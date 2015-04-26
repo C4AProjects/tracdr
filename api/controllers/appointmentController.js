@@ -54,6 +54,13 @@ module.exports.getMy=function(id,cb){
         cb(er, appoints)
     });
 }
+module.exports.getMy1=function(id,cb){
+
+    APP.DB.APPOINTMENT.find({_doctor:id}).populate('_patient ','-password').exec( function (er, appoints){
+
+        cb(er, appoints)
+    });
+}
 
 module.exports.getMyPAt=function(id,cb){
 

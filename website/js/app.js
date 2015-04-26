@@ -1,7 +1,7 @@
 /**
  * Created by haythem on 15/03/2015.
  */
- trackDr = angular.module('trackDr', ['ui.router','trackDr-services','ui.bootstrap','ui.calendar']);
+ trackDr = angular.module('trackDr', ['ui.router','trackDr-services','ui.bootstrap','ui.calendar','datatables','dialogs']);
 
 trackDr.config(function($stateProvider, $urlRouterProvider) {
     //
@@ -79,6 +79,9 @@ trackDr.config(function($stateProvider, $urlRouterProvider) {
         }).state('doctor.notifications', {
             url: "/notification",
             templateUrl: "views/doctor/notifications.html"
+        }).state('doctor.profile', {
+            url: "/profile",
+            templateUrl: "views/doctor/profile.html"
         });
 
 });

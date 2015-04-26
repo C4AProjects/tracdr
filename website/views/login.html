@@ -4,13 +4,20 @@
         <div class="error_message">Please enter a correct info #</div>
 
     </div>
-    <div class="input-wrapper">
+    <div class="input-wrapper" ng-if="!forget">
         <input type="password" required id="password_block" name="user.password" placeholder="Password" ng-model="user.password">
         <div class="error_message">Please enter a correct info #</div>
 
     </div>
-    <button type="submit" class="btn btn-reg" ng-click="login()">Sign In</button>
-    <button ui-sref="join" class="btn btn-primary">Register</button>
+    <div ng-hide="forget">
+        <button type="submit" class="btn btn-reg" ng-click="login()">Sign In</button>
+        <button ui-sref="join" class="btn btn-primary">Register</button>
+    </div>
+    <div ng-show="forget">
+        <button type="submit" class="btn btn-reg" ng-click="login()">Send</button>
+        <button ng-click="forget=false" class="btn btn-primary">Cancel</button>
+    </div>
+    <a ng-click="forget=true" ng-show="!forget">Forget your Password?</a>
     <div>
         <label style="color:red">{{loginError.errorMessage}}</label>
     </div>
