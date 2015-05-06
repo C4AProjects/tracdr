@@ -6,12 +6,12 @@ var patientCtrl = require('../controllers/patientController');
 var doctortCtrl = require('../controllers/doctorController');
 module.exports.registerPatient = function (doc, cb) {
     // APP.DB.APPOINTMENT();
-    if (!doc.email || !doc.userName || !doc.password) {
+    if (!doc.email  || !doc.password) {
         cb("Please Fill Password, email and userName");
         return;
     }
     DEBUG("Register PAtient " + doc)
-    APP.DB.DOCTOR.findOne({$or: [{email: doc.email.toLowerCase()}, {userName: doc.userName.toLowerCase()}]}, function (errFindDoctor, doctor) {
+    APP.DB.DOCTOR.findOne({email: doc.email.toLowerCase()}, function (errFindDoctor, doctor) {
         if (errFindDoctor) {
             cb(errFindDoctor)
         }
@@ -19,7 +19,7 @@ module.exports.registerPatient = function (doc, cb) {
             if (doctor) cb("This email already exist");
             else {
 
-                APP.DB.PATIENT.findOne({$or: [{email: doc.email.toLowerCase()}, {userName: doc.userName.toLowerCase()}]}, function (errFindPatient, patient) {
+                APP.DB.PATIENT.findOne({email: doc.email.toLowerCase()}, function (errFindPatient, patient) {
                     if (errFindPatient) {
                         cb(errFindPatient)
                     }
@@ -43,12 +43,12 @@ module.exports.registerPatient = function (doc, cb) {
     })
 }
 module.exports.registerDoctor = function (doc, cb) {
-    if (!doc.email || !doc.userName || !doc.password) {
+    if (!doc.email || !doc.password) {
         cb("Please Fill Password, email and userName");
         return;
     }
     DEBUG("Register PAtient " + doc)
-    APP.DB.DOCTOR.findOne({$or: [{email: doc.email.toLowerCase()}, {userName: doc.userName.toLowerCase()}]}, function (errFindDoctor, doctor) {
+    APP.DB.DOCTOR.findOne({email: doc.email.toLowerCase()}, function (errFindDoctor, doctor) {
         if (errFindDoctor) {
             cb(errFindDoctor)
         }
@@ -56,7 +56,7 @@ module.exports.registerDoctor = function (doc, cb) {
             if (doctor) cb("This email already exist");
             else {
 
-                APP.DB.PATIENT.findOne({$or: [{email: doc.email.toLowerCase()}, {userName: doc.userName.toLowerCase()}]}, function (errFindPatient, patient) {
+                APP.DB.PATIENT.findOne({email: doc.email.toLowerCase()}, function (errFindPatient, patient) {
                     if (errFindPatient) {
                         cb(errFindPatient)
                     }
@@ -81,14 +81,14 @@ module.exports.registerDoctor = function (doc, cb) {
 
 }
 module.exports.login = function (doc, cb) {
-    if ((!doc.email || !doc.userName) && !doc.password) {
+    if (!doc.email  && !doc.password) {
         cb("Please Fill Password, email and userName");
         return;
     }
     if (! doc.email)  doc.email="";
-    if (! doc.userName)  doc.userName="";
+
     DEBUG("Register PAtient " + doc)
-    APP.DB.DOCTOR.findOne({$or: [{email: doc.email.toLowerCase()}, {userName: doc.userName.toLowerCase()}],password:doc.password.toLowerCase()}, function (errFindDoctor, doctor) {
+    APP.DB.DOCTOR.findOne({email: doc.email.toLowerCase(),password:doc.password.toLowerCase()}, function (errFindDoctor, doctor) {
         if (errFindDoctor) {
             cb(errFindDoctor)
         }
@@ -101,7 +101,7 @@ module.exports.login = function (doc, cb) {
             }
             else {
 
-                APP.DB.PATIENT.findOne({$or: [{email: doc.email.toLowerCase()}, {userName: doc.userName.toLowerCase()}],password:doc.password.toLowerCase()}, function (errFindPatient, patient) {
+                APP.DB.PATIENT.findOne({email: doc.email.toLowerCase(),password:doc.password.toLowerCase()}, function (errFindPatient, patient) {
                     if (errFindPatient) {
                         cb(errFindPatient)
                     }

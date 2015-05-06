@@ -8,7 +8,7 @@ trackDr.controller('joinCtrl', function ($scope,Auth,$state,$http,Doctors){
     $scope.doctor={}
     $scope.join.notfound=false;
     $scope.registerPAtient = function () {
-        $scope.user.userName= $scope.user.firstName;
+
         $scope.user.country= "USA"
         Auth.registerPAtient($scope.user, function (res) {
 
@@ -52,7 +52,6 @@ trackDr.controller('joinCtrl', function ($scope,Auth,$state,$http,Doctors){
     });
 
     $scope.registerDoctor=function(){
-        $scope.user.userName= $scope.user.firstName
         Auth.registerDoctor($scope.user, function (res) {
 
 

@@ -17,30 +17,16 @@
                     </a>
                 </p>
             </div>
-            <!--<div class="3">
-                <input type="search" placeholder="Search" ng-model="dashboard.search">
-            </div>-->
+
         </div>
         <div class="row">
-            <div class="col-xs-2 text-right">
+            <div class="col-lg-2 col-xs-2  text-right">
                 <a ui-sref="doctor" ng-click=" active='patients'">
                     <div class="btn bg-primary btn-dash" ng-class="active=='patients'?'btn-dash-orange':''">
                         <img src="img/userprofile.png" width="45px">
                         <h6>Patients</h6>
                     </div>
                 </a>
-                <!-- <a ui-sref="doctor.appointments" ng-click=" active='appointments'">
-                   <div class="btn bg-primary btn-dash" ng-class="active=='appointments'?'btn-dash-orange':''">
-                       <img src="img/appointments.png">
-                       <h6>Appointments</h6>
-                   </div>
-               </a>
-             <a ui-sref="doctor.notifications" ng-click=" active='notifications'">
-                   <div class="btn bg-primary btn-dash" ng-class="active=='notifications'?'btn-dash-orange':''">
-                       <img src="img/notifications.png">
-                       <h6>Notifications</h6>
-                   </div>
-               </a>-->
                 <a ui-sref="doctor.calendar" ng-click="active='calendar'">
                     <div class="btn bg-primary btn-dash" ng-class="active=='calendar'?'btn-dash-orange':''">
                         <img src="img/calendar.png">
@@ -57,62 +43,22 @@
 
 
 
-            <div class="col-lg-6" >
-                <div class="container" ui-view>
+            <div class="col-lg-10 col-xs-10" >
+                <div class="" ui-view>
 
 
-                    <div>
-                        <h3>Patients</h3>
+
+
 
                         <div class="col-lg-10">
+                            <h3>Patients</h3>
                             <button type="button" class="btn btn-primary btn-sm " ng-click="addPatient()">Add</button>
-                            <table datatable="" dt-options="dtOptions" dt-columns="dtColumns" class="row-border hover"></table>
+                            <table datatable="" dt-options="dtOptions" dt-columns="dtColumns" class="row-border hover" width="100%"></table>
                         </div>
-                        <!--  <div>
-                           <table style="width: 100%">
-                               <tr>
-                                   <td style="vertical-align: top; width:40%">
 
-                                    <ul class="list-group">
-                                           <li ng-click="selectPatient(iteration._id)" class="list-group-item" ng-class="appointment._id==iteration._id?'main-color':''" ng-repeat="iteration in patients | filter:dashboard.search">
-                                               {{iteration.userName}} <small style="float: right; opacity: .5">{{iteration.modified_date| date : 'medium'}}</small>
-                                           </li>
-                                           <li  class="list-group-item" ng-if="patients.length<1">
-                                               You don't have any Patient
-                                           </li>
-                                       </ul>
-
-
-                                    </td>
-                                    <td style="vertical-align: top">
-                                        <ul class="list-group"  ng-if="patients.length>0">
-                                            <li class="list-group-item ">
-                                                <b class="txt-color">Patient File:</b>
-                                            </li>
-                                            <li class="list-group-item" style="min-height: 250px">
-
-                                                <div class="col-lg-4" style="text-align: center">
-                                                    <img src="img/join-patient.png"><br>
-                                                </div>
-                                                <div class="col-lg-8">
-
-                                                    <b>First Name:</b> {{patient.firstName}}<br>
-                                                    <b>LAst Name:</b> {{patient.lastName}}<br>
-                                                        <b>Email:</b> {{patient.email}}
-                                                </div>
-
-                                                <br>
-
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>-->
                 </div>
             </div>
-        </div>
+           </div>
     </div>
 
 </div>

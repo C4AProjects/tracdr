@@ -109,6 +109,7 @@ footer p {
             background: #ffffff;
             height: 185px;
             width: 70%;
+
             margin-top: 5px;
             margin-left: 0;
             border-radius: 10px;
@@ -132,8 +133,8 @@ footer p {
         .home-login{
             background-color: #0078ba;
             min-height: 400px;
-            padding-right: 15%;
-            padding-left: 15%;
+            padding-right: 30px;
+            padding-left: 30px;
             padding-top: 15px
         }
 
@@ -406,11 +407,12 @@ footer p {
 }
 .main-form.main-form-tracdr{
     background: #ffffff;
-    height: 155px;
+    height: 200px;
     width: 100%;
     margin-top: 5px;
     margin-left: 0;
     border-radius: 10px;
+
 }
 .opacity-img{
             opacity: .8;
@@ -451,7 +453,7 @@ footer p {
 }
 .main-form.main-form-tracdr{
     background: #ffffff;
-    height: 155px;
+    height: 200px;
     width: 100%;
     margin-top: 5px;
     margin-left: 0;

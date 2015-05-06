@@ -1176,3 +1176,113 @@ Urologists2015-04-13T19:47:57.893Z - debug: LoggerService Started
 2015-04-26T17:54:52.055Z - debug: Getting my patient
 2015-04-26T17:54:53.427Z - debug: Getting my patient
 2015-04-26T17:54:57.118Z - debug: Updating Doctor
+2015-05-06T19:31:01.580Z - debug: LoggerService Started
+2015-05-06T19:31:01.658Z - info: Init Mailer...
+2015-05-06T19:31:01.658Z - debug: Loading Models....
+2015-05-06T19:31:01.913Z - debug: loading DB Module...
+2015-05-06T19:31:01.914Z - info: Starting API
+2015-05-06T19:31:02.247Z - info: Loading Auth Route
+2015-05-06T19:31:02.257Z - info: Loading Dorctor Route
+2015-05-06T19:31:02.260Z - info: Loading Patient Route
+2015-05-06T19:31:02.261Z - info: Loading Notification Route
+2015-05-06T19:31:02.262Z - info: Loading Appointment Route
+2015-05-06T19:31:02.269Z - debug: [DB]: Connecting...
+2015-05-06T19:31:02.273Z - info: listening on *:3000
+2015-05-06T19:31:11.983Z - debug: LoggerService Started
+2015-05-06T19:31:12.033Z - info: Init Mailer...
+2015-05-06T19:31:12.034Z - debug: Loading Models....
+2015-05-06T19:31:12.191Z - debug: loading DB Module...
+2015-05-06T19:31:12.192Z - info: Starting API
+2015-05-06T19:31:12.366Z - info: Loading Auth Route
+2015-05-06T19:31:12.372Z - info: Loading Dorctor Route
+2015-05-06T19:31:12.374Z - info: Loading Patient Route
+2015-05-06T19:31:12.374Z - info: Loading Notification Route
+2015-05-06T19:31:12.375Z - info: Loading Appointment Route
+2015-05-06T19:31:12.380Z - debug: [DB]: Connecting...
+2015-05-06T19:31:12.384Z - info: listening on *:3000
+2015-05-06T19:31:12.498Z - info: [DB]: Connected OK
+2015-05-06T20:43:32.290Z - info: login
+2015-05-06T20:43:32.290Z - debug: Register PAtient [object Object]
+2015-05-06T20:51:16.113Z - info: login
+2015-05-06T20:51:16.113Z - debug: Register PAtient [object Object]
+2015-05-06T20:51:52.051Z - debug: Register Doctor
+2015-05-06T20:52:03.108Z - debug: LoggerService Started
+2015-05-06T20:52:03.191Z - info: Init Mailer...
+2015-05-06T20:52:03.192Z - debug: Loading Models....
+2015-05-06T20:52:03.476Z - debug: loading DB Module...
+2015-05-06T20:52:03.477Z - info: Starting API
+2015-05-06T20:52:03.865Z - info: Loading Auth Route
+2015-05-06T20:52:03.876Z - info: Loading Dorctor Route
+2015-05-06T20:52:03.879Z - info: Loading Patient Route
+2015-05-06T20:52:03.881Z - info: Loading Notification Route
+2015-05-06T20:52:03.882Z - info: Loading Appointment Route
+2015-05-06T20:52:03.888Z - debug: [DB]: Connecting...
+2015-05-06T20:52:03.893Z - info: listening on *:3000
+2015-05-06T20:52:04.008Z - info: [DB]: Connected OK
+2015-05-06T20:52:08.823Z - debug: Register Doctor
+2015-05-06T20:52:08.825Z - debug: Register PAtient [object Object]
+2015-05-06T20:52:09.222Z - debug: Getting my patient
+2015-05-06T20:52:09.257Z - debug: Getting my Appointment
+2015-05-06T20:52:09.269Z - debug: Getting a notification by doctor
+2015-05-06T20:52:09.369Z - debug: Getting my patient
+2015-05-06T20:57:19.572Z - info: login
+2015-05-06T20:57:19.573Z - debug: Register PAtient [object Object]
+2015-05-06T20:57:19.712Z - debug: Getting my patient
+2015-05-06T20:57:19.725Z - debug: Getting my Appointment
+2015-05-06T20:57:19.743Z - debug: Getting a notification by doctor
+2015-05-06T20:57:19.827Z - debug: Getting my patient
+2015-05-06T20:59:40.746Z - info: login
+2015-05-06T20:59:40.746Z - debug: Register PAtient [object Object]
+2015-05-06T20:59:40.880Z - debug: Getting my patient
+2015-05-06T20:59:40.893Z - debug: Getting my Appointment
+2015-05-06T20:59:40.907Z - debug: Getting a notification by doctor
+2015-05-06T20:59:40.988Z - debug: Getting my patient
+2015-05-06T21:00:06.750Z - debug: Register Patient
+2015-05-06T21:00:06.752Z - debug: Register PAtient [object Object]
+2015-05-06T21:00:06.864Z - debug: Adding Doctor
+2015-05-06T21:00:12.262Z - debug: Getting my patient
+2015-05-06T21:00:14.784Z - debug: Getting my patient
+2015-05-06T21:00:26.419Z - debug: Getting my patient
+2015-05-06T21:00:52.098Z - debug: Adding Appointment
+2015-05-06T21:00:52.170Z - debug: Getting my Appointment
+2015-05-06T21:03:55.191Z - info: login
+2015-05-06T21:03:55.191Z - debug: Register PAtient [object Object]
+2015-05-06T21:03:55.238Z - debug: Getting my patient
+2015-05-06T21:03:55.242Z - debug: Getting my Appointment
+2015-05-06T21:03:55.245Z - debug: Getting a notification by doctor
+2015-05-06T21:03:55.266Z - debug: Getting my patient
+2015-05-06T21:04:00.026Z - debug: Getting my patient
+2015-05-06T21:04:03.979Z - debug: Updating Appointment
+2015-05-06T21:04:03.996Z - debug: Getting my Appointment
+2015-05-06T21:04:08.587Z - debug: Updating Appointment
+2015-05-06T21:04:08.601Z - debug: Getting my Appointment
+2015-05-06T21:04:17.042Z - debug: Updating Appointment
+2015-05-06T21:04:17.057Z - debug: Getting my Appointment
+2015-05-06T21:04:19.800Z - debug: Updating Appointment
+2015-05-06T21:04:19.815Z - debug: Getting my Appointment
+2015-05-06T21:04:23.243Z - debug: Updating Appointment
+2015-05-06T21:04:23.258Z - debug: Getting my Appointment
+2015-05-06T21:04:59.260Z - debug: Updating Appointment
+2015-05-06T21:04:59.275Z - debug: Getting my Appointment
+2015-05-06T21:05:01.050Z - debug: Updating Appointment
+2015-05-06T21:05:01.066Z - debug: Getting my Appointment
+2015-05-06T21:05:03.353Z - debug: Updating Appointment
+2015-05-06T21:05:03.368Z - debug: Getting my Appointment
+2015-05-06T21:05:17.688Z - debug: Updating Appointment
+2015-05-06T21:05:17.702Z - debug: Getting my Appointment
+2015-05-06T21:05:19.290Z - debug: Updating Appointment
+2015-05-06T21:05:19.308Z - debug: Getting my Appointment
+2015-05-06T21:05:21.928Z - debug: Updating Appointment
+2015-05-06T21:05:21.943Z - debug: Getting my Appointment
+2015-05-06T21:05:23.979Z - debug: Updating Appointment
+2015-05-06T21:05:23.994Z - debug: Getting my Appointment
+2015-05-06T21:05:40.539Z - debug: Getting my patient
+2015-05-06T21:05:42.676Z - debug: Getting my patient
+2015-05-06T21:05:54.379Z - debug: Updating Doctor
+2015-05-06T21:06:45.780Z - debug: Find Doctor
+2015-05-06T21:06:52.982Z - debug: Register Patient
+2015-05-06T21:06:52.982Z - debug: Register PAtient [object Object]
+2015-05-06T21:06:52.997Z - debug: Adding Doctor
+2015-05-06T21:06:53.055Z - debug: Getting my Doctor
+2015-05-06T21:06:53.059Z - debug: Getting my Appointment
+2015-05-06T21:06:53.064Z - debug: Getting a notification by patient

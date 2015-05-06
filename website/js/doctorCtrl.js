@@ -134,12 +134,13 @@ $scope.loadAppointment=function(){
 
 
     $scope.dtOptions = DTOptionsBuilder.fromSource(serverApi+'/secured/patient/doctor/'+$scope.user._id)
-        .withPaginationType('full_numbers');
+        .withPaginationType('full_numbers')
+        .withOption('responsive', true);
     $scope.dtColumns = [
         DTColumnBuilder.newColumn('firstName').withTitle('First Name'),
         DTColumnBuilder.newColumn('lastName').withTitle('Last name'),
         DTColumnBuilder.newColumn('gender').withTitle('Gender'),
-        DTColumnBuilder.newColumn('dateOfBirth').withTitle('Date of Birth'),
+     //   DTColumnBuilder.newColumn('dateOfBirth').withTitle('Date of Birth'),
         DTColumnBuilder.newColumn('state').withTitle('State'),
             DTColumnBuilder.newColumn('email').withTitle('Email')
     ];
@@ -267,7 +268,7 @@ $scope.nuser={};
         $modalInstance.dismiss('cancel');
     };
     $scope.ok = function () {
-        $scope.nuser.userName=$scope.nuser.firstName;
+
         Auth.registerPAtient($scope.nuser, function (res) {
 
 
