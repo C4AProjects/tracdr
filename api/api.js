@@ -30,7 +30,7 @@ app.use(methodOverride());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(multer());
-app.use(express.static("website"));
+app.use(express.static("website"));var express = require('express');
 app.use(compress());
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");

@@ -2,16 +2,13 @@
 <div class="hr">
     <div class="container" >
         <div class="row">
-            <div class="col-xs-2 text-right">
+            <div class="col-xs-4 text-right">
                 <img src="img/profile.png" class="img-profile">
             </div>
             <div class="col-xs-7">
                 <h5 class="profile-name">{{user.firstName}}</h5>
                 <p>
-                    <a href="#">
-                        Account Settings
-                    </a>
-                    <br>
+
                     <a ng-click="logout()">
                         Log Out
                     </a>
@@ -20,7 +17,7 @@
 
         </div>
         <div class="row">
-            <div class="col-lg-2 col-xs-2  text-right">
+            <div class="col-sm-2  text-right ">
                 <a ui-sref="doctor" ng-click=" active='patients'">
                     <div class="btn bg-primary btn-dash" ng-class="active=='patients'?'btn-dash-orange':''">
                         <img src="img/userprofile.png" width="45px">

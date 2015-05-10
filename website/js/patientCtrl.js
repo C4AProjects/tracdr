@@ -3,7 +3,7 @@
  */
 trackDr.controller('patientCtrl', function ($scope,Auth,$state,$http,$filter){
 
-    $scope.active='appointments'
+    $scope.active='calendar'
     $scope.user = Auth.getUser().patient;
     if(! Auth.getUser().patient) $state.go("index");
     $scope.logout = function () {

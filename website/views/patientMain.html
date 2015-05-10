@@ -29,18 +29,19 @@
                         <h6>Appointments</h6>
                     </div>
                 </a>-->
-                <a ui-sref="patient.notification" ng-click="active='notifications'">
-                    <div class="btn bg-primary btn-dash" ng-class="active=='notifications'?'btn-dash-orange':''">
-                        <img src="img/notifications.png">
-                        <h6>Notifications</h6>
-                    </div>
-                </a>
                 <a ui-sref="patient.calendar" ng-click="active='calendar'">
                     <div class="btn bg-primary btn-dash" ng-class="active=='calendar'?'btn-dash-orange':''">
                         <img src="img/calendar.png">
                         <h6>Appointments</h6>
                     </div>
                 </a>
+                <a ui-sref="patient.notification" ng-click="active='notifications'">
+                    <div class="btn bg-primary btn-dash" ng-class="active=='notifications'?'btn-dash-orange':''">
+                        <img src="img/notifications.png">
+                        <h6>Notifications</h6>
+                    </div>
+                </a>
+
                 <a ui-sref="patient" ng-click="active='profile'">
                     <div class="btn bg-primary btn-dash" ng-class="active=='profile'?'btn-dash-orange':''">
                         <img src="img/my-profile.png">
@@ -48,8 +49,8 @@
                     </div>
                 </a>
             </div>
-            <div class="col-xs-10">
-                <div class="container" ui-view>
+            <div class="col-lg-10 col-xs-10">
+                <div  ui-view>
                     <div class="row" style="min-height:200px;width:80%;">
                         <div class="col-sm-6">
                             <div style="background-color: #0078BA;color: white;padding: 5px">

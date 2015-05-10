@@ -5,9 +5,9 @@
     <div class="modal-body">
         <div class="row">
             <div class="col-lg-6">
-                <h4>Selecte a patient: {{patient.userName}}</h4>
+                <h4>Select a patient: {{patient.firstName}}  {{ patient.lastName}}</h4>
                 <ul class="list-group">
-                    <li ng-click="selectPatient(iteration._id)" class="list-group-item" ng-class="appointment._id==iteration._id?'main-color':''" ng-repeat="iteration in patients">
+                    <li ng-click="selectPatient(iteration._id)" class="list-group-item" ng-class="patient._id==iteration._id?'color':'green'" ng-repeat="iteration in patients">
                         {{iteration.firstName}}  {{iteration.lastName}} <small style="float: right; opacity: .5">{{iteration.modified_date| date : 'medium'}}</small>
                     </li>
                 </ul>

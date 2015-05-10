@@ -232,6 +232,9 @@ $scope.loadAppointment=function(){
     };
     $scope.selectPatient = function (id) {
         $scope.patient = $filter('filter')($scope.patients, {_id: id}, true)[0];
+
+        console.log( "selected patient")
+        console.dir( $scope.patient)
     };
 
 
