@@ -60,8 +60,8 @@ controller:'doctorAppointmentCtrl'
         })
 
 
-        .state('doctor.join', {
-            url: "/join",
+        .state('join.doctor', {
+            url: "/doctor",
             templateUrl: "./scripts/doctor/join/doctor.join.tpl.html",
             controller: "doctorJoinCtrl"
         }).state('patient', {
@@ -69,20 +69,20 @@ controller:'doctorAppointmentCtrl'
             templateUrl: "./scripts/patient/patient.tpl.html",
 
             abstract: true
-        }).state('patient.join', {
-            url: "/join",
+        }).state('join.patient', {
+            url: "/patient",
             templateUrl: "./scripts/patient/join/patient.join.tpl.html",
             abstract: true,
             controller: "patientJoinCtrl"
-        }).state('patient.join.step1', {
+        }).state('join.patient.step1', {
             url: "/step1",
             templateUrl: "./scripts/patient/join/patient.join.step1.tpl.html"
 
-        }).state('patient.join.step2', {
+        }).state('join.patient.step2', {
             url: "/step2",
             templateUrl: "./scripts/patient/join/patient.join.step2.tpl.html"
 
-        }).state('patient.join.step3', {
+        }).state('join.patient.step3', {
             url: "/step3",
             templateUrl: "./scripts/patient/join/patient.join.step3.tpl.html"
 
