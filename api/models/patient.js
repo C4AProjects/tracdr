@@ -19,8 +19,11 @@ patient_schema = new Schema({
     phone: String,
     gender : String,
     dateOfBirth:String,//Date
+    activated:{type:Boolean, default:false},
+    activation_link:String,
     created_date: {type: Date, default: Date.now},
-    modified_date: {type: Date, default: Date.now}
+    modified_date: {type: Date, default: Date.now},
+    doctors:[{type: Schema.Types.ObjectId, ref: 'doctor'}],
 })
 module.exports = function (backend) {
 

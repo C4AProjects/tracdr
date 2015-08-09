@@ -24,10 +24,10 @@ module.exports = {
         }*/
     },
     mailer: {
-        service: 'Gmail', // Gmail, Zoho, SMTP
+        service: 'Zoho', // Gmail, Zoho, SMTP
         auth: {
-            user: 'contact.buzzo@gmail.com',
-            pass: 'buzzoadmin'
+            user: 'info@buzzo.me',
+            pass:  'TheBuzZ0$ap)'
         }
     }
 

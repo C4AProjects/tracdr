@@ -67,12 +67,35 @@ if(er) cb(er)
         if (doctors){
             if (!doctors.patients) doctors.patients=[];
                 doctors.patients.push(patId)
+
+            //send Mailer
+            // find the patientName
+            APP.DB.PATIENT.findOne({ _id: patId }, function (erPat, pat){
+                APP.MAILER.sendNewPatientMail(doctors.email,doctors.firstName,pat.firstName + " "+ pat.lastName,function(err,success){
+
+                })
+                if (!pat.doctors) pat.doctors=[]
+                pat.doctors.push(doctors._id)
+                pat.save()
+            })
+
             doctors.save();
             cb(null, doctors)
 }else{
             cb("Doctor Not Found")
         }
 
+    });
+}
+
+
+module.exports.findPatient=function(id,name,cb){
+
+    APP.DB.PATIENT.find({ doctors:id,$or:[{firstName:{$regex:new RegExp("^" + name, "i")}},{lastName:{$regex:new RegExp("^" + name, "i")}}]  }, function (er, usr){
+
+        if (er ) cb("ERROR finding Doctor patient:"+er)
+        else if (usr) { cb(null, usr)}
+        else {   cb( "Doctor Not Found")}
     });
 }
 

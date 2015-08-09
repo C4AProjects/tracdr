@@ -1,0 +1,158 @@
+
+<div class="footer tracdr-footer" style="height: 20px">
+
+</div>
+<div style="padding: 50px">
+<div class="txt-center" style="margin-left: 15%;margin-right: 15%">
+
+
+    <a href="#" class="btn" flow-btn flow-attrs="{accept:'image/*'}">
+        <img style="border-radius: 50%;width: 50px;height: 50px"  flow-img="$flow.files[0]" ng-show="$flow.files.length"/>
+        <img style="border-radius: 50%;width: 50px;height: 50px" src="assets/img/upload.png"  ng-hide="$flow.files.length"/>
+    </a>
+    <h4 class="txt-color">I'm a new Patient</h4>
+    </div>
+
+
+    <!--div ng-repeat="error in registerError">
+        <div class="alert alert-danger animated fadeIn">{{error.msg}}</div>
+    </div-->
+    <!--div class="alert alert-danger animated fadeIn" ng-show="usernameError">{{usernameError}}</div>
+    <div class="alert alert-danger animated fadeIn" ng-show="emailError">{{emailError}}</div-->
+
+
+
+
+
+    <div class="progress row" style="width: 50%;margin-left: 25%">
+        <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="3" style="width: 33%;">
+            1/3
+        </div>
+
+    </div>
+        <div class="row" style="text-align: left">
+            <h5>Enter Your Personal Details</h5>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <input type="text" class="form-control input-sm" placeholder="First Name" ng-model="user.firstName">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control input-sm" placeholder="Last Name" ng-model="user.lastName">
+                </div>
+             <div class="form-group">
+                    <input type="text" class="form-control input-sm" placeholder="Email" ng-model="user.email">
+                </div>
+
+
+                    <div class="form-group">
+                        <input type="text" class="form-control input-sm" placeholder="Date of Birth" ng-model="user.dateOfBirth"
+                               datepicker-popup="dd-MMMM-yyyy"
+                               ng-model="cdate.customStartDate"
+                               is-open="cdate.customStartDate.open"
+                               ng-click = "cdate.customStartDate.open = true"
+
+                               ng-required="true"
+                               close-text="Close"
+                               />
+
+                    </div>
+
+
+            </div>
+
+            <div class="col-lg-6">
+                <!--<div class="form-group">
+                    <select class="form-control input-sm" ng-model="user.country">
+                        <option value="" disabled selected>Select your Country</option>
+                        <option>USA</option>
+                        <option>Canada</option>
+                    </select>
+                </div>-->
+                <div class="form-group">
+                    <select class="form-control input-sm" placeholder="Gender" ng-model="user.gender">
+                        <option value="" disabled selected>Select Gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-control input-sm" ng-model="user.state">
+                        <option value="" disabled selected>Select your State</option>
+                        <option>Alabama</option>
+                        <option>Alaska</option>
+                        <option>Arizona</option>
+                        <option>Arkansas</option>
+                        <option>California</option>
+                        <option>Colorado</option>
+                        <option>Connecticut</option>
+                        <option>Delaware</option>
+                        <option>Florida</option>
+                        <option>Georgia</option>
+                        <option>Hawaii</option>
+                        <option>Idaho</option>
+                        <option>Illinois</option>
+                        <option>Indiana</option>
+                        <option>Iowa</option>
+                        <option>Kansas</option>
+                        <option>Kentucky</option>
+                        <option>Louisiana</option>
+                        <option>Maine</option>
+                        <option>Maryland</option>
+                        <option>Massachusetts[D]</option>
+                        <option>Michigan</option>
+                        <option>Minnesota</option>
+                        <option>Mississippi</option>
+                        <option>Missouri</option>
+                        <option>Montana</option>
+                        <option>Nebraska</option>
+                        <option>Nevada</option>
+                        <option>New Hampshire</option>
+                        <option>New Jersey</option>
+                        <option>New Mexico</option>
+                        <option>New York</option>
+                        <option>North Carolina</option>
+                        <option>North Dakota</option>
+                        <option>Ohio</option>
+                        <option>Oklahoma</option>
+                        <option>Oregon</option>
+                        <option>Pennsylvania</option>
+                        <option>Rhode Island</option>
+                        <option>South Carolina</option>
+                        <option>South Dakota</option>
+                        <option>Tennessee</option>
+                        <option>Texas</option>
+                        <option>Utah</option>
+                        <option>Vermont</option>
+                        <option>Virginia</option>
+                        <option>Washington</option>
+                        <option>West Virginia</option>
+                        <option>Wisconsin</option>
+                        <option>Wyoming</option>
+
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control input-sm" placeholder="Post Code" ng-model="user.postcode">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control input-sm" placeholder="Phone Number" ng-model="user.phone">
+                </div>
+               <!-- <div class="form-group">
+                    <input type="text" class="form-control input-sm" placeholder="Next of Kin Phone Number" ng-model="user.kinphone">
+                </div>-->
+            </div>
+        </div>
+
+        <div class="row" >
+            <div class="col-lg-12 text-center">
+                <br>
+                <button class="btn btn-default btn-grey" ui-sref='join'>BACK</button>
+                <button class="btn btn-primary btn-orange" ui-sref='patient.join.step2'>NEXT</button>
+            </div>
+        </div>
+
+
+</div>

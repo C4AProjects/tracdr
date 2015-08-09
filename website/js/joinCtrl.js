@@ -95,7 +95,7 @@ trackDr.controller('joinCtrl', function ($scope,Auth,$state,$http,Doctors){
 
     $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
     $scope.format = $scope.formats[0];
-$scope.selectDoctor=function(doc){
+    $scope.selectDoctor=function(doc){
     $scope.doctor={}
     $scope.doctor._id=doc._id;
     $scope.join.notfound=false;

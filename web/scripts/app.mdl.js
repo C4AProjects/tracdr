@@ -6,6 +6,6 @@ APP =angular.module("trackDr",
     ['ui.router',
         'ui.bootstrap',
 
-
+        'ui.calendar',
          'angularSpinner','ngDialog', 'ngAnimate',      'ui-notification'
     ]);

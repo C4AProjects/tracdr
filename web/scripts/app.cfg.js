@@ -29,11 +29,87 @@ APP.config(function ($stateProvider, $urlRouterProvider) {
             url: "/doctor",
             templateUrl: "./scripts/doctor/doctor.tpl.html",
 
-            abstract:true
-        }).state('doctor.join', {
+            abstract: true
+        }).state('doctor.patient', {
+            url: "/patient",
+            templateUrl: "./scripts/doctor/patient/doctor.patient.tpl.html",
+            controller: 'doctorPatientCtrl'
+        }).state('doctor.patientDetails', {
+            url: "/pAtient/details/:ID",
+            templateUrl: "./scripts/doctor/patient/patient.details.tpl.html",
+            controller: 'patientDetailsCtrl'
+        }).state('doctor.appointment', {
+            url: "/appointment",
+            templateUrl: "./scripts/doctor/appointment/doctor.appointment.tpl.html",
+controller:'doctorAppointmentCtrl'
+        }).state('doctor.appointment.calendar', {
+            url: "/calendar",
+            controller: 'doctorAppointmentCalendarCtrl',
+            templateUrl: "./scripts/doctor/appointment/appointment.calendar.tpl.html"
+
+        }).state('doctor.appointment.list', {
+            url: "/list",
+            controller: 'doctorAppointmentListCtrl',
+            templateUrl: "./scripts/doctor/appointment/appointment.list.tpl.html"
+
+        }).state('doctor.profile', {
+            url: "/profile",
+            controller: 'doctorProfileCtrl',
+            templateUrl: "./scripts/doctor/profile/profile.tpl.html"
+
+        })
+
+
+        .state('doctor.join', {
             url: "/join",
             templateUrl: "./scripts/doctor/join/doctor.join.tpl.html",
             controller: "doctorJoinCtrl"
+        }).state('patient', {
+            url: "/patient",
+            templateUrl: "./scripts/patient/patient.tpl.html",
+
+            abstract: true
+        }).state('patient.join', {
+            url: "/join",
+            templateUrl: "./scripts/patient/join/patient.join.tpl.html",
+            abstract: true,
+            controller: "patientJoinCtrl"
+        }).state('patient.join.step1', {
+            url: "/step1",
+            templateUrl: "./scripts/patient/join/patient.join.step1.tpl.html"
+
+        }).state('patient.join.step2', {
+            url: "/step2",
+            templateUrl: "./scripts/patient/join/patient.join.step2.tpl.html"
+
+        }).state('patient.join.step3', {
+            url: "/step3",
+            templateUrl: "./scripts/patient/join/patient.join.step3.tpl.html"
+
+        }).state('patient.doctor', {
+            url: "/doctor",
+            templateUrl: "./scripts/patient/doctor/doctor.tpl.html",
+            controller:'PatientCtrl'
+
+        }).state('patient.appointment', {
+            url: "/appointment",
+            templateUrl: "./scripts/patient/appointment/doctor.appointment.tpl.html",
+            controller:'patientAppointmentCtrl'
+        }).state('patient.appointment.calendar', {
+            url: "/calendar",
+            controller: 'patientAppointmentCalendarCtrl',
+            templateUrl: "./scripts/patient/appointment/appointment.calendar.tpl.html"
+
+        }).state('patient.appointment.list', {
+            url: "/list",
+            controller: 'patientAppointmentListCtrl',
+            templateUrl: "./scripts/patient/appointment/appointment.list.tpl.html"
+
+        }).state('patient.profile', {
+            url: "/profile",
+            controller: 'patientProfileCtrl',
+            templateUrl: "./scripts/patient/profile/profile.tpl.html"
+
         })
 })
     .factory('authInterceptor', function ($rootScope, $q, $window) {
@@ -47,7 +123,7 @@ APP.config(function ($stateProvider, $urlRouterProvider) {
             },
             response: function (response) {
 
-                console.log("status  "+response)
+                console.log("status  " + response)
                 if (response.status === 401) {
                     // handle the case where the user is not authenticated
 
@@ -55,7 +131,7 @@ APP.config(function ($stateProvider, $urlRouterProvider) {
                 return response || $q.when(response);
             }
         };
-    }).factory('ajax-loader', function ($rootScope, $q, $window,usSpinnerService) {
+    }).factory('ajax-loader', function ($rootScope, $q, $window, usSpinnerService) {
         var requests = 0;
 
         function show() {
@@ -90,4 +166,19 @@ APP.config(function ($stateProvider, $urlRouterProvider) {
         $httpProvider.interceptors.push('authInterceptor');
 
         $httpProvider.interceptors.push('ajax-loader');
-    })
+    }).run(['$rootScope', '$location', 'DataService', '$state', 'ApiServer', function ($rootScope, $location, DataService, $state, ApiServer) {
+
+
+        if ($rootScope.USER && $rootScope.USER.doctor) {
+            console.log("is doctor")
+            ///$state.go("doctor.patient")
+            $location.path("doctor/patient");
+          //  $state.go("doctor.patient")
+        } else if ($rootScope.USER && $rootScope.USER.patient) {
+
+            $location.path("patient/doctor");
+        } else {
+            $location.path("index");
+        }
+
+    }])

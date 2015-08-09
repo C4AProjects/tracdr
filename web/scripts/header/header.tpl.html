@@ -31,7 +31,7 @@
 
                     <li ui-sref-active="active" ><a ui-sref="contact_us" >Contact Us</a></li>
                     <li ui-sref-active="active" ><a ui-sref="about"  >About</a></li>
-
+                    <li ng-if="loggedIn" ng-click="logout()" ><a href>Logout</a></li>
 
             </ul>
         </div><!-- /.navbar-collapse -->

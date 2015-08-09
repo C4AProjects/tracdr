@@ -14,10 +14,10 @@
         <button ui-sref="join" class="btn btn-primary">Register</button>
     </div>
     <div ng-show="forget">
-        <button type="submit" class="btn btn-reg" ng-click="login()">Send</button>
+        <button type="submit" class="btn btn-reg" ng-click="forgetpass()">Send</button>
         <button ng-click="forget=false" class="btn btn-primary">Cancel</button>
     </div>
-    <a ng-click="forget=true" ng-show="!forget">Forget your Password?</a>
+    <a href ng-click="forget=true" ng-show="!forget">Forget your Password?</a>
     <div>
         <label style="color:red">{{loginError.errorMessage}}</label>
     </div>

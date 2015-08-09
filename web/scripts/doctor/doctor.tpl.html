@@ -1,1 +1,51 @@
-<div ui-view style="height: 100%"></div>
+
+<div class="footer tracdr-footer" style="height: 20px">
+
+</div>
+<div class="hr">
+    <div class="container" >
+
+        <div class="row">
+            <div class="col-sm-2  text-right ">
+                <a >
+                    <img src="assets/img/profile.png" class="img-profile">
+
+                </a>
+
+                <a  >
+                    <div class="btn bg-primary btn-dash" ui-sref="doctor.patient"  ui-sref-active="btn-dash-orange">
+                        <img src="assets/img/userprofile.png" width="45px">
+                        <h6>Patients</h6>
+                    </div>
+                </a>
+                <a  >
+                    <div class="btn bg-primary btn-dash " ui-sref="doctor.appointment.calendar"  ui-sref-active="btn-dash-orange">
+                        <img src="assets/img/calendar.png">
+                        <h6>Appointment</h6>
+                    </div>
+                </a>
+                <a  >
+                    <div class="btn bg-primary btn-dash" ui-sref="doctor.profile" ui-sref-active="btn-dash-orange">
+                        <img src="assets/img/my-profile.png">
+                        <h6>My profile</h6>
+                    </div>
+                </a>
+            </div>
+
+
+
+            <div class="col-lg-10 col-xs-10" >
+                <div class="" ui-view>
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

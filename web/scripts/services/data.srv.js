@@ -8,12 +8,13 @@ APP.factory('DataService', function ($window,$state,$location,$rootScope) {
 
     var token;
     var loggedIn=false;
-
-
+    $rootScope.loggedIn=false
+console.log("testing if session existx")
     if ($window.sessionStorage.token &&  $window.sessionStorage.user){
 
         user= JSON.parse($window.sessionStorage.user);
         $rootScope.USER=user
+        $rootScope.loggedIn=true
         loggedIn=true
       //  $location.path("/dashboard");
         console.log("logged in")
@@ -38,6 +39,7 @@ APP.factory('DataService', function ($window,$state,$location,$rootScope) {
     }
     service.setLogged=function(logged){
         loggedIn=logged;
+        $rootScope.loggedIn=logged
     }
     service.isLogged=function(){
         return loggedIn;

@@ -1,0 +1,44 @@
+<h4>Appointment List</h4>
+<div class="panel-body" style="padding:0px;margin:0px;height: 100%">
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>
+                Title
+            </th>
+
+            <th>
+                Details
+            </th>
+            <th>
+                Start
+            </th>
+            <th>
+                End
+            </th>
+            <th>
+                Status
+            </th>
+
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr ng-repeat="doc in appointments" >
+            <td>{{ doc.subject }}</td>
+
+            <td>{{ doc.details }}</td>
+            <td>{{ doc.startTime | date:"short"}}</td>
+            <td>{{ doc.endTime | date:"short"}}</td>
+            <td>{{ doc.fromNow }}</td>
+
+
+
+        </tr>
+        </tbody>
+
+    </table>
+
+
+</div>

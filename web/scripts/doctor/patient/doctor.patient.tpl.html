@@ -1,10 +1,76 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+<div class="panel panel-default" >
+    <div class="panel-heading">
+        <h3 class="panel-title"><span class="fa fa fa-life-ring"></span> Patients</h3>
+    </div>
+    <div class="panel-heading">
+        <div class="col-lg-6">
+            <div class="input-group input-group-sm">
+                <span class="input-group-addon" id="sizing-addon3">@</span>
+                <input type="text" class="form-control input-sm" placeholder="search" ng-model="search.query" typeahead="doc as label(doc) for doc in results" ng-change="findDoctorPatient(search.query)" typeahead-on-select="selectPatient($item)" aria-describedby="sizing-addon3">
 
-</body>
-</html>
+            </div>
+        </div>
+
+        <button type="button" class="btn btn-primary btn-sm " ng-click="addPatient()">Add New Patient <span class="fa fa-plus-square"></span></button>
+
+    </div>
+
+
+
+
+    <div class="panel-body" style="padding:0px;margin:0px;height: 100%">
+
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>
+                    First Name
+                </th>
+
+                <th>
+                    Last Name
+                </th>
+                <th>
+                    Gender
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    State
+                </th>
+
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr ng-repeat="doc in patiens" ui-sref="doctor.patientDetails({ID:doc._id})">
+                <td>{{ doc.firstName }}</td>
+
+                <td>{{ doc.lastName }}</td>
+                <td>{{ doc.gender }}</td>
+                <td>{{ doc.email }}</td>
+                <td>{{ doc.state }}</td>
+
+
+
+            </tr>
+            </tbody>
+
+        </table>
+
+
+    </div>
+
+    <div class="panel-footer">
+        <div ng-if="pageNumber>1">
+            <a ng-disabled="currentPage==1" class="right fa fa-angle-left btn btn-success" ng-click="prevPage()" style="font-family: FontAwesome;border-radius: 0px ;margin: 0px;background-color: #56724c"
+                    ></a>
+            <a   class="right  btn btn-success btn-small" style="font-family: FontAwesome;border-radius: 0px ;margin: 0px;background-color: #56724c;  font-size: 10px;"
+                    >{{currentPage }} / {{pageNumber }}</a>
+            <a ng-disabled="pageNumber<=currentPage"  class="right fa fa-angle-right btn btn-success" ng-click="nextPage()" style="font-family: FontAwesome;border-radius: 0px ;margin: 0px;background-color: #56724c"
+                    ></a>
+        </div>
+
+    </div>
+</div>

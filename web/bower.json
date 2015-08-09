@@ -14,7 +14,7 @@
     "ng-flow": "~2.6.0",
     "fontawesome": "~4.3.0",
     "angular-datatables": "~0.4.2",
-    "moment": "~2.10.2",
+    "moment": "~2.10.6",
     "angular-dialog-service": "~5.2.6",
     "angular-spinner": "~0.6.1",
     "ngDialog": "~0.4.0",

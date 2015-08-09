@@ -13,6 +13,8 @@ module.exports = function (app) {
             else{
                 var token = jwt.sign({userId: "2014", date:new Date()}, secret);
                 res.send({success:true,patient:doc,role:"patient",token:token})
+
+
             }
 
         })

@@ -48,6 +48,36 @@ MAILER.sendForgetMail=function(to,name,pass,cb){
     transporter.sendMail(mailOptions, cb);
 
 }
+
+MAILER.sendNewPatientMail=function(to,name,patient,cb){
+    var mailOptions = {
+        from: APP.CONFIG.mailer.auth.user, // sender address
+        to: to, // list of receivers
+        subject: 'trackDr', // Subject line
+        // plaintext body
+        html: 'Hello ' +name +'<br>You have a new patient : <b>'+ patient + '</b><br><br>If you received this email by mistake, simply delete it. <br>Thankyou<br><img src="http://54.89.140.6:2014/website/images/buzzo.png" style="background-color: black">' // html body
+
+    };
+
+
+    transporter.sendMail(mailOptions, cb);
+
+}
+
+MAILER.sendActivationMail=function(to,name,link,cb){
+    var mailOptions = {
+        from: APP.CONFIG.mailer.auth.user, // sender address
+        to: to, // list of receivers
+        subject: 'trackDr', // Subject line
+        // plaintext body
+        html: 'Hello ' +name +'<br>Click on this link to activate your account : <a href="'+link+'">Activate</a><br><br>If you received this email by mistake, simply delete it. <br>Thankyou<br><img src="http://54.89.140.6:2014/website/images/buzzo.png" style="background-color: black">' // html body
+
+    };
+
+
+    transporter.sendMail(mailOptions, cb);
+
+}
 module.exports = function (backend) {
     MAILER.init();
    // MAILER.testMail();

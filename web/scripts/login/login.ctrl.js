@@ -7,8 +7,8 @@ APP.controller('loginCtrl', function ($scope, $state,$rootScope,$animate,LoginSe
         $scope.loginError = {}
         LoginService.login($scope.user, function (res) {
             if (res.doctor)
-                $state.go("doctor")
-            else if (res.patient)   $state.go("patient.calendar")
+                $state.go("doctor.patient")
+            else if (res.patient)   $state.go("patient.doctor")
         }, function (err) {
             $scope.loginError = {}
             //$scope.loginError.errorMessage = err.error;

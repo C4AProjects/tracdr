@@ -89,6 +89,15 @@ module.exports = function (app) {
         })
 
     });
+    app.get("/api/secured/doctor/:ID/patient/find/:name", function(req, res){
+        DEBUG("Getting a Doctor")
+        doctorCtrl.findPatient(req.params.ID,req.params.name,function(err,doc){
+            if (err) res.send({error:err})
+            else res.send(doc)
+
+        })
+
+    });
     app.get("/api/secured/doctor/patient/:ID", function(req, res){
         DEBUG("Getting my Doctor")
         doctorCtrl.getByPatient(req.params.ID,function(err,doc){
@@ -104,7 +113,15 @@ module.exports = function (app) {
         })
 
     });
+    app.get("/api/secured/doctors/:ID", function(req, res){
+        DEBUG("Getting my Doctors")
+        APP.DB.DOCTOR.find({patients:req.params.ID }, function (er, doctors){
 
+            if (er) res.send({error:err})
+            else res.send(doctors)
+        });
+
+    });
     app.put("/api/secured/doctor/:ID", function(req, res){
         DEBUG("Updating Doctor")
         doctorCtrl.update(req.params.ID,req.body,function(err,doc){

@@ -1,7 +1,17 @@
 /**
  * Created by haythem on 15/03/2015.
  */
- trackDr = angular.module('trackDr', ['ui.router','trackDr-services','ui.bootstrap','ui.calendar','datatables','dialogs']);
+ trackDr = angular.module('trackDr',
+     [
+         'ui.router',
+         'trackDr-services',
+         'ui.bootstrap',
+         'ui.calendar',
+         'datatables',
+         'dialogs',
+         'angularSpinner' ,
+         'ui-notification'
+     ]);
 
 trackDr.config(function($stateProvider, $urlRouterProvider) {
     //
@@ -85,3 +95,39 @@ trackDr.config(function($stateProvider, $urlRouterProvider) {
         });
 
 });
+trackDr.factory('ajax-loader', function ($rootScope, $q, $window,usSpinnerService) {
+    var requests = 0;
+
+    function show() {
+        if (!requests) {
+            $rootScope.$broadcast("ajax-start");
+            usSpinnerService.spin('spinner-1');
+        }
+        requests++;
+    }
+
+    function hide() {
+        requests--;
+        if (!requests) {
+            $rootScope.$broadcast("ajax-stop");
+            usSpinnerService.stop('spinner-1');
+        }
+    }
+
+    return {
+        'request': function (config) {
+            show();
+            return $q.when(config);
+        }, 'response': function (response) {
+            hide();
+            return $q.when(response);
+        }, 'responseError': function (rejection) {
+            hide();
+            return $q.reject(rejection);
+        }
+    };
+}).config(function ($httpProvider) {
+
+
+    $httpProvider.interceptors.push('ajax-loader');
+})

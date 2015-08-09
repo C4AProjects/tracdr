@@ -30,7 +30,7 @@ app.use(methodOverride());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(multer());
-app.use(express.static("website"));var express = require('express');
+app.use(express.static("web"));var express = require('express');
 app.use(compress());
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -46,7 +46,8 @@ app.use(function(err, req, res, next){
 });
 
 app.get('/', function(req, res){
-    res.sendfile("website/index.html");
+    console.log("index")
+    res.sendfile("web/index.html");
 });
 
 app.get('/api', function(req, res){
@@ -71,7 +72,7 @@ INFO("Loading Appointment Route")
 require('./route/appointmentRoute')(app)
 
 app.listen(3000, function(){
-    INFO('listening on *:3000');
+    INFO('listeninssg on *:3000');
 });
 
 

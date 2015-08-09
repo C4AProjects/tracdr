@@ -61,6 +61,18 @@ angular.module('trackDr-services', [])
                         error(res);
                     }
                 }).error(error);
+            },
+            forget: function (user, success, error) {
+
+                $http.post(serverApi + '/forget/', user).success(function (res) {
+                    if (!res.error) {
+
+                        success(res);
+                    }
+                    else {
+                        error(res);
+                    }
+                }).error(error);
             }
 
             ,getUser:function(){

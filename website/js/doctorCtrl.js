@@ -12,6 +12,7 @@ trackDr.controller('doctorCtrl', function ($scope, Auth, $filter, Patients,$time
             $scope.patients = res;
         }
     })
+
     $scope.updateProfile=function(){
         $http.put(serverApi + '/secured/doctor/'+$scope.user._id,$scope.user).success(function (res) {
             if (!res.error) {

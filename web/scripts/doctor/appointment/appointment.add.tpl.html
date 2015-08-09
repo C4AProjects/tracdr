@@ -1,0 +1,67 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Add New Appointment  <span class="fa fa-times pull-right" ng-click="closeThisDialog()"></span></h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-lg-12">
+                Select a patient
+                <div class="input-group input-group-sm">
+                    <input type="text" class="form-control input-sm" placeholder="search" ng-model="search.query" typeahead="doc as label(doc) for doc in results" ng-change="findDoctorPatient(search.query)" typeahead-on-select="selectPatient($item)" aria-describedby="sizing-addon3">
+                    <span class="input-group-addon btn btn-default" id="sizing-addon2" ng-click="deleteSearch()"><i class="fa fa-trash-o"></i></span>
+
+                </div>
+                <div style="background-color: #aed0ea" ng-if="selectedPatient._id">
+                    Patient: <br>{{selectedPatient.firstName}} {{selectedPatient.lastName}} <span>({{selectedPatient.email}})</span>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-12">
+                <div class="col-lg-12">
+                    Day:
+                    <div class="form-group">
+                        <input type="text" class="form-control input-sm" placeholder="Date of Birth" ng-model="event.date"
+                               datepicker-popup="dd-MMMM-yyyy"
+                               ng-model="cdate.customStartDate"
+                               is-open="cdate.customStartDate.open"
+                               ng-click = "cdate.customStartDate.open = true"
+
+                               ng-required="true"
+                               close-text="Close"
+                                />
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    From:
+                    <timepicker ng-model="event.start"  hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
+                </div>
+                <div class="col-lg-6">
+               To:
+                <timepicker ng-model="event.end"  hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
+</div>
+            </div>
+
+        </div>
+        <div>
+            <div class="input-wrapper">
+                <input required id="email_block" name="subject" placeholder="Subject" ng-model="event.subject">
+
+
+            </div>
+            <br>
+            <div class="input-wrapper">
+                <textarea required id="password_block" name="details" placeholder="Details" ng-model="event.details" style="width: 100%"></textarea>
+
+            </div>
+        </div>
+
+
+        <button class="btn btn-success pull-right" ng-click="confirm(event)" style="margin:5px">Save</button>
+        <button class="btn btn-default pull-right" ng-click="closeThisDialog()" style="margin:5px">Cancel</button>
+    </div>
+</div>
+

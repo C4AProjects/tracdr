@@ -1,0 +1,70 @@
+<div class="panel panel-default" >
+    <div class="panel-heading">
+        <h3 class="panel-title"><span class="fa fa fa-life-ring"></span> Patients</h3>
+    </div>
+
+
+
+
+
+    <div class="panel-body" style="padding:10px;margin:0px;height: 100%">
+        <b>First Name: </b>{{ patient.firstName }}<br>
+            <b>Last Name: </b>{{ patient.firstName }}<br>
+                <b>Gender:</b> {{ patient.gender }}<br>
+                    <b>State:</b> {{ patient.state }}<br>
+                        <b>Email:</b> {{ patient.email }}<br>
+        <br>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>
+                    Title
+                </th>
+
+                <th>
+                    Details
+                </th>
+                <th>
+                    Start
+                </th>
+                <th>
+                    End
+                </th>
+                <th>
+                    Status
+                </th>
+
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr ng-repeat="doc in appointments" >
+                <td>{{ doc.subject }}</td>
+
+                <td>{{ doc.details }}</td>
+                <td>{{ doc.startTime | date:"short"}}</td>
+                <td>{{ doc.endTime | date:"short"}}</td>
+                <td>{{ doc.fromNow }}</td>
+
+
+
+            </tr>
+            </tbody>
+
+        </table>
+
+
+    </div>
+
+    <div class="panel-footer">
+        <div ng-if="pageNumber>1">
+            <a ng-disabled="currentPage==1" class="right fa fa-angle-left btn btn-success" ng-click="prevPage()" style="font-family: FontAwesome;border-radius: 0px ;margin: 0px;background-color: #56724c"
+                    ></a>
+            <a   class="right  btn btn-success btn-small" style="font-family: FontAwesome;border-radius: 0px ;margin: 0px;background-color: #56724c;  font-size: 10px;"
+                    >{{currentPage }} / {{pageNumber }}</a>
+            <a ng-disabled="pageNumber<=currentPage"  class="right fa fa-angle-right btn btn-success" ng-click="nextPage()" style="font-family: FontAwesome;border-radius: 0px ;margin: 0px;background-color: #56724c"
+                    ></a>
+        </div>
+
+    </div>
+</div>

@@ -30,6 +30,7 @@ module.exports.registerPatient = function (doc, cb) {
                             patientCtrl.add(doc, cb)
 
 
+
                         }
                     }
 
@@ -63,8 +64,20 @@ module.exports.registerDoctor = function (doc, cb) {
                     else {
                         if (patient) cb("This email already exist");
                         else {
-
+///activated:{type:Boolean, default:false},
+                            //activation_link:String,
+                            var link = jwt.sign({date:new Date()}, secret);
+                            doc.activation_link=link;
                             doctortCtrl.add(doc, cb)
+
+                            APP.MAILER.sendActivationMail(doc.email,doc.firstName,link,function(err,success){
+                                if(err){
+                                 //   cb(err);
+                                }
+                                if(success){
+                                   // cb(null,{success:true});
+                                }
+                            })
 
 
                         }

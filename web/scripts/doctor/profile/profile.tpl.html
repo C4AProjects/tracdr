@@ -1,0 +1,270 @@
+<div>
+    <h3>Profile</h3>
+    <div class="row" style="margin-bottom: 20px;width:80%;">
+        <div class="col-sm-6">
+            <div style="background-color: #0078BA;color: white;padding: 5px">
+                Login Information
+            </div>
+
+            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                <div class="col-md-4" style="margin-top: 5px">Email</div>
+                <div class="col-md-8">
+                    <div class="input-group col-md-12">
+
+                        <input type="text" class="form-control " id="inputPassword"  ng-model="USER.doctor.email">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                <div class="col-md-4" style="margin-top: 5px">Password</div>
+                <div class="col-md-8">
+                    <div class="input-group col-md-12">
+
+                        <input type="password" class="form-control " id="inputPassword" placeholder="Password" ng-model="USER.doctor.password">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-sm-6">
+            <div style="background-color: #0078BA;color: white;padding: 5px">
+                Location Information
+            </div>
+
+
+            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                <div class="col-md-4" style="margin-top: 5px">State</div>
+                <div class="col-md-8">
+                    <select class="form-control input-sm" ng-model="USER.doctor.state">
+                        <option value="" disabled selected>Select your State</option>
+                        <option>Alabama</option>
+                        <option>Alaska</option>
+                        <option>Arizona</option>
+                        <option>Arkansas</option>
+                        <option>California</option>
+                        <option>Colorado</option>
+                        <option>Connecticut</option>
+                        <option>Delaware</option>
+                        <option>Florida</option>
+                        <option>Georgia</option>
+                        <option>Hawaii</option>
+                        <option>Idaho</option>
+                        <option>Illinois</option>
+                        <option>Indiana</option>
+                        <option>Iowa</option>
+                        <option>Kansas</option>
+                        <option>Kentucky</option>
+                        <option>Louisiana</option>
+                        <option>Maine</option>
+                        <option>Maryland</option>
+                        <option>Massachusetts[D]</option>
+                        <option>Michigan</option>
+                        <option>Minnesota</option>
+                        <option>Mississippi</option>
+                        <option>Missouri</option>
+                        <option>Montana</option>
+                        <option>Nebraska</option>
+                        <option>Nevada</option>
+                        <option>New Hampshire</option>
+                        <option>New Jersey</option>
+                        <option>New Mexico</option>
+                        <option>New York</option>
+                        <option>North Carolina</option>
+                        <option>North Dakota</option>
+                        <option>Ohio</option>
+                        <option>Oklahoma</option>
+                        <option>Oregon</option>
+                        <option>Pennsylvania</option>
+                        <option>Rhode Island</option>
+                        <option>South Carolina</option>
+                        <option>South Dakota</option>
+                        <option>Tennessee</option>
+                        <option>Texas</option>
+                        <option>Utah</option>
+                        <option>Vermont</option>
+                        <option>Virginia</option>
+                        <option>Washington</option>
+                        <option>West Virginia</option>
+                        <option>Wisconsin</option>
+                        <option>Wyoming</option>
+
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                <div class="col-md-4" style="margin-top: 5px">PostCode</div>
+                <div class="col-md-8">
+                    <div class="input-group col-md-12">
+
+                        <input type="text" class="form-control " id="inputPassword" placeholder="Post Code" ng-model="USER.doctor.postCode">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="row" style="margin-bottom: 20px;;width:80%;">
+        <div class="col-sm-12">
+            <div style="background-color: #0078BA;color: white;padding: 5px">
+                Professional Information
+            </div>
+
+            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                <div class="col-md-4" style="margin-top: 5px">Hospital</div>
+                <div class="col-md-8">
+                    <div class="input-group col-md-12">
+
+                        <input type="text" class="form-control " id="inputPassword"  ng-model="USER.doctor.hospital">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                <div class="col-md-4" style="margin-top: 5px">Speciality</div>
+                <div class="col-md-8">
+                    <div class="input-group col-md-12">
+
+                        <div class="form-group">
+                            <select class="form-control input-sm" placeholder="Specialty" ng-model="USER.doctor.specialty">
+                                <option value="" disabled selected>Specialty</option>
+                                <option>Acupuncturist</option>
+                                <option>Allergist</option>
+                                <option>Cardiologist</option>
+                                <option>Chiropractor</option>
+                                <option>Dentist</option>
+                                <option>Dermatologist</option>
+                                <option>Dietitian</option>
+                                <option>Ear, Nose & Throat Doctor</option>
+                                <option>Endocrinologist</option>
+                                <option>Endodontist</option>
+                                <option>Eye Doctor</option>
+                                <option>Family Physician</option>
+                                <option>Infectious Disease Specialist</option>
+                                <option>Infertility Specialist</option>
+                                <option>Internist</option>
+                                <option>Neurologist</option>
+                                <option>Neurosurgeon</option>
+                                <option>Nurse Practitioner</option>
+                                <option>Nutritionist</option>
+                                <option>OB-GYN</option>
+                                <option>Oncologist</option>
+                                <option>Ophthalmologist</option>
+                                <option>Optometrist</option>
+                                <option>Oral Surgeon</option>
+                                <option>Orthodontist</option>
+                                <option>Orthopedic Surgeon</option>
+                                <option>Pain Management Specialist</option>
+                                <option>Pediatric Dentist</option>
+                                <option>Pediatrician</option>
+                                <option>Periodontist</option>
+                                <option>Physiatrist</option>
+                                <option>Physical Therapist</option>
+                                <option>Plastic Surgeon</option>
+                                <option>Podiatrist</option>
+                                <option>Doctor</option>
+                                <option>Prosthodontist</option>
+                                <option>Psychiatrist</option>
+                                <option>Psychologist</option>
+                                <option>Psychotherapist</option>
+                                <option>Radiologist</option>
+                                <option>Rheumatologist</option>
+                                <option>Sleep Medicine Specialist</option>
+                                <option>Sports Medicine Specialist</option>
+                                <option>Surgeon</option>
+                                <option>Therapist / Counselor</option>
+                                <option>Urologist</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row" style="min-height:200px;width:80%;">
+        <div class="col-sm-12">
+            <div style="background-color: #0078BA;color: white;padding: 5px">
+                Personal Information
+            </div>
+
+            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                <div class="col-md-4" style="margin-top: 5px">Firsnname</div>
+                <div class="col-md-8">
+                    <div class="input-group col-md-12">
+
+                        <input type="text" class="form-control " id="inputPassword"  ng-model="USER.doctor.firstName">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                <div class="col-md-4" style="margin-top: 5px">Lastname</div>
+                <div class="col-md-8">
+                    <div class="input-group col-md-12">
+
+                        <input type="text" class="form-control " id="inputPassword" ng-model="USER.doctor.lastName">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                <div class="col-md-4" style="margin-top: 5px">Phone</div>
+                <div class="col-md-8">
+                    <div class="input-group col-md-12">
+
+                        <input type="text" class="form-control " id="inputPassword"  ng-model="USER.doctor.phone">
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                <div class="col-md-4" style="margin-top: 5px">Birth</div>
+                <div class="col-md-8">
+                    <div class="input-group col-md-12">
+
+                        <input type="text" class="form-control input-sm" placeholder="Date of Birth" ng-model="USER.doctor.dateOfBirth"
+                               datepicker-popup="dd-MMMM-yyyy"
+                               ng-model="cdate.customStartDate"
+                               is-open="cdate.customStartDate.open"
+                               ng-click = "cdate.customStartDate.open = true"
+
+                               ng-required="true"
+                               close-text="Close"
+                                />
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                <div class="col-md-4" style="margin-top: 5px">Gender</div>
+                <div class="col-md-8">
+                    <div class="input-group col-md-12">
+
+                        <input type="text" class="form-control " id="inputPassword" ng-model="USER.doctor.gender">
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="btn btn-primary btn-orange" ng-click='updateProfile()'>Save</button>
+        </div>
+
+
+    </div>
+</div>
