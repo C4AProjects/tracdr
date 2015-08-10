@@ -3317,3 +3317,137 @@ Urologists2015-04-13T19:47:57.893Z - debug: LoggerService Started
 2015-08-09T11:42:09.976Z - info: [DB]: Connected OK
 2015-08-09T11:42:13.182Z - debug: Register Doctor
 2015-08-09T11:42:13.183Z - debug: Register PAtient [object Object]
+2015-08-09T11:59:10.339Z - debug: LoggerService Started
+2015-08-09T11:59:10.420Z - info: Init Mailer...
+2015-08-09T11:59:10.421Z - debug: Loading Models....
+2015-08-09T11:59:10.715Z - debug: loading DB Module...
+2015-08-09T11:59:10.716Z - info: Starting API
+2015-08-09T11:59:11.093Z - info: Loading Auth Route
+2015-08-09T11:59:11.102Z - info: Loading Dorctor Route
+2015-08-09T11:59:11.104Z - info: Loading Patient Route
+2015-08-09T11:59:11.106Z - info: Loading Notification Route
+2015-08-09T11:59:11.107Z - info: Loading Appointment Route
+2015-08-09T11:59:11.113Z - debug: [DB]: Connecting...
+2015-08-09T11:59:11.118Z - info: listeninssg on *:3000
+2015-08-09T11:59:11.230Z - info: [DB]: Connected OK
+2015-08-09T11:59:24.146Z - info: login
+2015-08-09T11:59:35.058Z - info: login
+2015-08-09T12:01:28.504Z - info: login
+2015-08-09T12:03:55.635Z - debug: Register Doctor
+2015-08-09T12:06:17.031Z - info: login
+2015-08-09T12:07:19.992Z - debug: Register Doctor
+2015-08-09T12:07:19.992Z - debug: Register PAtient [object Object]
+2015-08-09T12:07:26.984Z - info: login
+2015-08-09T12:07:26.984Z - debug: Register PAtient [object Object]
+2015-08-09T12:07:27.072Z - debug: Getting my patientx
+2015-08-09T12:07:29.016Z - debug: Getting my Appointment
+2015-08-09T12:07:30.057Z - debug: Getting my patientx
+2015-08-09T12:07:43.069Z - debug: Register Patient
+2015-08-09T12:07:43.069Z - debug: Register PAtient [object Object]
+2015-08-09T12:07:43.088Z - debug: Adding Doctor
+2015-08-09T12:07:43.100Z - debug: Getting my patientx
+2015-08-09T12:08:04.889Z - debug: Find Doctor
+2015-08-09T12:08:05.516Z - debug: Find Doctor
+2015-08-09T12:08:06.033Z - debug: Find Doctor
+2015-08-09T12:08:07.009Z - debug: Find Doctor
+2015-08-09T12:08:07.744Z - debug: Find Doctor
+2015-08-09T12:08:15.132Z - debug: Register Patient
+2015-08-09T12:08:15.132Z - debug: Register PAtient [object Object]
+2015-08-09T12:08:15.148Z - debug: Adding Doctor
+2015-08-09T12:08:23.946Z - info: login
+2015-08-09T12:08:26.789Z - info: login
+2015-08-09T12:08:26.789Z - debug: Register PAtient [object Object]
+2015-08-09T12:08:26.867Z - debug: Getting my Doctors
+2015-08-09T12:08:31.823Z - debug: Getting my Appointment
+2015-08-09T12:09:35.350Z - info: login
+2015-08-09T12:11:06.278Z - debug: Register Doctor
+2015-08-09T12:11:06.278Z - debug: Register PAtient [object Object]
+2015-08-09T12:37:32.088Z - debug: LoggerService Started
+2015-08-09T12:37:32.143Z - info: Init Mailer...
+2015-08-09T12:37:32.144Z - debug: Loading Models....
+2015-08-09T12:37:32.302Z - debug: loading DB Module...
+2015-08-09T12:37:32.303Z - info: Starting API
+2015-08-09T12:37:32.486Z - info: Loading Auth Route
+2015-08-09T12:37:32.492Z - info: Loading Dorctor Route
+2015-08-09T12:37:32.494Z - info: Loading Patient Route
+2015-08-09T12:37:32.494Z - info: Loading Notification Route
+2015-08-09T12:37:32.495Z - info: Loading Appointment Route
+2015-08-09T12:37:32.500Z - debug: [DB]: Connecting...
+2015-08-09T12:37:32.505Z - info: listeninssg on *:3000
+2015-08-09T12:37:32.621Z - info: [DB]: Connected OK
+2015-08-09T12:37:46.883Z - debug: LoggerService Started
+2015-08-09T12:37:46.934Z - info: Init Mailer...
+2015-08-09T12:37:46.935Z - debug: Loading Models....
+2015-08-09T12:37:47.102Z - debug: loading DB Module...
+2015-08-09T12:37:47.103Z - info: Starting API
+2015-08-09T12:37:47.303Z - info: Loading Auth Route
+2015-08-09T12:37:47.310Z - info: Loading Dorctor Route
+2015-08-09T12:37:47.311Z - info: Loading Patient Route
+2015-08-09T12:37:47.312Z - info: Loading Notification Route
+2015-08-09T12:37:47.313Z - info: Loading Appointment Route
+2015-08-09T12:37:47.318Z - debug: [DB]: Connecting...
+2015-08-09T12:37:47.322Z - info: listeninssg on *:3000
+2015-08-09T12:37:47.439Z - info: [DB]: Connected OK
+2015-08-09T12:38:05.862Z - info: login
+2015-08-09T12:38:15.406Z - info: login
+2015-08-09T12:38:23.367Z - info: login
+2015-08-09T12:41:12.361Z - info: login
+2015-08-09T12:41:12.361Z - debug: Register PAtient [object Object]
+2015-08-09T12:41:27.065Z - info: login
+2015-08-09T12:41:27.065Z - debug: Register PAtient [object Object]
+2015-08-09T12:41:27.115Z - debug: Getting my patientx
+2015-08-09T12:41:31.316Z - debug: Getting my Appointment
+2015-08-09T12:41:32.474Z - debug: Getting my patientx
+2015-08-09T12:44:04.122Z - debug: Register Patient
+2015-08-09T12:44:24.220Z - debug: Register Patient
+2015-08-09T12:44:24.220Z - debug: Register PAtient [object Object]
+2015-08-09T12:44:24.239Z - debug: Adding Doctor
+2015-08-09T12:44:24.249Z - debug: Getting my patientx
+2015-08-09T12:44:28.206Z - debug: Getting a patient
+2015-08-09T12:44:28.207Z - debug: Getting my Appointment
+2015-08-09T12:44:29.978Z - debug: Getting my Appointment
+2015-08-09T12:46:48.630Z - debug: Getting a Doctor
+2015-08-09T12:46:49.021Z - debug: Getting a Doctor
+2015-08-09T12:46:49.765Z - debug: Getting a Doctor
+2015-08-09T12:46:51.052Z - debug: Getting a Doctor
+2015-08-09T12:46:51.213Z - debug: Getting a Doctor
+2015-08-09T12:47:08.943Z - debug: Adding Appointment
+2015-08-09T12:47:08.956Z - debug: Getting my Appointment
+2015-08-09T12:47:13.003Z - debug: Getting my patientx
+2015-08-09T12:47:13.673Z - debug: Getting my Appointment
+2015-08-09T12:47:15.451Z - debug: Getting my Appointment
+2015-08-09T12:48:14.781Z - debug: Getting my patientx
+2015-08-09T12:48:16.267Z - debug: Getting a Doctor
+2015-08-09T12:48:16.546Z - debug: Getting a Doctor
+2015-08-09T15:46:03.641Z - info: login
+2015-08-09T15:46:03.641Z - debug: Register PAtient [object Object]
+2015-08-09T15:46:49.190Z - info: login
+2015-08-09T15:46:49.190Z - debug: Register PAtient [object Object]
+2015-08-09T15:47:24.765Z - info: login
+2015-08-09T15:47:24.765Z - debug: Register PAtient [object Object]
+2015-08-10T09:28:41.393Z - debug: LoggerService Started
+2015-08-10T09:28:41.471Z - info: Init Mailer...
+2015-08-10T09:28:41.472Z - debug: Loading Models....
+2015-08-10T09:28:41.747Z - debug: loading DB Module...
+2015-08-10T09:28:41.749Z - info: Starting API
+2015-08-10T09:28:42.096Z - info: Loading Auth Route
+2015-08-10T09:28:42.106Z - info: Loading Dorctor Route
+2015-08-10T09:28:42.108Z - info: Loading Patient Route
+2015-08-10T09:28:42.110Z - info: Loading Notification Route
+2015-08-10T09:28:42.111Z - info: Loading Appointment Route
+2015-08-10T09:28:42.117Z - debug: [DB]: Connecting...
+2015-08-10T09:28:42.122Z - info: listeninssg on *:3000
+2015-08-10T09:28:42.238Z - info: [DB]: Connected OK
+2015-08-10T09:29:15.524Z - debug: LoggerService Started
+2015-08-10T09:29:15.573Z - info: Init Mailer...
+2015-08-10T09:29:15.574Z - debug: Loading Models....
+2015-08-10T09:29:15.732Z - debug: loading DB Module...
+2015-08-10T09:29:15.733Z - info: Starting API
+2015-08-10T09:29:15.912Z - info: Loading Auth Route
+2015-08-10T09:29:15.919Z - info: Loading Dorctor Route
+2015-08-10T09:29:15.920Z - info: Loading Patient Route
+2015-08-10T09:29:15.921Z - info: Loading Notification Route
+2015-08-10T09:29:15.922Z - info: Loading Appointment Route
+2015-08-10T09:29:15.927Z - debug: [DB]: Connecting...
+2015-08-10T09:29:15.931Z - info: listeninssg on *:3000
+2015-08-10T09:29:16.049Z - info: [DB]: Connected OK
