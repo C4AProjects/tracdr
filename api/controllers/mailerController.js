@@ -70,7 +70,7 @@ MAILER.sendActivationMail=function(to,name,link,cb){
         to: to, // list of receivers
         subject: 'trackDr', // Subject line
         // plaintext body
-        html: 'Hello ' +name +'<br>Click on this link to activate your account : <a href="'+link+'">Activate</a><br><br>If you received this email by mistake, simply delete it. <br>Thankyou<br><img src="http://54.89.140.6:2014/website/images/buzzo.png" style="background-color: black">' // html body
+        html: 'Hello ' +name +'<br>Click on this link to activate your account : <a href="http://tracdr.c4asolution.com:3000/api/activate/'+link+'">Activate</a><br><br>If you received this email by mistake, simply delete it. <br>Thankyou<br><img src="http://54.89.140.6:2014/website/images/buzzo.png" style="background-color: black">' // html body
 
     };
 

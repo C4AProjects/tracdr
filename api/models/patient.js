@@ -20,7 +20,7 @@ patient_schema = new Schema({
     gender : String,
     dateOfBirth:String,//Date
     activated:{type:Boolean, default:false},
-    activation_link:String,
+    activation_code:String,
     created_date: {type: Date, default: Date.now},
     modified_date: {type: Date, default: Date.now},
     doctors:[{type: Schema.Types.ObjectId, ref: 'doctor'}],

@@ -25,6 +25,11 @@ APP.config(function ($stateProvider, $urlRouterProvider) {
         }).state('join', {
             url: "/join",
             templateUrl: "./scripts/join/join.tpl.html"
+        }).state('activation', {
+            url: "/activation",
+
+            templateUrl: "./scripts/activation/activation.tpl.html"
+
         }).state('doctor', {
             url: "/doctor",
             templateUrl: "./scripts/doctor/doctor.tpl.html",

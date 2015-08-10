@@ -17,7 +17,7 @@ var mongoose = require('mongoose'),
      hospital: String,
      specialty : String,
      activated:{type:Boolean, default:false},
-     activation_link:String,
+     activation_code:String,
      patients : [{type: Schema.Types.ObjectId, ref: 'patient'}],
     created_date: {type: Date, default: Date.now},
     modified_date: {type: Date, default: Date.now}
