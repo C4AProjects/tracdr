@@ -20,9 +20,9 @@ APP.controller('loginCtrl', function ($scope, $state,$rootScope,$animate,LoginSe
 
     $scope.forgetpass = function () {
 
-        Auth.forget($scope.user, function (res) {
+        LoginService.forget($scope.user, function (res) {
 
-            Notification.error({message: "Mail Sent"});
+            Notification({message: "Mail Sent"});
             $scope.forget=false
         }, function (err) {
             $scope.loginError = {}

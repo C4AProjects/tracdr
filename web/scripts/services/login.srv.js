@@ -23,6 +23,18 @@ APP .factory('LoginService', function ($http,$window,ApiServer,$rootScope,DataSe
         delete $window.sessionStorage.token;
         DataService.setLogged(false)
     }
+    service. forget= function (user, success, error) {
+
+        $http.post(serverApi + '/forget/', user).success(function (res) {
+            if (!res.error) {
+
+                success(res);
+            }
+            else {
+                error(res);
+            }
+        }).error(error);
+    }
     return service;
 
 })
