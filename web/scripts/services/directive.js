@@ -137,18 +137,7 @@
           });
         }
 
-        if (attrs.required) {
-          required = attrs.required.split(' ');
 
-          ctrl.$parsers.push(function (value) {
-            angular.forEach(required, function (elem) {
-              if (!angular.isNumber(elem)) {
-                ctrl.$setValidity('required', false);
-              }
-            });
-            ctrl.$setValidity('required', true);
-          });
-        }
 
         for (var i = currentYear; i >= oldestYear; i--) {
           scope.years.push(i);
