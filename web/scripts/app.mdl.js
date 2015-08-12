@@ -7,5 +7,6 @@ APP =angular.module("trackDr",
         'ui.bootstrap',
 
         'ui.calendar',
-         'angularSpinner','ngDialog', 'ngAnimate',      'ui-notification'
+         'angularSpinner','ngDialog', 'ngAnimate',      'ui-notification',
+        'rorymadden.date-dropdowns'
     ]);

@@ -18,7 +18,7 @@ patient_schema = new Schema({
     kinphone: String,
     phone: String,
     gender : String,
-    dateOfBirth:String,//Date
+    dateOfBirth:Date,//Date
     activated:{type:Boolean, default:false},
     activation_code:String,
     created_date: {type: Date, default: Date.now},

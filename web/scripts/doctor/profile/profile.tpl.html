@@ -236,20 +236,14 @@
                 <div class="col-md-4" style="margin-top: 5px">Birth</div>
                 <div class="col-md-8">
                     <div class="input-group col-md-12">
-
-                        <input type="text" class="form-control input-sm" placeholder="Date of Birth" ng-model="USER.doctor.dateOfBirth"
-                               datepicker-popup="dd-MMMM-yyyy"
-                               ng-model="cdate.customStartDate"
-                               is-open="cdate.customStartDate.open"
-                               ng-click = "cdate.customStartDate.open = true"
-
-                               ng-required="true"
-                               close-text="Close"
-                                />
+                        <input rsmdatedropdowns ng-model="USER.doctor.dateOfBirth" required="false">
                     </div>
                 </div>
 
             </div>
+
+
+
 
             <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
                 <div class="col-md-4" style="margin-top: 5px">Gender</div>

@@ -20,7 +20,8 @@
     "ngDialog": "~0.4.0",
     "angular-ui-notification": "~0.0.11",
     "font-awesome": "~4.3.0",
-    "angular-animate": "~1.4.3"
+    "angular-animate": "~1.4.3",
+    "angular-date-dropdowns": "~0.1.1"
   },
   "resolutions": {
     "jquery": "~2.x",

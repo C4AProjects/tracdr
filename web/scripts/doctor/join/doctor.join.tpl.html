@@ -35,15 +35,8 @@
                 <input type="text" class="form-control input-sm" placeholder="Email" ng-model="user.email">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control input-sm" placeholder="Date of Birth" ng-model="user.dateOfBirth"
-                       datepicker-popup="dd-MMMM-yyyy"
-                       ng-model="cdate.customStartDate"
-                       is-open="cdate.customStartDate.open"
-                       ng-click = "cdate.customStartDate.open = true"
+                <input rsmdatedropdowns ng-model="user.dateOfBirth" >
 
-                       ng-required="true"
-                       close-text="Close"
-                        />
 
             </div>
 
