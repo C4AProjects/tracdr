@@ -16,6 +16,12 @@ APP.controller('doctorAppointmentCtrl', function ($scope, $state,$rootScope,$ani
             if (!value._patient){
                 Notification.error({message:"Please Select a Patient"})
             }else{
+
+                console.log("before")
+                console.log(value.start)
+                console.log(value.end)
+                value.startTime=value.start
+                value.endTime=value.end
                 value.startTime.setFullYear(value.date.getFullYear())
                 value.startTime.setMonth(value.date.getMonth())
                 value.startTime.setDate(value.date.getDate())
@@ -24,6 +30,9 @@ APP.controller('doctorAppointmentCtrl', function ($scope, $state,$rootScope,$ani
                 value.endTime.setMonth(value.date.getMonth())
                 value.endTime.setDate(value.date.getDate())
 
+                console.log("after")
+                console.log(value.startTime)
+                console.log(value.endTime)
                 $http.post(serverApi + '/secured/appointment/',value).success(function (res) {
                     if (!res.error) {
 

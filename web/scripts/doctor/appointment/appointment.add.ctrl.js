@@ -7,7 +7,8 @@ APP.controller('doctorAppointmentAddCtrl', function ($scope, $state,$rootScope,$
     $scope.event.date=new Date();
     $scope.event.startTime =  new Date();
     $scope.event.endTime =  new Date();
-
+    $scope.event.start =  new Date();
+    $scope.event.end =  new Date();
 
     $scope.event._doctor = $rootScope.USER.doctor._id;
 
