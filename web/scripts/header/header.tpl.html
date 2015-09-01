@@ -27,6 +27,8 @@
             <ul class="nav navbar-nav navbar-right">
 
                     <li ui-sref-active="active" ><a ui-sref="index">Home</a></li>
+                <li ui-sref-active="active" ng-if="USER.doctor && loggedIn"><a ui-sref="doctor.patient">Doctor</a></li>
+                <li ui-sref-active="active" ng-if="USER.patient && loggedIn "><a ui-sref="patient.doctor">Patient</a></li>
                     <li ui-sref-active="active" ><a ui-sref="faq"  >FAQ</a></li>
 
                     <li ui-sref-active="active" ><a ui-sref="contact_us" >Contact Us</a></li>

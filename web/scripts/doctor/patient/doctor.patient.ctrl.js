@@ -36,14 +36,10 @@ $scope.patiens=[]
         if (!item) return;
         $state.go("doctor.patientDetails",{ID:item._id})
     };
-
+$rootScope.nuser={}
     $scope.addPatient=function(){
         ngDialog.openConfirm({ template: 'scripts/doctor/patient/patient.add.tpl.html',overlay:false ,showClose:false,
-            controller: ['$scope', function($scope) {
-            // controller logic
-            $scope.title="Delete Driver"
-            $scope.message="Are you sure to delete this driver"
-        }] }).then(function (value) {
+            controller: 'doctorAddCtrl'}).then(function (value) {
 
 
             registerService.registerPAtient(value, function (res) {
@@ -53,7 +49,7 @@ $scope.patiens=[]
 
                     //   app.post("/api/secured/doctor/:docID/patien/:patientID", function(req, res){
                     $http.post(serverApi + '/secured/doctor/'  +$rootScope.USER.doctor._id+'/patien/'+res.patient._id, $rootScope.USER.doctor).success(function(data) {
-                        console.log(data)
+                        $rootScope.nuser={}
                     });
 
                 $scope.loadPatients()

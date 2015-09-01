@@ -3,8 +3,8 @@
 }
 
 .img-profile{
-    width: 80px;
-    height: 80px;
+    width: 100px;
+
     border-radius: 50%;
     border: 2px solid grey;
 }
@@ -15,8 +15,8 @@
 }
 
 .btn-dash{
-    width: 85px;
-    height: 85px;
+    width: 100px;
+    height: 100px;
     margin-top: 1px;
     border-radius: 0;
     color:white;
