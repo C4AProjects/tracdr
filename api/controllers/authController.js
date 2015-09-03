@@ -6,8 +6,8 @@ var patientCtrl = require('../controllers/patientController');
 var doctortCtrl = require('../controllers/doctorController');
 module.exports.registerPatient = function (doc, cb) {
     // APP.DB.APPOINTMENT();
-    if (!doc.email || !doc.password) {
-        cb("Please Fill Password, email and userName");
+    if (!doc.email ) {
+        cb("Please Fill Email ");
         return;
     }
     DEBUG("Register PAtient " + doc)

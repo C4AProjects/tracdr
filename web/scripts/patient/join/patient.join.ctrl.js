@@ -12,7 +12,36 @@ APP.controller('patientJoinCtrl', function ($scope, $state,$rootScope,$animate,r
     $scope.join={}
     $scope.doctor={}
     $scope.join.notfound=false;
+
+    $scope.goToStep2=function(){
+        if (! $scope.user.firstName ){
+            Notification.error({message:"Please Fill your First Name"})
+            return ;
+        }
+
+        if (! $scope.user.lastName ){
+            Notification.error({message:"Please Fill your Last Name"})
+            return ;
+        }
+
+        if (! $scope.user.email ){
+            Notification.error({message:"Please Fill your Email"})
+            return ;
+        }
+
+
+        $state.go('join.patient.step2')
+    }
     $scope.registerPAtient=function(){
+
+        if (! $scope.user.password ){
+            Notification.error({message:"Please Fill your password"})
+            return ;
+        }
+        if ($scope.user.password!= $scope.user.confirmPassword){
+            Notification.error({message:"Please confirm your password"})
+            return ;
+        }
 
         $scope.user.country= "USA"
         registerService.registerPAtient($scope.user, function (res) {

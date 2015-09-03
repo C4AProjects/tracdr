@@ -20,9 +20,28 @@ module.exports = function (app) {
                     subject: "Appointment Added"
                 }
                 notifCtrl.add(notification,function(er,re){
-                    if (er) console.log(er)
-                    else console.log(re)
+                    //if (er) console.log(er)
+                   // else console.log(re)
                 })
+
+                console.log(doc)
+
+
+                APP.DB.PATIENT.findOne({_id:doc._patient}, function (errPat, pat) {
+
+                    if (pat){
+                        APP.MAILER.sendAddAppMail(pat.email, pat.firstName, doc.subject,doc.details,doc.endTime, function (err, success) {
+                            if (err) {
+                               console.log(err)
+                            }
+                            if (success) {
+                                console.log(success)
+                            }
+                        })
+                    }
+
+                })
+
             }
 
         })
@@ -93,6 +112,22 @@ module.exports = function (app) {
                 notifCtrl.add(notification,function(er,re){
                     if (er) console.log(er)
                     else console.log(re)
+                })
+
+
+                APP.DB.PATIENT.findOne({_id:doc._patient}, function (errPat, pat) {
+
+                    if (pat){
+                        APP.MAILER.sendUpdateAppMail(pat.email, pat.firstName, doc.subject,doc.details,doc.endTime, function (err, success) {
+                            if (err) {
+                                console.log(err)
+                            }
+                            if (success) {
+                                console.log(success)
+                            }
+                        })
+                    }
+
                 })
             }
 

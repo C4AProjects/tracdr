@@ -78,6 +78,44 @@ MAILER.sendActivationMail=function(to,name,link,cb){
     transporter.sendMail(mailOptions, cb);
 
 }
+
+
+MAILER.sendAddAppMail=function(to,name,subject,det,date,cb){
+    var mailOptions = {
+        from: APP.CONFIG.mailer.auth.user, // sender address
+        to: to, // list of receivers
+        subject: 'New Appointment - tracDr', // Subject line
+        // plaintext body
+        html: 'Hello ' +name +'<br>You have a new appointment: '+
+            '<br>Subject: '+subject +'<br>'+
+        'Details: '+det +'<br>'+
+        'Date:'+date +'<br>'+
+    '<br><br>If you received this email by mistake, simply delete it. <br>Thankyou<br>'// html body
+
+    };
+
+
+    transporter.sendMail(mailOptions, cb);
+
+}
+MAILER.sendUpdateAppMail=function(to,name,subject,det,date,cb){
+    var mailOptions = {
+        from: APP.CONFIG.mailer.auth.user, // sender address
+        to: to, // list of receivers
+        subject: ' Appointment Updated- tracDr', // Subject line
+        // plaintext body
+        html: 'Hello ' +name +'<br>You have a new appointment: '+
+        '<br>Subject: '+subject +'<br>'+
+        'Details: '+det +'<br>'+
+        'Date:'+date +'<br>'+
+        '<br><br>If you received this email by mistake, simply delete it. <br>Thankyou<br>'// html body
+
+    };
+
+
+    transporter.sendMail(mailOptions, cb);
+
+}
 module.exports = function (backend) {
     MAILER.init();
    // MAILER.testMail();

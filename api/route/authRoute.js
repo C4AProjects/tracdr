@@ -47,13 +47,9 @@ module.exports = function (app) {
     app.get("/api/activate/:code", function(req, res){
         INFO("activate Code")
         authCtrl.activate(req.params.code,function(err,doc){
-            if (err) res.send({error:err})
-            else {
-                console.log("login %j",doc)
-               // res.send(doc);
-                //http://tracdr.c4asolution.com:3000/#/activation;
+
                 res.redirect('http://tracdr.c4asolution.com:3000/#/activation');
-            }
+
 
         })
 
