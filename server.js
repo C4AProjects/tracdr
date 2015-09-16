@@ -6,7 +6,7 @@ APP.CONFIG=require("./config/config").loadConfig();
 
 APP.LOGGER = require("./api/logger/logger");
 APP.LOGGER.init(APP.CONFIG.logger);
-
+APP.UPLOAD_DIR=__dirname + "/uploads/";
 
 require("./api/controllers/mailerController")(APP);
 

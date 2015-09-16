@@ -23,15 +23,20 @@ var multer = require('multer');
 var errorHandler = require('errorhandler');
 var compress = require('compression');
 var app = express();
+
+var busboy = require('connect-busboy');
 app.use(methodOverride());
 /*app.use(session({ resave: true,
     saveUninitialized: true,
     secret: 'trackDR@2015' }));*/
 app.use(bodyParser.json());
+
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(multer());
-app.use(express.static("web"));var express = require('express');
-app.use(compress());
+app.use(multer({
+    dest:APP.UPLOAD_DIR
+}));
+app.use(express.static("web"));
+//app.use(compress());
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');

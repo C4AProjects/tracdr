@@ -255,6 +255,21 @@
                 </div>
 
             </div>
+            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                <div class="col-md-4" style="margin-top: 5px"> <button class="btn btn-primary" ngf-select ng-model="file" name="file" ngf-pattern="'image/*"
+                                                                       accept="image/*" ngf-max-size="20MB" ngf-min-height="100"
+                                                                      >Select Profile photo</button>
+                </div>
+                <div class="col-md-8">
+                    <div class="input-group col-md-12">
+
+
+                        <img ngf-src="file || '{{ApiServer+'/photo/'+USER.doctor.profilePhoto}}' " style="width: 300px">                    </div>
+                </div>
+
+            </div>
+
+
 
             <button class="btn btn-primary btn-orange" ng-click='updateProfile()'>Save</button>
         </div>

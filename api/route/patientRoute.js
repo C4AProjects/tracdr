@@ -62,4 +62,24 @@ module.exports = function (app) {
         })
 
     });
+
+    var fs = require('fs');
+    var util = require('util');
+    app.post("/api/patient/photo/:ID", function(req, res){
+
+        APP.DB.PATIENT.findOne({_id:req.params.ID }, function (er, doctor){
+
+            if (er) res.send({error:err})
+            else if(doctor){
+                if (req.files && req.files.file && req.files.file.name) {
+                    console.log(req.files.file);
+                    doctor.profilePhoto=req.files.file.name
+                    doctor.save(function(err){
+                        res.send({file:req.files.file.name})
+                    })
+                }
+            }
+        });
+
+    });
 }

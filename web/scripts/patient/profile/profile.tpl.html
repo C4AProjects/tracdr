@@ -1,7 +1,7 @@
 <div>
     <h3>Profile</h3>
     <div  ui-view>
-        <div class="row" style="min-height:200px;width:80%;">
+        <div class="row" style="min-height:150px;width:80%;">
             <div class="col-sm-6">
                 <div style="background-color: #0078BA;color: white;padding: 5px">
                     Login Information
@@ -176,10 +176,25 @@
 
                 </div>
 
+                <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
+                    <div class="col-md-4" style="margin-top: 5px"> <button class="btn btn-primary" ngf-select ng-model="xx.filex" name="filex" ngf-pattern="'image/*"
+                                                                           accept="image/*" ngf-max-size="20MB" ngf-min-height="100"
+                            >Select Profile photo</button>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="input-group col-md-12">
 
+
+                            <img ngf-src="xx.filex || '{{ApiServer+'/photo/'+USER.patient.profilePhoto}}' " style="width: 300px">
+                      </div>
+                    </div>
+
+                </div>
             </div>
 
 
         </div>
+
+    </div>
         <button class="btn btn-primary btn-orange" ng-click='updateProfile()'>Save</button>
 </div>

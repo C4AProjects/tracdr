@@ -173,7 +173,7 @@ controller:'doctorAppointmentCtrl'
         $httpProvider.interceptors.push('ajax-loader');
     }).run(['$rootScope', '$location', 'DataService', '$state', 'ApiServer', function ($rootScope, $location, DataService, $state, ApiServer) {
 
-
+        $rootScope.ApiServer=ApiServer
         if ($rootScope.USER && $rootScope.USER.doctor) {
             console.log("is doctor")
             ///$state.go("doctor.patient")

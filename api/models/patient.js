@@ -18,6 +18,7 @@ patient_schema = new Schema({
     kinphone: String,
     phone: String,
     gender : String,
+    profilePhoto:String,
     dateOfBirth:Date,//Date
     activated:{type:Boolean, default:false},
     activation_code:String,

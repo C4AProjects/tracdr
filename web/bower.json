@@ -21,7 +21,9 @@
     "angular-ui-notification": "~0.0.11",
     "font-awesome": "~4.3.0",
     "angular-animate": "~1.4.3",
-    "angular-date-dropdowns": "~0.1.1"
+    "angular-date-dropdowns": "~0.1.1",
+    "ng-file-upload": "~7.2.1",
+    "ng-file-upload-shim": "~7.2.1"
   },
   "resolutions": {
     "jquery": "~2.x",
