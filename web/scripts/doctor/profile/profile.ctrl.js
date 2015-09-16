@@ -61,7 +61,7 @@ APP.controller('doctorProfileCtrl', function ($scope, $state,$rootScope,$animate
     // upload on file select or drop
     $scope.upload = function (file,cb) {
         Upload.upload({
-            url: 'http://localhost:3000/api/doctor/photo/55cbc2da7c719fec70764a62',
+            url: $rootScope.ApiServer+ '/doctor/photo/'+$rootScope.USER.doctor._id,
             fields: {'username': $scope.username},
             file: file
         }).progress(function (evt) {

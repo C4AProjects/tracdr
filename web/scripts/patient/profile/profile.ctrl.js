@@ -60,7 +60,7 @@ console.log($scope.xx.filex)
 
     $scope.upload = function (file,cb) {
         Upload.upload({
-            url: 'http://localhost:3000/api/patient/photo/'+$rootScope.USER.patient._id,
+            url: $rootScope.ApiServer+'/patient/photo/'+$rootScope.USER.patient._id,
             fields: {'username': $scope.username},
             file: file
         }).progress(function (evt) {
