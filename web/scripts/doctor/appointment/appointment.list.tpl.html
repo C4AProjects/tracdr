@@ -21,7 +21,9 @@
             <th>
                 Status
             </th>
-
+            <th>
+                Delayed Date
+            </th>
 
         </tr>
         </thead>
@@ -44,7 +46,7 @@
                         </div>
 
                         <div  class="col-xs-4" style="background-color:#005991">
-                            <span style="color:whitesmoke">Reported</span>
+                            <span style="color:whitesmoke">Delayed</span>
 
                         </div>
                         <div class="col-xs-4" style="background-color:#0099e6">
@@ -58,7 +60,7 @@
                             <span style="color:white">On Time</span>
                         </div>
                         <div class="col-xs-4" style="background-color:#005991">
-                            <span style="color:whitesmoke">Reported</span>
+                            <span style="color:whitesmoke">Delayed</span>
                         </div>
 
                         <div  class="col-xs-4" style="background-color:#005991">
@@ -88,7 +90,7 @@
 
             </td>
             <td>
-
+                <div ng-if="getStatus(doc)=='reported'">{{doc.status | date:"short" }}</div>
             </td>
 
 

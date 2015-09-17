@@ -58,7 +58,7 @@ return status
             controller: 'appEditCtrl' ,data:{doc:doc}}).then(function (value) {
             console.log(value)
             if (value.status=='reported'){
-                doc.status=value.status
+                doc.status=value.event.date;//value.status
             }else{
                 doc.status=null;
             }
