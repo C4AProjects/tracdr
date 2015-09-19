@@ -98,19 +98,38 @@ MAILER.sendAddAppMail=function(to,name,subject,det,date,cb){
     transporter.sendMail(mailOptions, cb);
 
 }
-MAILER.sendUpdateAppMail=function(to,name,subject,det,date,cb){
-    var mailOptions = {
-        from: APP.CONFIG.mailer.auth.user, // sender address
-        to: to, // list of receivers
-        subject: ' Appointment Updated- tracDr', // Subject line
-        // plaintext body
-        html: 'Hello ' +name +'<br>You have a new appointment: '+
-        '<br>Subject: '+subject +'<br>'+
-        'Details: '+det +'<br>'+
-        'Date:'+date +'<br>'+
-        '<br><br>If you received this email by mistake, simply delete it. <br>Thankyou<br>'// html body
 
-    };
+MAILER.sendUpdateAppMail=function(to,name,subject,det,date,status,cb){
+    var isDate = new Date(status) !== "Invalid Date" && !isNaN(new Date(status))
+    var mailOptions;
+    if (!isDate){
+         mailOptions = {
+            from: APP.CONFIG.mailer.auth.user, // sender address
+            to: to, // list of receivers
+            subject: ' Appointment Updated- tracDr', // Subject line
+            // plaintext body
+            html: 'Hello ' +name +'<br>Your Appointment was updated: '+
+            '<br>Subject: '+subject +'<br>'+
+            'Details: '+det +'<br>'+
+            'Date:'+date +'<br>'+
+            '<br><br>If you received this email by mistake, simply delete it. <br>Thankyou<br>'// html body
+
+        };
+    }else{
+        mailOptions = {
+            from: APP.CONFIG.mailer.auth.user, // sender address
+            to: to, // list of receivers
+            subject: ' Appointment Updated- tracDr', // Subject line
+            // plaintext body
+            html: 'Hello ' +name +'<br>Your Appointment was Delayed: '+
+            '<br>Subject: '+subject +'<br>'+
+            'Details: '+det +'<br>'+
+            'Date:'+status +'<br>'+
+            '<br><br>If you received this email by mistake, simply delete it. <br>Thankyou<br>'// html body
+
+        };
+    }
+
 
 
     transporter.sendMail(mailOptions, cb);

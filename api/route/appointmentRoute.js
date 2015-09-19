@@ -118,7 +118,7 @@ module.exports = function (app) {
                 APP.DB.PATIENT.findOne({_id:doc._patient}, function (errPat, pat) {
 
                     if (pat){
-                        APP.MAILER.sendUpdateAppMail(pat.email, pat.firstName, doc.subject,doc.details,doc.endTime, function (err, success) {
+                        APP.MAILER.sendUpdateAppMail(pat.email, pat.firstName, doc.subject,doc.details,doc.endTime,doc.status, function (err, success) {
                             if (err) {
                                 console.log(err)
                             }

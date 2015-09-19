@@ -24,7 +24,11 @@ APP.controller('doctorAppointmentListCtrl', function ($scope, $state,$rootScope,
 
                 $scope.appointments = res;
                 $scope.appointments.forEach(function(app){
-                    app.fromNow= moment(app.startTime).endOf('day').fromNow();
+                    app.fromNow= moment(app.startTime).fromNow();
+
+                    var isDate = new Date(app.status) !== "Invalid Date" && !isNaN(new Date(app.status))
+                    if(isDate)
+                        app.fromStatusNow= moment(app.status).fromNow();
                 })
 
 
@@ -59,6 +63,7 @@ return status
             console.log(value)
             if (value.status=='reported'){
                 doc.status=value.event.date;//value.status
+                doc.status.setHours(value.event.start.getHours(),value.event.start.getMinutes());
             }else{
                 doc.status=null;
             }
