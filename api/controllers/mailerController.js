@@ -98,6 +98,7 @@ MAILER.sendAddAppMail=function(to,name,subject,det,date,cb){
     transporter.sendMail(mailOptions, cb);
 
 }
+var moment = require('moment');
 
 MAILER.sendUpdateAppMail=function(to,name,subject,det,date,status,cb){
     var isDate = new Date(status) !== "Invalid Date" && !isNaN(new Date(status))
@@ -111,7 +112,7 @@ MAILER.sendUpdateAppMail=function(to,name,subject,det,date,status,cb){
             html: 'Hello ' +name +'<br>Your Appointment was updated: '+
             '<br>Subject: '+subject +'<br>'+
             'Details: '+det +'<br>'+
-            'Date:'+date +'<br>'+
+            'Date:'+   moment(date).format("LLL")+'<br>'+
             '<br><br>If you received this email by mistake, simply delete it. <br>Thankyou<br>'// html body
 
         };
@@ -121,10 +122,10 @@ MAILER.sendUpdateAppMail=function(to,name,subject,det,date,status,cb){
             to: to, // list of receivers
             subject: ' Appointment Updated- tracDr', // Subject line
             // plaintext body
-            html: 'Hello ' +name +'<br>Your Appointment was Delayed: '+
+            html: 'Hello ' +name +'<br>Your Appointment was Delayed by '+moment(status).diff(moment(date),'hours')+ " Hours :"+
             '<br>Subject: '+subject +'<br>'+
             'Details: '+det +'<br>'+
-            'Date:'+status +'<br>'+
+            'Date:'+ moment(status).format("LLL") +'<br>'+
             '<br><br>If you received this email by mistake, simply delete it. <br>Thankyou<br>'// html body
 
         };
