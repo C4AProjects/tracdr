@@ -2,7 +2,13 @@
 APP .factory('LoginService', function ($http,$window,ApiServer,$rootScope,DataService) {
     var service={};
     service.login=function (user,success,error){
-        $http.post(serverApi+'/login/', user).success(function (res) {
+        var  usr={}
+        usr.password=user.password
+        usr.email=user.email
+if (usr.password) usr.password=usr.password.toLowerCase()
+        if (usr.email) usr.email=usr.email.toLowerCase()
+
+        $http.post(serverApi+'/login/', usr).success(function (res) {
             if (!res.error) {
                 $rootScope.USER=res;
                 $window.sessionStorage.token = res.token;

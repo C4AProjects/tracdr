@@ -107,9 +107,9 @@ MAILER.sendUpdateAppMail=function(to,name,subject,det,date,status,cb){
          mailOptions = {
             from: APP.CONFIG.mailer.auth.user, // sender address
             to: to, // list of receivers
-            subject: ' Appointment Updated- tracDr', // Subject line
+            subject: ' Your Appointment has been changed', // Subject line
             // plaintext body
-            html: 'Hello ' +name +'<br>Your Appointment was updated: '+
+            html: 'Hello ' +name +'<br>The new appointment is at: '+moment(date).format("LLL")+' . '+
             '<br>Subject: '+subject +'<br>'+
             'Details: '+det +'<br>'+
             'Date:'+   moment(date).format("LLL")+'<br>'+
@@ -120,9 +120,9 @@ MAILER.sendUpdateAppMail=function(to,name,subject,det,date,status,cb){
         mailOptions = {
             from: APP.CONFIG.mailer.auth.user, // sender address
             to: to, // list of receivers
-            subject: ' Appointment Updated- tracDr', // Subject line
+            subject: ' Your Appointment has been changed', // Subject line
             // plaintext body
-            html: 'Hello ' +name +'<br>Your Appointment was Delayed by '+moment(status).diff(moment(date),'hours')+ " Hours :"+
+            html: 'Hello ' +name +'<br>The new appointment is at '+moment(status).format("LLL")+ " . "+
             '<br>Subject: '+subject +'<br>'+
             'Details: '+det +'<br>'+
             'Date:'+ moment(status).format("LLL") +'<br>'+

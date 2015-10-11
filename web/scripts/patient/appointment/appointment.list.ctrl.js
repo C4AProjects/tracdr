@@ -28,7 +28,7 @@ APP.controller('patientAppointmentListCtrl', function ($scope, $state,$rootScope
 
                     var isDate = new Date(app.status) !== "Invalid Date" && !isNaN(new Date(app.status))
                     if(isDate)
-                        app.fromStatusNow= moment(app.status).fromNow();
+                        app.fromStatusNow= app.status// moment(app.status).fromNow();
                 })
 
 
