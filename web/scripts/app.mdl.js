@@ -8,5 +8,5 @@ APP =angular.module("trackDr",
 
         'ui.calendar',
          'angularSpinner','ngDialog', 'ngAnimate',      'ui-notification',
-        'rorymadden.date-dropdowns','ngFileUpload'
+        'rorymadden.date-dropdowns','ngFileUpload','sbDateSelect'
     ]);

@@ -12,7 +12,11 @@ APP.controller('patientJoinCtrl', function ($scope, $state,$rootScope,$animate,r
     $scope.join={}
     $scope.doctor={}
     $scope.join.notfound=false;
-
+    function validateEmail(email) {
+        var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+        console.log(re.test(email))
+        return re.test(email);
+    }
     $scope.goToStep2=function(){
         if (! $scope.user.firstName ){
             Notification.error({message:"Please Fill your First Name"})
@@ -28,7 +32,10 @@ APP.controller('patientJoinCtrl', function ($scope, $state,$rootScope,$animate,r
             Notification.error({message:"Please Fill your Email"})
             return ;
         }
-
+        if (!validateEmail($scope.user.email)){
+            Notification.error({message:"Email invalid"});
+            return;
+        }
 
         $state.go('join.patient.step2')
     }

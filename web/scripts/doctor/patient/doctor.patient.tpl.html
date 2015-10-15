@@ -39,21 +39,32 @@
                 <th>
                     State
                 </th>
-
+                <th>
+                    Action
+                </th>
             </tr>
             </thead>
 
             <tbody>
-            <tr ng-repeat="doc in patiens" ui-sref="doctor.patientDetails({ID:doc._id})">
-                <td>{{ doc.firstName }}</td>
+            <tr ng-repeat="doc in patiens" >
+                <td ui-sref="doctor.patientDetails({ID:doc._id})">{{ doc.firstName }}</td>
 
-                <td>{{ doc.lastName }}</td>
-                <td>{{ doc.gender }}</td>
-                <td>{{ doc.email }}</td>
-                <td>{{ doc.state }}</td>
+                <td ui-sref="doctor.patientDetails({ID:doc._id})">{{ doc.lastName }}</td>
+                <td ui-sref="doctor.patientDetails({ID:doc._id})">{{ doc.gender }}</td>
+                <td ui-sref="doctor.patientDetails({ID:doc._id})">{{ doc.email }}</td>
+                <td ui-sref="doctor.patientDetails({ID:doc._id})">{{ doc.state }}</td>
 
 
-
+<td>
+    <div class="button-actions" >
+        <button type="button" class="btn btn-success btn-sm" title="Edit" ng-click="editUser(doc)">
+            <span class="glyphicon glyphicon-edit"></span>
+        </button>
+        <button type="button" class="btn btn-danger btn-sm" title="Remove" ng-click="deleteUser(doc)">
+            <span class="glyphicon glyphicon-remove-circle"></span>
+        </button>
+    </div>
+</td>
             </tr>
             </tbody>
 

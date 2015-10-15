@@ -156,11 +156,15 @@
                 <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.13);margin:0">
                     <div class="col-md-4" style="margin-top: 5px">Birth</div>
                     <div class="col-md-8">
-                        <div class="input-group col-md-12">
-                            <input rsmdatedropdowns ng-model="USER.patient.dateOfBirth" required="false">
+
+                            <!--<input rsmdatedropdowns ng-model="USER.patient.dateOfBirth" required="false">-->
+
+                                <!-- <input rsmdatedropdowns ng-model="user.dateOfBirth" >-->
+                                <div sb-date-select sb-select-class="form-control" ng-model="USER.patient.dateOfBirth"></div>
 
 
-                        </div>
+
+
                     </div>
 
                 </div>

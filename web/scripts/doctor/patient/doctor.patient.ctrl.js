@@ -37,12 +37,14 @@ $scope.patiens=[]
         $state.go("doctor.patientDetails",{ID:item._id})
     };
 $rootScope.nuser={}
-    $scope.addPatient=function(){
+    $scope.editUser=function(user){
         ngDialog.openConfirm({ template: 'scripts/doctor/patient/patient.add.tpl.html',overlay:false ,showClose:false,
-            controller: 'doctorAddCtrl'}).then(function (value) {
+            controller: 'doctorAddCtrl',data:{user:user}}).then(function (value) {
 
-
-            registerService.registerPAtient(value, function (res) {
+            $http.put(serverApi + '/secured/patient/'+value._id, user).success(function (res) {
+             console.dir(res)
+            })
+          /*  registerService.registerPAtient(value, function (res) {
 
 
 
@@ -51,6 +53,47 @@ $rootScope.nuser={}
                     $http.post(serverApi + '/secured/doctor/'  +$rootScope.USER.doctor._id+'/patien/'+res.patient._id, $rootScope.USER.doctor).success(function(data) {
                         $rootScope.nuser={}
                     });
+
+                $scope.loadPatients()
+
+            },    function (err) {
+
+                Notification.error({message:err.error})
+            })*/
+
+
+
+
+
+        }, function (reason) {
+
+        });
+    }
+    $scope.deleteUser=function(usr){
+        var r = confirm("Delete this Patient: "+usr.firstName + " "+usr.lastName);
+        if (r == true) {
+            $http.delete(serverApi + '/secured/patient/'+usr._id).success(function (res) {
+                $scope.loadPatients()
+            })
+        } else {
+            //x = "You pressed Cancel!";
+        }
+        alert(x)
+    }
+    $scope.addPatient=function(){
+        ngDialog.openConfirm({ template: 'scripts/doctor/patient/patient.add.tpl.html',overlay:false ,showClose:false,
+            controller: 'doctorAddCtrl',data:{user:{}}}).then(function (value) {
+
+
+            registerService.registerPAtient(value, function (res) {
+
+
+
+
+                //   app.post("/api/secured/doctor/:docID/patien/:patientID", function(req, res){
+                $http.post(serverApi + '/secured/doctor/'  +$rootScope.USER.doctor._id+'/patien/'+res.patient._id, $rootScope.USER.doctor).success(function(data) {
+                    $rootScope.nuser={}
+                });
 
                 $scope.loadPatients()
 

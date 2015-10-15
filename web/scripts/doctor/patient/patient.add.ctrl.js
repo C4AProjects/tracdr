@@ -4,5 +4,5 @@
  */
 APP.controller('doctorAddCtrl', function ($scope, $state,$rootScope,$animate,registerService,Notification,$http,ngDialog) {
 
-console.log("NBIED")
+    $scope.nuser=$scope.ngDialogData.user
 })

@@ -15,15 +15,9 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Date of Birth <span style="color:red"> (*)</span></label>
-                    <input type="text" class="form-control input-sm" placeholder="Date of Birth" ng-model="nuser.dateOfBirth"
-                           datepicker-popup="dd-MMMM-yyyy"
 
-                           is-open="cdate.customStartDate.open"
-                           ng-click = "cdate.customStartDate.open = true"
+                    <div sb-date-select sb-select-class="form-control" ng-model="nuser.dateOfBirth"></div>
 
-                           ng-required="true"
-                           close-text="Close"
-                            />
 
                 </div>
 
